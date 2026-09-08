@@ -1,0 +1,8 @@
+build/
+cache/
+__pycache__/
+*.pyc
+*.tar
+*.tar.gz
+*.tar.zst
+*.md5
