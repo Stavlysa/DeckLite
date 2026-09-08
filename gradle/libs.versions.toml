@@ -18,6 +18,7 @@ coil = "2.7.0"
 avnc = "030e6c032e"
 termuxX11 = "21159a1405"
 coreAnimation = "1.0.0"
+preferenceKtx = "1.2.1"
 terminalLib = "e7a15b7877"
 
 [libraries]
@@ -42,6 +43,7 @@ coil-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
 avnc = { group = "com.github.tiny-computer", name = "avnc", version.ref = "avnc" }
 termux-x11 = { group = "com.github.tiny-computer", name = "termux-x11", version.ref = "termuxX11" }
 androidx-core-animation = { group = "androidx.core", name = "core-animation", version.ref = "coreAnimation" }
+androidx-preference-ktx = { group = "androidx.preference", name = "preference-ktx", version.ref = "preferenceKtx" }
 terminal-lib = { group = "com.github.tiny-computer", name = "terminal-lib", version.ref = "terminalLib" }
 
 

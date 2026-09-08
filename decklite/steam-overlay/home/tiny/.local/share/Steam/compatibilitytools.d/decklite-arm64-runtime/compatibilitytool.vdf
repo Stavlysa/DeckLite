@@ -1,0 +1,17 @@
+"compatibilitytools"
+{
+	"compat_tools"
+	{
+		"steamlinuxruntime_4_arm64_official"
+		{
+			"appid"         "4185400"
+			"depotid"       "4185401"
+			"install_path"  "/home/tiny/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4-arm64"
+			"display_name"  "Steam Linux Runtime 4.0 - Arm64"
+			"from_oslist"   "linux"
+			"to_oslist"     "linux"
+			"unlisted"      "1"
+			"aliases"       "steamrt4-arm64"
+		}
+	}
+}

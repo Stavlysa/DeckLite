@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Не подключено</string>
+    <string name="preferences_button_text">   НАСТРОЙКИ   </string>
+    <string name="help_button_text">   ПОМОЩЬ   </string>
+    <string name="exit_button_text">   ВЫХОД   </string>
+    <string name="extra_keys_config_desc">Здесь вы можете задать значение переменной extra-keys как в приложении Termux (читайте <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">это</a>) и другое \n
+Напр. <b>META</b> для <i>клавиши META</i>, \n
+<b>KEYBOARD</b> для <i>клавиши переключения программной клавиатуры</i>, \n
+<b>PREFERENCES</b> для <i>клавиши открытия настроек</i>, \n
+<b>MOUSE_HELPER</b> для <i>клавиши переключения помощника мыши</i>, \n
+<b>STYLUS_HELPER</b> для <i>клавиши переключения оверлея стилуса</i>, \n
+<b>EXIT</b> для <i>клавиши выхода из приложения</i>.</string>
+    <string name="lorie_notification_content_text">Потяните вниз для отображения параметров</string>
+    <string name="lorie_notification_open_preferences">Настройки</string>
+    <string name="lorie_notification_exit">Выход</string>
+    <string name="lorie_notification_restart_activity">Перезапуск</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Переключить IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Переключить доп. клавиатуру</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Освободить захваты</string>
+    <string name="lorie_notification_toggle_fullscreen">Переключить полный экран</string>
+
+    <string name="lorie_pref_main">Настройки</string>
+    <string name="lorie_pref_output">Вывод</string>
+    <string name="lorie_pref_pointer">Указатель</string>
+    <string name="lorie_pref_kbd">Клавиатура</string>
+    <string name="lorie_pref_other">Прочее</string>
+    <string name="lorie_pref_version">Версия</string>
+    <string name="lorie_pref_ekbar">Настройки панели дополнительных клавиш</string>
+    <string name="lorie_pref_userActions">Реакция на действия пользователя</string>
+
+    <string name="lorie_pref_displayResolutionMode">Режим разрешения дисплея</string>
+    <string name="lorie_pref_displayScale">Масштаб дисплея, %</string>
+    <string name="lorie_pref_displayResolutionExact">Разрешение дисплея</string>
+    <string name="lorie_pref_displayResolutionCustom">Разрешение дисплея</string>
+    <string name="lorie_pref_displayFilteringMode">Режим фильтрации дисплея</string>
+    <string name="lorie_pref_adjustResolution">Подгонять разрешение под ориентацию экрана</string>
+    <string name="lorie_pref_displayStretch">Растянуть по размеру дисплея</string>
+    <string name="lorie_pref_Reseed">Изменять размер экрана при открытой программной клавиатуре</string>
+    <string name="lorie_pref_Reseed_summary">Размер экрана будет изменён при открытой программной клавиатуре.</string>
+    <string name="lorie_pref_PIP">Режим «картинка в картинке»</string>
+    <string name="lorie_pref_PIP_summary">Показывать приложение в режиме PIP при нажатии кнопки «Домой» или кнопки недавних приложений</string>
+    <string name="lorie_pref_fullscreen">Полный экран</string>
+    <string name="lorie_pref_fullscreen_summary">Переключить иммерсивный режим на дисплее вашего устройства</string>
+    <string name="lorie_pref_forceOrientation">Ориентация экрана</string>
+    <string name="lorie_pref_hideCutout">Скрыть вырез дисплея (если есть)</string>
+    <string name="lorie_pref_keepScreenOn">Не выключать экран</string>
+
+    <string name="lorie_pref_touchMode">Режим ввода с сенсорного экрана</string>
+    <string name="lorie_pref_scaleTouchpad">Применить коэффициент масштаба дисплея к тачпаду</string>
+    <string name="lorie_pref_showStylusClickOverride">Показать параметры клика стилуса</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Переопределение касания стилуса, левый, средний или правый клик (только стилус)</string>
+    <string name="lorie_pref_stylusIsMouse">Включить режим мыши для стилуса</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Заставьте стилус работать как мышь. При активации стилус будет только перемещать курсор и отправлять клики мыши, игнорируя давление, угол и наклон.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Режим модификатора контакта кнопки стилуса</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Включите эту опцию, чтобы отправлять правую или среднюю кнопку мыши только при касании стилусом экрана с нажатой кнопкой.</string>
+    <string name="lorie_pref_showMouseHelper">Показать оверлей помощника кликов мыши</string>
+    <string name="lorie_pref_showMouseHelper_summary">Экранные кнопки мыши, используемые с тачпадом</string>
+    <string name="lorie_pref_pointerCapture">Захватывать внешние указывающие устройства, когда это возможно</string>
+    <string name="lorie_pref_pointerCapture_summary">Перехватывать все аппаратные события указателя. Указатель возвращается в Android после нажатия клавиши Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Преобразовывать движения захваченного указателя</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Коэффициент скорости захваченного указателя, %</string>
+    <string name="lorie_pref_tapToMove">Включить касание-для-перемещения для тачпадов</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Игнорировать события ввода с геймпада</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Предотвратить пересылку событий геймпада и джойстика на X-сервер</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Показать дополнительную клавиатуру</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Показать клавиатуру с дополнительными клавишами.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Показывать IME при подключённой внешней клавиатуре</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Показывать программную клавиатуру, когда подключена аппаратная клавиатура.</string>
+    <string name="lorie_pref_preferScancodes">Предпочитать скан-коды, когда это возможно</string>
+    <string name="lorie_pref_preferScancodes_summary">Позволить X-серверу обрабатывать раскладку аппаратной клавиатуры (с настройками DE или setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Обходное решение для скан-кодов аппаратной клавиатуры</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Исправляет скан-коды на некоторых устройствах. Может вызвать проблемы с несколькими раскладками.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Перехватывать системные сочетания клавиш</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Только Samsung Dex. Позволяет перехватывать «Alt+F4», «Meta+D», «Meta+E» и т.д.</string>
+    <string name="lorie_pref_enableAccessibilityService">Включить службу специальных возможностей для ручного перехвата системных сочетаний клавиш.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Открыть настройки специальных возможностей.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Включить службу специальных возможностей для автоматического перехвата системных сочетаний клавиш.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Требуется разрешение WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Приостановить перехват клавиш клавишей Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Отфильтровывать перехваченную клавишу Win (Meta/Mod4).</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Позволяет использовать сочетания Dex во время перехвата. Требуется служба специальных возможностей.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Принудительный посимвольный ввод</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Подавляет подсказки, предиктивный ввод и CJK-языки</string>
+
+    <string name="lorie_pref_clipboardEnable">Общий буфер обмена</string>
+    <string name="lorie_pref_requestNotificationPermission">Запросить разрешение на уведомления</string>
+    <string name="lorie_pref_xrMode">Режим Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">Настроить реакцию на действия пользователя</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Хранить настройки для дополнительных дисплеев отдельно</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Откройте этот экран на дисплее, который хотите настроить</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Настроить высоту дисплея для панели дополнительных клавиш</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Может вызвать мерцание экрана при переключении панели дополнительных клавиш.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Деактивировать специальные клавиши на панели дополнительных клавиш после каждого нажатия</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Используйте долгое нажатие для блокировки специальных клавиш</string>
+    <string name="lorie_pref_opacityEKBar">Непрозрачность панели дополнительных клавиш, %</string>
+    <string name="lorie_pref_extra_keys_config">Конфигурация дополнительных клавиш</string>
+
+    <string name="lorie_pref_swipeUpAction">Смахивание тремя пальцами вверх</string>
+    <string name="lorie_pref_swipeDownAction">Смахивание тремя пальцами вниз</string>
+    <string name="lorie_pref_volumeUpAction">Увеличение громкости</string>
+    <string name="lorie_pref_volumeDownAction">Уменьшение громкости</string>
+    <string name="lorie_pref_backButtonAction">Кнопка «Назад»</string>
+    <string name="lorie_pref_notificationTapAction">Касание уведомления</string>
+    <string name="lorie_pref_notificationButton0Action">Первая кнопка уведомления</string>
+    <string name="lorie_pref_notificationButton1Action">Вторая кнопка уведомления</string>
+    <string name="lorie_pref_mediaKeysAction">Мультимедийные клавиши</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Требуется, чтобы «режим разрешения дисплея» был «exact» или «custom»</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Требуется перехват системных сочетаний клавиш с помощью режима Dex или службы специальных возможностей</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Требуется, чтобы «режим ввода с сенсорного экрана» был «Trackpad», а «режим разрешения дисплея» не был «native»</string>
+
+    <string name="lorie_touchMode_trackpad">Тачпад</string>
+    <string name="lorie_touchMode_simulated">Симуляция сенсорного экрана</string>
+    <string name="lorie_touchMode_direct">Прямое касание</string>
+
+    <string name="lorie_displayResolution_native">исходное</string>
+    <string name="lorie_displayResolution_scaled">масштабированное</string>
+    <string name="lorie_displayResolution_exact">точное</string>
+    <string name="lorie_displayResolution_custom">своё</string>
+
+    <string name="lorie_displayFiltering_bilinear">билинейное</string>
+    <string name="lorie_displayFiltering_nearest">ближайшего соседа</string>
+
+    <string name="lorie_transformCapturedPointer_no">Нет</string>
+    <string name="lorie_transformCapturedPointer_cw">По часовой стрелке</string>
+    <string name="lorie_transformCapturedPointer_cc">Против часовой стрелки</string>
+    <string name="lorie_transformCapturedPointer_ud">Вверх ногами</string>
+    <string name="lorie_transformCapturedPointer_at">Автоматически (для тачпада)</string>
+
+    <string name="lorie_userAction_noAction">нет действия</string>
+    <string name="lorie_userAction_noActionWithText">нет действия (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">переключить прогр. клавиатуру</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">переключить панель доп. клавиш</string>
+    <string name="lorie_userAction_openPreferences">открыть настройки</string>
+    <string name="lorie_userAction_releaseCaptures">освободить захват указателя и клавиатуры</string>
+    <string name="lorie_userAction_toggleFullscreen">переключить полный экран</string>
+    <string name="lorie_userAction_restartActivity">перезапустить активность</string>
+    <string name="lorie_userAction_exit">выход</string>
+    <string name="lorie_userAction_sendVolumeDown">отправить уменьшение громкости</string>
+    <string name="lorie_userAction_sendVolumeUp">отправить увеличение громкости</string>
+    <string name="lorie_userAction_sendMediaAction">отправить медиа-действие</string>
+    <string name="lorie_userAction_androidVolumeControl">управление громкостью Android</string>
+    <string name="lorie_userAction_androidMediaControl">управление медиа Android</string>
+
+    <string name="lorie_orientation_auto">авто</string>
+    <string name="lorie_orientation_portrait">портретная</string>
+    <string name="lorie_orientation_landscape">альбомная</string>
+    <string name="lorie_orientation_reversePortrait">обратная портретная</string>
+    <string name="lorie_orientation_reverseLandscape">обратная альбомная</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Скопировано в буфер обмена</string>
+    <string name="lorie_toast_wrong_resolution_format">Неверный формат разрешения</string>
+    <string name="lorie_dialog_permission_denied_title">Доступ запрещён</string>
+    <string name="lorie_dialog_permission_denied_message">Android требует разрешение WRITE_SECURE_SETTINGS для автоматического запуска службы специальных возможностей.\nПожалуйста, выполните эту команду через ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Не удалось загрузить нативную библиотеку. Вы установили правильный APK? Попробуйте universal-версию.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

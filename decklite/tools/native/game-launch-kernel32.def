@@ -1,0 +1,19 @@
+LIBRARY kernel32.dll
+EXPORTS
+MoveFileExW
+DeleteFileW
+CreateFileW
+GetTempPathW
+GetCurrentProcessId
+GetCommandLineW
+CreateProcessW
+WaitForSingleObject
+GetExitCodeProcess
+CloseHandle
+GetTickCount
+Sleep
+ExitProcess
+GetLastError
+GetStdHandle
+WriteFile
+GetEnvironmentVariableW

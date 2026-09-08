@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Nav savienots</string>
+    <string name="preferences_button_text">   IESTATĪJUMI   </string>
+    <string name="help_button_text">   PALĪDZĪBA   </string>
+    <string name="exit_button_text">   IZIET   </string>
+    <string name="extra_keys_config_desc">Šeit jūs varat iestatīt extra-keys mainīgā vērtību tāpat kā Termux lietotnē (lasiet <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">šo</a>) un vēl vairāk \n
+Piem., <b>META</b> priekš <i>META taustiņa</i>, \n
+<b>KEYBOARD</b> priekš <i>programmatūras tastatūras pārslēgšanas taustiņa</i>, \n
+<b>PREFERENCES</b> priekš <i>iestatījumu atvēršanas taustiņa</i>, \n
+<b>MOUSE_HELPER</b> priekš <i>peles palīga pārslēgšanas taustiņa</i>, \n
+<b>STYLUS_HELPER</b> priekš <i>irbuļa klikšķa pārklājuma pārslēgšanas taustiņa</i>, \n
+<b>EXIT</b> priekš <i>lietotnes iziešanas taustiņa</i>.</string>
+    <string name="lorie_notification_content_text">Velciet uz leju, lai parādītu opcijas</string>
+    <string name="lorie_notification_open_preferences">Iestatījumi</string>
+    <string name="lorie_notification_exit">Iziet</string>
+    <string name="lorie_notification_restart_activity">Pārstartēt</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Pārslēgt IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Pārslēgt papildu tastatūru</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Atbrīvot tveršanu</string>
+    <string name="lorie_notification_toggle_fullscreen">Pārslēgt pilnekrānu</string>
+
+    <string name="lorie_pref_main">Iestatījumi</string>
+    <string name="lorie_pref_output">Izvade</string>
+    <string name="lorie_pref_pointer">Rādītājs</string>
+    <string name="lorie_pref_kbd">Tastatūra</string>
+    <string name="lorie_pref_other">Cits</string>
+    <string name="lorie_pref_version">Versija</string>
+    <string name="lorie_pref_ekbar">Papildu taustiņu joslas iestatījumi</string>
+    <string name="lorie_pref_userActions">Atbilde uz lietotāja darbībām</string>
+
+    <string name="lorie_pref_displayResolutionMode">Displeja izšķirtspējas režīms</string>
+    <string name="lorie_pref_displayScale">Displeja mērogs, %</string>
+    <string name="lorie_pref_displayResolutionExact">Displeja izšķirtspēja</string>
+    <string name="lorie_pref_displayResolutionCustom">Displeja izšķirtspēja</string>
+    <string name="lorie_pref_displayFilteringMode">Displeja filtrēšanas režīms</string>
+    <string name="lorie_pref_adjustResolution">Pielāgot iestatīto izšķirtspēju ekrāna orientācijai</string>
+    <string name="lorie_pref_displayStretch">Izstiept, lai atbilstu displejam</string>
+    <string name="lorie_pref_Reseed">Pārregulēt ekrānu, kamēr programmatūras tastatūra ir atvērta</string>
+    <string name="lorie_pref_Reseed_summary">Ekrāna izmērs tiks pielāgots, kamēr programmatūras tastatūra ir atvērta.</string>
+    <string name="lorie_pref_PIP">Attēls attēlā režīms</string>
+    <string name="lorie_pref_PIP_summary">Rādīt lietotni PIP režīmā, kad tiek nospiesta sākuma poga vai neseno lietotņu poga</string>
+    <string name="lorie_pref_fullscreen">Pilnekrāns</string>
+    <string name="lorie_pref_fullscreen_summary">Pārslēgt iegremdējošo režīmu jūsu ierīces displejā</string>
+    <string name="lorie_pref_forceOrientation">Ekrāna orientācija</string>
+    <string name="lorie_pref_hideCutout">Paslēpt displeja izgriezumu (ja tāds ir)</string>
+    <string name="lorie_pref_keepScreenOn">Saglabāt ekrānu ieslēgtu</string>
+
+    <string name="lorie_pref_touchMode">Skārienekrāna ievades režīms</string>
+    <string name="lorie_pref_scaleTouchpad">Piemērot displeja mēroga koeficientu skārienpaliktnim</string>
+    <string name="lorie_pref_showStylusClickOverride">Rādīt irbuļa klikšķa opcijas</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Irbuļa pieskāriena pārrakstīšana, kreisais, vidējais vai labais klikšķis (tikai irbulim)</string>
+    <string name="lorie_pref_stylusIsMouse">Iespējot irbuļa peles režīmu</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Liek jūsu irbulim darboties kā pelei. Kad aktivizēts, irbulis tikai pārvietos kursoru un sūtīs peles klikšķus, ignorējot spiedienu, leņķi un slīpumu.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Irbuļa pogas kontakta modifikatora režīms</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Iespējojiet šo opciju, lai sūtītu labās vai vidējās peles pogas tikai tad, kad irbulis pieskaras ekrānam, kamēr poga ir nospiesta.</string>
+    <string name="lorie_pref_showMouseHelper">Rādīt peles klikšķa palīga pārklājumu</string>
+    <string name="lorie_pref_showMouseHelper_summary">Ekrāna peles pogas, ko var izmantot ar skārienpaliktni</string>
+    <string name="lorie_pref_pointerCapture">Tvert ārējās rādītājierīces, kad iespējams</string>
+    <string name="lorie_pref_pointerCapture_summary">Pārtvert visus aparatūras rādītāja notikumus. Rādītājs atgriežas Android pēc Escape taustiņa nospiešanas.</string>
+    <string name="lorie_pref_transformCapturedPointer">Pārveidot tvertā rādītāja kustības</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Tvertā rādītāja ātruma koeficients, %</string>
+    <string name="lorie_pref_tapToMove">Iespējot pieskārienu-pārvietošanai skārienpaliktņiem</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorēt spēļu paneļa ievades notikumus</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Novērst spēļu paneļa un kursorsviras notikumu pārsūtīšanu uz X serveri</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Rādīt papildu tastatūru</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Rādīt tastatūru ar papildu taustiņiem.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Rādīt IME ar ārējo tastatūru</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Rādīt programmatūras tastatūru, kamēr aparatūras tastatūra ir pievienota.</string>
+    <string name="lorie_pref_preferScancodes">Dot priekšroku skenēšanas kodiem, kad iespējams</string>
+    <string name="lorie_pref_preferScancodes_summary">Ļaut X serverim apstrādāt aparatūras tastatūras izkārtojumu (ar DE iestatījumiem vai setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Aparatūras tastatūras skenēšanas kodu risinājums</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Labo skenēšanas kodus dažās ierīcēs. Var radīt problēmas ar vairākiem izkārtojumiem.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Pārtvert sistēmas īsceļus</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Tikai Samsung Dex. Ļauj pārtvert \"Alt+F4\", \"Meta+D\", \"Meta+E\" utt.</string>
+    <string name="lorie_pref_enableAccessibilityService">Iespējot piekļuves pakalpojumu, lai manuāli pārtvertu sistēmas īsceļus.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Atvērt piekļuves iestatījumus.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Iespējot piekļuves pakalpojumu, lai automātiski pārtvertu sistēmas īsceļus.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Nepieciešama WRITE_SECURE_SETTINGS atļauja.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Apturēt taustiņu pārtveršanu ar Esc taustiņu</string>
+    <string name="lorie_pref_filterOutWinkey">Filtrēt pārtverto Win (Meta/Mod4) taustiņu.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Ļauj izmantot Dex īsceļus pārtveršanas laikā. Nepieciešams piekļuves pakalpojums, lai darbotos.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Piespiest uz rakstzīmēm balstītu ievadi</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Nomāc ieteikumus, paredzamo rakstīšanu un CJK valodas</string>
+
+    <string name="lorie_pref_clipboardEnable">Starpliktuves koplietošana</string>
+    <string name="lorie_pref_requestNotificationPermission">Pieprasīt paziņojumu atļauju</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR režīms</string>
+    <string name="lorie_pref_configureResponseToUserActions">Konfigurēt atbildi uz lietotāja darbībām</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Saglabāt sekundāro displeju iestatījumus atsevišķi</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Atveriet šo ekrānu displejā, kuru vēlaties konfigurēt</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Pielāgot displeja augstumu papildu taustiņu joslai</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Var izraisīt ekrāna mirgošanu, pārslēdzot papildu taustiņu joslu.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Deaktivizēt speciālos taustiņus papildu taustiņu joslā pēc katras taustiņa nospiešanas</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Izmantojiet ilgu pieskārienu, lai bloķētu speciālos taustiņus</string>
+    <string name="lorie_pref_opacityEKBar">Papildu taustiņu joslas necaurredzamība, %</string>
+    <string name="lorie_pref_extra_keys_config">Papildu taustiņu konfigurācija</string>
+
+    <string name="lorie_pref_swipeUpAction">Trīs pirkstu vilkšana uz augšu</string>
+    <string name="lorie_pref_swipeDownAction">Trīs pirkstu vilkšana uz leju</string>
+    <string name="lorie_pref_volumeUpAction">Skaļums uz augšu</string>
+    <string name="lorie_pref_volumeDownAction">Skaļums uz leju</string>
+    <string name="lorie_pref_backButtonAction">Atpakaļ poga</string>
+    <string name="lorie_pref_notificationTapAction">Paziņojuma pieskāriens</string>
+    <string name="lorie_pref_notificationButton0Action">Paziņojuma pirmā poga</string>
+    <string name="lorie_pref_notificationButton1Action">Paziņojuma otrā poga</string>
+    <string name="lorie_pref_mediaKeysAction">Multivides taustiņi</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Nepieciešams, lai \"displeja izšķirtspējas režīms\" būtu \"exact\" vai \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Nepieciešams pārtvert sistēmas īsceļus ar Dex režīmu vai piekļuves pakalpojumu</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Nepieciešams, lai \"skārienekrāna ievades režīms\" būtu \"Trackpad\" un \"displeja izšķirtspējas režīms\" nebūtu \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Skārienpaliktnis</string>
+    <string name="lorie_touchMode_simulated">Simulēts skārienekrāns</string>
+    <string name="lorie_touchMode_direct">Tiešs pieskāriens</string>
+
+    <string name="lorie_displayResolution_native">native</string>
+    <string name="lorie_displayResolution_scaled">mērogots</string>
+    <string name="lorie_displayResolution_exact">precīzs</string>
+    <string name="lorie_displayResolution_custom">pielāgots</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilineārs</string>
+    <string name="lorie_displayFiltering_nearest">tuvākais kaimiņš</string>
+
+    <string name="lorie_transformCapturedPointer_no">Nē</string>
+    <string name="lorie_transformCapturedPointer_cw">Pulksteņrādītāja virzienā</string>
+    <string name="lorie_transformCapturedPointer_cc">Pretēji pulksteņrādītāja virzienam</string>
+    <string name="lorie_transformCapturedPointer_ud">Otrādi</string>
+    <string name="lorie_transformCapturedPointer_at">Automātiski (skārienpaliktnim)</string>
+
+    <string name="lorie_userAction_noAction">nav darbības</string>
+    <string name="lorie_userAction_noActionWithText">nav darbības (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">pārslēgt programmatūras tastatūru</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">pārslēgt papildu taustiņu joslu</string>
+    <string name="lorie_userAction_openPreferences">atvērt iestatījumus</string>
+    <string name="lorie_userAction_releaseCaptures">atbrīvot rādītāja un tastatūras tveršanu</string>
+    <string name="lorie_userAction_toggleFullscreen">pārslēgt pilnekrānu</string>
+    <string name="lorie_userAction_restartActivity">pārstartēt aktivitāti</string>
+    <string name="lorie_userAction_exit">iziet</string>
+    <string name="lorie_userAction_sendVolumeDown">sūtīt skaļumu uz leju</string>
+    <string name="lorie_userAction_sendVolumeUp">sūtīt skaļumu uz augšu</string>
+    <string name="lorie_userAction_sendMediaAction">sūtīt multivides darbību</string>
+    <string name="lorie_userAction_androidVolumeControl">Android skaļuma kontrole</string>
+    <string name="lorie_userAction_androidMediaControl">Android multivides kontrole</string>
+
+    <string name="lorie_orientation_auto">automātiski</string>
+    <string name="lorie_orientation_portrait">portrets</string>
+    <string name="lorie_orientation_landscape">ainava</string>
+    <string name="lorie_orientation_reversePortrait">apgriezts portrets</string>
+    <string name="lorie_orientation_reverseLandscape">apgriezta ainava</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Kopēts starpliktuvē</string>
+    <string name="lorie_toast_wrong_resolution_format">Nepareizs izšķirtspējas formāts</string>
+    <string name="lorie_dialog_permission_denied_title">Atļauja liegta</string>
+    <string name="lorie_dialog_permission_denied_message">Android nepieciešama WRITE_SECURE_SETTINGS atļauja, lai automātiski startētu piekļuves pakalpojumu.\nLūdzu, palaidiet šo komandu, izmantojot ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Neizdevās ielādēt native bibliotēku. Vai instalējāt pareizo APK? Izmēģiniet universal versiju.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

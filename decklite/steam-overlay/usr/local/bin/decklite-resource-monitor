@@ -1,0 +1,378 @@
+#!/usr/bin/env python3
+"""Live CPU, memory, process, and KGSL GPU monitor for Android PRoot."""
+
+from __future__ import annotations
+
+import glob
+import os
+import re
+import sys
+import time
+
+import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import GLib, Gtk  # noqa: E402
+
+
+CLOCK_TICKS = os.sysconf("SC_CLK_TCK")
+PAGE_SIZE = os.sysconf("SC_PAGE_SIZE")
+NUMBER = re.compile(r"-?\d+(?:\.\d+)?")
+
+
+def read_text(path: str) -> str:
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as handle:
+            return handle.read().strip()
+    except (OSError, PermissionError):
+        return ""
+
+
+def first_number(path: str) -> float | None:
+    match = NUMBER.search(read_text(path))
+    return float(match.group(0)) if match else None
+
+
+def online_cpus() -> list[int]:
+    value = read_text("/sys/devices/system/cpu/online")
+    cpus: set[int] = set()
+    for group in value.split(","):
+        if not group:
+            continue
+        if "-" in group:
+            start, end = group.split("-", 1)
+            cpus.update(range(int(start), int(end) + 1))
+        else:
+            cpus.add(int(group))
+    return sorted(cpus) or list(range(os.cpu_count() or 1))
+
+
+def idle_microseconds(cpus: list[int]) -> int | None:
+    total = 0
+    found = False
+    for cpu in cpus:
+        for path in glob.glob(
+            f"/sys/devices/system/cpu/cpu{cpu}/cpuidle/state*/time"
+        ):
+            value = first_number(path)
+            if value is not None:
+                total += int(value)
+                found = True
+    return total if found else None
+
+
+def memory_info() -> dict[str, int]:
+    result: dict[str, int] = {}
+    for line in read_text("/proc/meminfo").splitlines():
+        if ":" not in line:
+            continue
+        key, raw = line.split(":", 1)
+        match = NUMBER.search(raw)
+        if match:
+            result[key] = int(float(match.group(0))) * 1024
+    return result
+
+
+def process_snapshot() -> dict[int, dict[str, int | str]]:
+    result: dict[int, dict[str, int | str]] = {}
+    for entry in glob.glob("/proc/[0-9]*"):
+        try:
+            pid = int(entry.rsplit("/", 1)[-1])
+            stat = read_text(f"{entry}/stat")
+            close = stat.rfind(")")
+            open_ = stat.find("(")
+            if open_ < 0 or close < 0:
+                continue
+            fields = stat[close + 2 :].split()
+            if len(fields) < 22:
+                continue
+            name = stat[open_ + 1 : close]
+            ticks = int(fields[11]) + int(fields[12])
+            rss = max(0, int(fields[21])) * PAGE_SIZE
+            command = read_text(f"{entry}/cmdline").replace("\x00", " ").strip()
+            result[pid] = {
+                "name": name,
+                "state": fields[0],
+                "ticks": ticks,
+                "rss": rss,
+                "command": command or name,
+            }
+        except (OSError, PermissionError, ValueError, IndexError):
+            continue
+    return result
+
+
+def format_bytes(value: float) -> str:
+    for suffix in ("B", "KiB", "MiB", "GiB", "TiB"):
+        if abs(value) < 1024.0 or suffix == "TiB":
+            return f"{value:.1f} {suffix}"
+        value /= 1024.0
+    return "0 B"
+
+
+def self_test() -> int:
+    """Print two live samples without requiring X11."""
+    cpus = online_cpus()
+    idle_before = idle_microseconds(cpus)
+    processes_before = process_snapshot()
+    started = time.monotonic()
+    time.sleep(1.0)
+    elapsed = max(0.001, time.monotonic() - started)
+    idle_after = idle_microseconds(cpus)
+    processes_after = process_snapshot()
+
+    device_cpu: float | None = None
+    if idle_before is not None and idle_after is not None:
+        capacity = elapsed * len(cpus) * 1_000_000
+        device_cpu = 100.0 * (
+            1.0 - max(0, idle_after - idle_before) / capacity
+        )
+        device_cpu = max(0.0, min(100.0, device_cpu))
+
+    old_ticks = sum(int(item["ticks"]) for item in processes_before.values())
+    new_ticks = sum(int(item["ticks"]) for item in processes_after.values())
+    container_cpu = max(
+        0.0,
+        (new_ticks - old_ticks) / CLOCK_TICKS / elapsed * 100.0 / len(cpus),
+    )
+    gpu = first_number("/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage")
+    mem = memory_info()
+    print(f"DEVICE_CPU={device_cpu if device_cpu is not None else 'unavailable'}")
+    print(f"CONTAINER_CPU={container_cpu}")
+    print(f"GPU={gpu if gpu is not None else 'unavailable'}")
+    print(f"MEM_TOTAL={mem.get('MemTotal', 0)}")
+    print(f"READABLE_PROCESSES={len(processes_after)}")
+    return 0 if device_cpu is not None and mem.get("MemTotal") and processes_after else 1
+
+
+class Metric:
+    def __init__(self, title: str):
+        self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
+        self.title = Gtk.Label(label=title, xalign=0)
+        self.title.get_style_context().add_class("heading")
+        self.bar = Gtk.ProgressBar(show_text=True)
+        self.detail = Gtk.Label(xalign=0)
+        self.box.pack_start(self.title, False, False, 0)
+        self.box.pack_start(self.bar, False, False, 0)
+        self.box.pack_start(self.detail, False, False, 0)
+
+    def set(self, percentage: float | None, text: str, detail: str) -> None:
+        if percentage is None:
+            self.bar.set_fraction(0)
+        else:
+            self.bar.set_fraction(max(0.0, min(1.0, percentage / 100.0)))
+        self.bar.set_text(text)
+        self.detail.set_text(detail)
+
+
+class ResourceMonitor(Gtk.Window):
+    def __init__(self) -> None:
+        super().__init__(title="DeckLite Resource Monitor")
+        self.set_default_size(1060, 700)
+        self.set_icon_name("org.gnome.SystemMonitor")
+        self.connect("destroy", Gtk.main_quit)
+
+        settings = Gtk.Settings.get_default()
+        if settings:
+            settings.set_property("gtk-application-prefer-dark-theme", True)
+
+        outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
+        outer.set_border_width(14)
+        self.add(outer)
+
+        heading = Gtk.Label(
+            label="Live device and Tiny Container resource usage", xalign=0
+        )
+        heading.get_style_context().add_class("title")
+        outer.pack_start(heading, False, False, 0)
+
+        metrics = Gtk.Grid(column_spacing=18, row_spacing=10)
+        self.device_cpu = Metric("Device CPU")
+        self.container_cpu = Metric("Container CPU")
+        self.gpu = Metric("GPU")
+        self.memory = Metric("Device memory")
+        metrics.attach(self.device_cpu.box, 0, 0, 1, 1)
+        metrics.attach(self.container_cpu.box, 1, 0, 1, 1)
+        metrics.attach(self.gpu.box, 0, 1, 1, 1)
+        metrics.attach(self.memory.box, 1, 1, 1, 1)
+        metrics.set_column_homogeneous(True)
+        outer.pack_start(metrics, False, False, 0)
+
+        notebook = Gtk.Notebook()
+        outer.pack_start(notebook, True, True, 0)
+
+        self.process_model = Gtk.ListStore(int, str, float, str, str, str)
+        tree = Gtk.TreeView(model=self.process_model)
+        columns = (
+            ("PID", 0),
+            ("Process", 1),
+            ("CPU (one core)", 2),
+            ("RAM", 3),
+            ("State", 4),
+            ("Command", 5),
+        )
+        for title, index in columns:
+            if index == 2:
+                renderer = Gtk.CellRendererText()
+                column = Gtk.TreeViewColumn(title, renderer)
+                column.set_cell_data_func(
+                    renderer,
+                    lambda col, cell, model, iterator, data: cell.set_property(
+                        "text", f"{model[iterator][2]:.1f}%"
+                    ),
+                )
+            else:
+                renderer = Gtk.CellRendererText()
+                column = Gtk.TreeViewColumn(title, renderer, text=index)
+            column.set_resizable(True)
+            column.set_sort_column_id(index)
+            tree.append_column(column)
+        self.process_model.set_sort_column_id(2, Gtk.SortType.DESCENDING)
+        process_scroll = Gtk.ScrolledWindow()
+        process_scroll.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
+        process_scroll.add(tree)
+        notebook.append_page(process_scroll, Gtk.Label(label="Processes"))
+
+        self.hardware = Gtk.Label(xalign=0, yalign=0)
+        self.hardware.set_selectable(True)
+        self.hardware.set_line_wrap(True)
+        hardware_scroll = Gtk.ScrolledWindow()
+        hardware_scroll.add(self.hardware)
+        notebook.append_page(hardware_scroll, Gtk.Label(label="Hardware details"))
+
+        self.status = Gtk.Label(
+            label="Shows every process readable by the Tiny Container Android UID.",
+            xalign=0,
+        )
+        outer.pack_start(self.status, False, False, 0)
+
+        self.cpus = online_cpus()
+        self.previous_time = time.monotonic()
+        self.previous_idle = idle_microseconds(self.cpus)
+        self.previous_processes = process_snapshot()
+        GLib.timeout_add_seconds(1, self.refresh)
+        self.refresh()
+
+    def refresh(self) -> bool:
+        now = time.monotonic()
+        elapsed = max(0.001, now - self.previous_time)
+        current_idle = idle_microseconds(self.cpus)
+        processes = process_snapshot()
+
+        device_percentage: float | None = None
+        if current_idle is not None and self.previous_idle is not None:
+            idle_delta = max(0, current_idle - self.previous_idle)
+            capacity = elapsed * len(self.cpus) * 1_000_000
+            device_percentage = 100.0 * (1.0 - idle_delta / capacity)
+            device_percentage = max(0.0, min(100.0, device_percentage))
+        self.device_cpu.set(
+            device_percentage,
+            "Unavailable" if device_percentage is None else f"{device_percentage:.1f}%",
+            f"{len(self.cpus)} online cores; Android cpuidle counters",
+        )
+
+        old_total = sum(int(p["ticks"]) for p in self.previous_processes.values())
+        new_total = sum(int(p["ticks"]) for p in processes.values())
+        one_core = max(0.0, (new_total - old_total) / CLOCK_TICKS / elapsed * 100.0)
+        normalized = one_core / max(1, len(self.cpus))
+        self.container_cpu.set(
+            normalized,
+            f"{normalized:.1f}% of device",
+            f"{one_core:.1f}% of one core; {len(processes)} readable processes",
+        )
+
+        gpu_percentage = first_number(
+            "/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage"
+        )
+        if gpu_percentage is None:
+            values = [float(v) for v in NUMBER.findall(
+                read_text("/sys/class/kgsl/kgsl-3d0/gpubusy")
+            )]
+            if len(values) >= 2 and values[1] > 0:
+                gpu_percentage = 100.0 * values[0] / values[1]
+        gpu_frequency = first_number("/sys/class/kgsl/kgsl-3d0/devfreq/cur_freq")
+        gpu_detail = "Adreno KGSL live counter"
+        if gpu_frequency is not None:
+            gpu_detail += f"; {gpu_frequency / 1_000_000:.0f} MHz"
+        self.gpu.set(
+            gpu_percentage,
+            "Unavailable" if gpu_percentage is None else f"{gpu_percentage:.1f}%",
+            gpu_detail if gpu_percentage is not None else "No readable KGSL counter",
+        )
+
+        mem = memory_info()
+        total = mem.get("MemTotal", 0)
+        available = mem.get("MemAvailable", mem.get("MemFree", 0))
+        used = max(0, total - available)
+        memory_percentage = (100.0 * used / total) if total else None
+        process_rss = sum(int(p["rss"]) for p in processes.values())
+        self.memory.set(
+            memory_percentage,
+            "Unavailable"
+            if memory_percentage is None
+            else f"{memory_percentage:.1f}%",
+            f"{format_bytes(used)} / {format_bytes(total)}; readable RSS sum {format_bytes(process_rss)}",
+        )
+
+        rows = []
+        for pid, process in processes.items():
+            previous = self.previous_processes.get(pid)
+            delta = int(process["ticks"]) - int(previous["ticks"]) if previous else 0
+            cpu = max(0.0, delta / CLOCK_TICKS / elapsed * 100.0)
+            rows.append((cpu, pid, process))
+        rows.sort(reverse=True, key=lambda row: (row[0], int(row[2]["rss"])))
+        self.process_model.clear()
+        for cpu, pid, process in rows:
+            self.process_model.append(
+                [
+                    pid,
+                    str(process["name"]),
+                    cpu,
+                    format_bytes(int(process["rss"])),
+                    str(process["state"]),
+                    str(process["command"]),
+                ]
+            )
+
+        frequencies = []
+        for cpu in self.cpus:
+            value = first_number(
+                f"/sys/devices/system/cpu/cpu{cpu}/cpufreq/scaling_cur_freq"
+            )
+            if value is not None:
+                frequencies.append(f"CPU {cpu}: {value / 1000:.0f} MHz")
+        self.hardware.set_text(
+            "CPU frequencies\n"
+            + ("\n".join(frequencies) if frequencies else "Unavailable")
+            + "\n\nGPU source\n"
+            + (
+                "/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage"
+                if gpu_percentage is not None
+                else "No readable KGSL usage source"
+            )
+            + "\n\nScope\nDevice CPU and memory cover Android as a whole. "
+            "Container CPU, RSS, and the process table cover every process "
+            "that Android permits this app to read."
+        )
+
+        self.previous_time = now
+        self.previous_idle = current_idle
+        self.previous_processes = processes
+        return True
+
+
+def main() -> int:
+    if sys.argv[1:] == ["--self-test"]:
+        return self_test()
+    try:
+        window = ResourceMonitor()
+        window.show_all()
+        Gtk.main()
+        return 0
+    except Exception as exc:  # Keep a useful log when launched from the desktop.
+        print(f"Resource Monitor failed: {exc!r}", file=sys.stderr)
+        raise
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

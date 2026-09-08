@@ -1,0 +1,10 @@
+{
+  "release": "4.3.4",
+  "debugging_default": false,
+  "ssh_listen": "127.0.0.1:8027",
+  "authentication": "paired-ed25519-public-key",
+  "pairing_requires_apk_debugging_enabled": true,
+  "android_debuggable": false,
+  "ssh_start_requires_container_restart": true,
+  "private_keys_in_image": false
+}

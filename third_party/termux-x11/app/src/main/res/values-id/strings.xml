@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Tidak terhubung</string>
+    <string name="preferences_button_text">   PREFERENSI   </string>
+    <string name="help_button_text">   BANTUAN   </string>
+    <string name="exit_button_text">   KELUAR   </string>
+    <string name="extra_keys_config_desc">Di sini Anda dapat mengatur nilai variabel extra-keys seperti di aplikasi Termux (baca <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">ini</a>) dan lainnya \n
+Mis. <b>META</b> untuk <i>tombol META</i>, \n
+<b>KEYBOARD</b> untuk <i>tombol alih papan ketik lunak</i>, \n
+<b>PREFERENCES</b> untuk <i>tombol buka preferensi</i>, \n
+<b>MOUSE_HELPER</b> untuk <i>tombol alih bantuan mouse</i>, \n
+<b>STYLUS_HELPER</b> untuk <i>tombol alih overlay klik stylus</i>, \n
+<b>EXIT</b> untuk <i>tombol keluar aplikasi</i>.</string>
+    <string name="lorie_notification_content_text">Tarik ke bawah untuk menampilkan opsi</string>
+    <string name="lorie_notification_open_preferences">Preferensi</string>
+    <string name="lorie_notification_exit">Keluar</string>
+    <string name="lorie_notification_restart_activity">Mulai ulang</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Alihkan IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Alihkan papan ketik tambahan</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Lepaskan tangkapan</string>
+    <string name="lorie_notification_toggle_fullscreen">Alihkan layar penuh</string>
+
+    <string name="lorie_pref_main">Preferensi</string>
+    <string name="lorie_pref_output">Keluaran</string>
+    <string name="lorie_pref_pointer">Penunjuk</string>
+    <string name="lorie_pref_kbd">Papan Ketik</string>
+    <string name="lorie_pref_other">Lainnya</string>
+    <string name="lorie_pref_version">Versi</string>
+    <string name="lorie_pref_ekbar">Preferensi bilah tombol ekstra</string>
+    <string name="lorie_pref_userActions">Respons terhadap tindakan pengguna</string>
+
+    <string name="lorie_pref_displayResolutionMode">Mode resolusi layar</string>
+    <string name="lorie_pref_displayScale">Skala layar, %</string>
+    <string name="lorie_pref_displayResolutionExact">Resolusi layar</string>
+    <string name="lorie_pref_displayResolutionCustom">Resolusi layar</string>
+    <string name="lorie_pref_displayFilteringMode">Mode penyaringan layar</string>
+    <string name="lorie_pref_adjustResolution">Sesuaikan resolusi yang diatur agar sesuai dengan orientasi layar</string>
+    <string name="lorie_pref_displayStretch">Regangkan agar sesuai layar</string>
+    <string name="lorie_pref_Reseed">Ubah ukuran layar saat papan ketik lunak terbuka</string>
+    <string name="lorie_pref_Reseed_summary">Ukuran layar akan disesuaikan saat Papan Ketik Lunak terbuka.</string>
+    <string name="lorie_pref_PIP">Mode PIP</string>
+    <string name="lorie_pref_PIP_summary">Tampilkan aplikasi dalam mode PIP saat tombol beranda atau tombol terbaru ditekan</string>
+    <string name="lorie_pref_fullscreen">Layar penuh</string>
+    <string name="lorie_pref_fullscreen_summary">Alihkan mode imersif di layar perangkat Anda</string>
+    <string name="lorie_pref_forceOrientation">Orientasi layar</string>
+    <string name="lorie_pref_hideCutout">Sembunyikan potongan layar (jika ada)</string>
+    <string name="lorie_pref_keepScreenOn">Biarkan Layar Tetap Menyala</string>
+
+    <string name="lorie_pref_touchMode">Mode input layar sentuh</string>
+    <string name="lorie_pref_scaleTouchpad">Terapkan faktor skala layar ke touchpad</string>
+    <string name="lorie_pref_showStylusClickOverride">Tampilkan opsi klik stylus</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Override sentuhan stylus, klik kiri, tengah atau kanan (hanya stylus)</string>
+    <string name="lorie_pref_stylusIsMouse">Aktifkan mode mouse stylus</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Buat stylus Anda berfungsi seperti mouse. Saat diaktifkan, stylus hanya akan memindahkan kursor dan mengirim klik mouse, mengabaikan tekanan, sudut, dan kemiringan.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Mode pengubah kontak tombol stylus</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Aktifkan opsi ini untuk mengirim tombol mouse kanan atau tengah hanya saat stylus menyentuh layar ketika tombol ditekan.</string>
+    <string name="lorie_pref_showMouseHelper">Tampilkan overlay bantuan klik mouse</string>
+    <string name="lorie_pref_showMouseHelper_summary">Tombol mouse di layar yang dapat digunakan dengan touchpad</string>
+    <string name="lorie_pref_pointerCapture">Tangkap perangkat penunjuk eksternal bila memungkinkan</string>
+    <string name="lorie_pref_pointerCapture_summary">Intersepsi semua peristiwa penunjuk perangkat keras. Penunjuk kembali ke Android setelah menekan tombol Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Transformasikan gerakan penunjuk yang ditangkap</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Faktor kecepatan penunjuk yang ditangkap, %</string>
+    <string name="lorie_pref_tapToMove">Aktifkan ketuk-untuk-bergerak untuk touchpad</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Abaikan event input gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Cegah event gamepad dan joystick diteruskan ke server X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Tampilkan papan ketik tambahan</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Tampilkan papan ketik dengan tombol tambahan.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Tampilkan IME dengan papan ketik eksternal</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Tampilkan papan ketik perangkat lunak saat papan ketik perangkat keras terhubung.</string>
+    <string name="lorie_pref_preferScancodes">Utamakan kode pindai bila memungkinkan</string>
+    <string name="lorie_pref_preferScancodes_summary">Biarkan server X menangani tata letak papan ketik perangkat keras (dengan pengaturan DE atau setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Solusi kode pindai papan ketik perangkat keras</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Memperbaiki kode pindai pada beberapa perangkat. Dapat menyebabkan masalah dengan beberapa tata letak.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Intersepsi pintasan sistem</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Hanya Samsung Dex. Memungkinkan intersepsi \"Alt+F4\", \"Meta+D\", \"Meta+E\", dll.</string>
+    <string name="lorie_pref_enableAccessibilityService">Aktifkan layanan Aksesibilitas untuk mengintersepsi pintasan sistem secara manual.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Buka pengaturan Aksesibilitas.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Aktifkan layanan Aksesibilitas untuk mengintersepsi pintasan sistem secara otomatis.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Memerlukan izin WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Jeda intersepsi tombol dengan tombol Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Saring tombol Win (Meta/Mod4) yang diintersepsi.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Memungkinkan Anda menggunakan pintasan Dex selama intersepsi. Memerlukan layanan Aksesibilitas untuk bekerja.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Paksa input berbasis karakter</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Menekan saran, pengetikan prediktif, dan bahasa CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">Berbagi papan klip</string>
+    <string name="lorie_pref_requestNotificationPermission">Minta izin notifikasi</string>
+    <string name="lorie_pref_xrMode">Mode Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">Konfigurasi respons terhadap tindakan pengguna</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Simpan preferensi untuk layar sekunder secara terpisah</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Buka layar ini di layar yang ingin Anda konfigurasi</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Sesuaikan tinggi layar untuk bilah tombol ekstra</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Dapat menyebabkan layar berkedip saat mengganti bilah tombol ekstra.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Nonaktifkan tombol khusus pada bilah tombol ekstra setelah setiap penekanan tombol</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Gunakan ketukan panjang untuk mengunci tombol khusus</string>
+    <string name="lorie_pref_opacityEKBar">Opasitas bilah tombol ekstra, %</string>
+    <string name="lorie_pref_extra_keys_config">Konfigurasi tombol ekstra</string>
+
+    <string name="lorie_pref_swipeUpAction">Usap tiga jari ke atas</string>
+    <string name="lorie_pref_swipeDownAction">Usap tiga jari ke bawah</string>
+    <string name="lorie_pref_volumeUpAction">Volume naik</string>
+    <string name="lorie_pref_volumeDownAction">Volume turun</string>
+    <string name="lorie_pref_backButtonAction">Tombol kembali</string>
+    <string name="lorie_pref_notificationTapAction">Ketuk notifikasi</string>
+    <string name="lorie_pref_notificationButton0Action">Tombol notifikasi pertama</string>
+    <string name="lorie_pref_notificationButton1Action">Tombol notifikasi kedua</string>
+    <string name="lorie_pref_mediaKeysAction">Tombol media</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Memerlukan \"mode resolusi layar\" menjadi \"exact\" atau \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Memerlukan intersepsi pintasan sistem dengan mode Dex atau layanan Aksesibilitas</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Memerlukan \"mode input layar sentuh\" menjadi \"Trackpad\" dan \"mode resolusi layar\" bukan \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Touchpad</string>
+    <string name="lorie_touchMode_simulated">Layar sentuh tersimulasi</string>
+    <string name="lorie_touchMode_direct">Sentuhan langsung</string>
+
+    <string name="lorie_displayResolution_native">asli</string>
+    <string name="lorie_displayResolution_scaled">diskalakan</string>
+    <string name="lorie_displayResolution_exact">tepat</string>
+    <string name="lorie_displayResolution_custom">kustom</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilinear</string>
+    <string name="lorie_displayFiltering_nearest">tetangga terdekat</string>
+
+    <string name="lorie_transformCapturedPointer_no">Tidak</string>
+    <string name="lorie_transformCapturedPointer_cw">Searah jarum jam</string>
+    <string name="lorie_transformCapturedPointer_cc">Berlawanan arah jarum jam</string>
+    <string name="lorie_transformCapturedPointer_ud">Terbalik</string>
+    <string name="lorie_transformCapturedPointer_at">Otomatis (untuk touchpad)</string>
+
+    <string name="lorie_userAction_noAction">tidak ada tindakan</string>
+    <string name="lorie_userAction_noActionWithText">tidak ada tindakan (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">alihkan papan ketik lunak</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">alihkan bilah tombol tambahan</string>
+    <string name="lorie_userAction_openPreferences">buka preferensi</string>
+    <string name="lorie_userAction_releaseCaptures">lepas tangkapan penunjuk dan papan ketik</string>
+    <string name="lorie_userAction_toggleFullscreen">alihkan layar penuh</string>
+    <string name="lorie_userAction_restartActivity">mulai ulang aktivitas</string>
+    <string name="lorie_userAction_exit">keluar</string>
+    <string name="lorie_userAction_sendVolumeDown">kirim volume turun</string>
+    <string name="lorie_userAction_sendVolumeUp">kirim volume naik</string>
+    <string name="lorie_userAction_sendMediaAction">kirim tindakan media</string>
+    <string name="lorie_userAction_androidVolumeControl">kontrol volume Android</string>
+    <string name="lorie_userAction_androidMediaControl">kontrol media Android</string>
+
+    <string name="lorie_orientation_auto">otomatis</string>
+    <string name="lorie_orientation_portrait">potret</string>
+    <string name="lorie_orientation_landscape">lanskap</string>
+    <string name="lorie_orientation_reversePortrait">potret terbalik</string>
+    <string name="lorie_orientation_reverseLandscape">lanskap terbalik</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Disalin ke papan klip</string>
+    <string name="lorie_toast_wrong_resolution_format">Format resolusi salah</string>
+    <string name="lorie_dialog_permission_denied_title">Izin ditolak</string>
+    <string name="lorie_dialog_permission_denied_message">Android memerlukan izin WRITE_SECURE_SETTINGS untuk memulai layanan aksesibilitas secara otomatis.\nSilakan jalankan perintah ini menggunakan ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Gagal memuat pustaka native. Apakah Anda menginstal APK yang benar? Coba versi universal.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

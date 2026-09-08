@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Resource Monitor
+Comment=View all readable processes, CPU, memory, network, and filesystems
+Exec=/usr/local/bin/resource-monitor
+Icon=org.gnome.SystemMonitor
+Terminal=false
+Categories=System;Monitor;
+StartupNotify=true

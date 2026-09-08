@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Inte ansluten</string>
+    <string name="preferences_button_text">   INSTÄLLNINGAR   </string>
+    <string name="help_button_text">   HJÄLP   </string>
+    <string name="exit_button_text">   AVSLUTA   </string>
+    <string name="extra_keys_config_desc">Här kan du ställa in värdet på extra-keys-variabeln som i Termux-appen (läs <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">detta</a>) och mer \n
+T.ex. <b>META</b> för <i>META-tangent</i>, \n
+<b>KEYBOARD</b> för <i>tangent för att växla mjukvarutangentbord</i>, \n
+<b>PREFERENCES</b> för <i>tangent för att öppna inställningar</i>, \n
+<b>MOUSE_HELPER</b> för <i>tangent för att växla mushjälpare</i>, \n
+<b>STYLUS_HELPER</b> för <i>tangent för att växla pennklicksöverlägg</i>, \n
+<b>EXIT</b> för <i>tangent för att avsluta appen</i>.</string>
+    <string name="lorie_notification_content_text">Dra ner för att visa alternativ</string>
+    <string name="lorie_notification_open_preferences">Inställningar</string>
+    <string name="lorie_notification_exit">Avsluta</string>
+    <string name="lorie_notification_restart_activity">Starta om</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Växla IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Växla extra tangentbord</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Frigör fångster</string>
+    <string name="lorie_notification_toggle_fullscreen">Växla helskärm</string>
+
+    <string name="lorie_pref_main">Inställningar</string>
+    <string name="lorie_pref_output">Utdata</string>
+    <string name="lorie_pref_pointer">Pekare</string>
+    <string name="lorie_pref_kbd">Tangentbord</string>
+    <string name="lorie_pref_other">Övrigt</string>
+    <string name="lorie_pref_version">Version</string>
+    <string name="lorie_pref_ekbar">Inställningar för extra tangentrad</string>
+    <string name="lorie_pref_userActions">Svar på användaråtgärder</string>
+
+    <string name="lorie_pref_displayResolutionMode">Skärmupplösningsläge</string>
+    <string name="lorie_pref_displayScale">Skärmskala, %</string>
+    <string name="lorie_pref_displayResolutionExact">Skärmupplösning</string>
+    <string name="lorie_pref_displayResolutionCustom">Skärmupplösning</string>
+    <string name="lorie_pref_displayFilteringMode">Skärmfiltreringsläge</string>
+    <string name="lorie_pref_adjustResolution">Justera inställd upplösning efter skärmorientering</string>
+    <string name="lorie_pref_displayStretch">Sträck ut för att passa skärmen</string>
+    <string name="lorie_pref_Reseed">Justera om skärmen medan mjukvarutangentbordet är öppet</string>
+    <string name="lorie_pref_Reseed_summary">Skärmstorleken kommer att justeras medan Mjukvarutangentbordet är öppet.</string>
+    <string name="lorie_pref_PIP">Bild-i-bild-läge</string>
+    <string name="lorie_pref_PIP_summary">Visa app i PIP-läge när hemknappen eller senaste-appar-knappen trycks</string>
+    <string name="lorie_pref_fullscreen">Helskärm</string>
+    <string name="lorie_pref_fullscreen_summary">Växla fördjupande läge på din enhets skärm</string>
+    <string name="lorie_pref_forceOrientation">Skärmorientering</string>
+    <string name="lorie_pref_hideCutout">Dölj skärmutskärning (om någon)</string>
+    <string name="lorie_pref_keepScreenOn">Håll skärmen på</string>
+
+    <string name="lorie_pref_touchMode">Pekskärmsinmatningsläge</string>
+    <string name="lorie_pref_scaleTouchpad">Tillämpa skärmskalningsfaktor på pekplatta</string>
+    <string name="lorie_pref_showStylusClickOverride">Visa pennklicksalternativ</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Pennberöringsöverskrivning, vänster-, mitten- eller högerklick (endast penna)</string>
+    <string name="lorie_pref_stylusIsMouse">Aktivera pennmusläge</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Få din penna att fungera som en mus. När den är aktiverad kommer pennan bara att flytta markören och skicka musklick, och ignorera tryck, vinkel och lutning.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Pennknappskontaktmodifierarlåge</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Aktivera detta alternativ för att skicka höger- eller mittenmusklick endast när pennan rör vid skärmen medan knappen är intryckt.</string>
+    <string name="lorie_pref_showMouseHelper">Visa musklickshjälpsöverlägg</string>
+    <string name="lorie_pref_showMouseHelper_summary">Musklick på skärmen som kan användas med pekplatta</string>
+    <string name="lorie_pref_pointerCapture">Fånga externa pekarenheter när möjligt</string>
+    <string name="lorie_pref_pointerCapture_summary">Fånga upp alla hårdvarupekarhändelser. Pekaren återgår till Android efter att ha tryckt på Escape-tangenten.</string>
+    <string name="lorie_pref_transformCapturedPointer">Transformera fångade pekarrörelser</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Hastighetsfaktor för fångad pekare, %</string>
+    <string name="lorie_pref_tapToMove">Aktivera tryck-för-att-flytta för pekplattor</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorera inmatningshändelser från gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Förhindra att gamepad- och joystickhändelser vidarebefordras till X-servern</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Visa extra tangentbord</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Visa tangentbord med extra tangenter.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Visa IME med externt tangentbord</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Visa mjukvarutangentbord medan hårdvarutangentbord är anslutet.</string>
+    <string name="lorie_pref_preferScancodes">Föredra skanningskoder när möjligt</string>
+    <string name="lorie_pref_preferScancodes_summary">Låt X-servern hantera hårdvarutangentbordslayout (med DE-inställningar eller setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Lösning för hårdvarutangentbords skanningskoder</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Åtgärdar skanningskoder på vissa enheter. Kan orsaka problem med flera layouter.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Fånga upp systemgenvägar</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Endast Samsung Dex. Tillåter uppfångning av \"Alt+F4\", \"Meta+D\", \"Meta+E\", etc.</string>
+    <string name="lorie_pref_enableAccessibilityService">Aktivera Tillgänglighetstjänst för att manuellt fånga upp systemgenvägar.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Öppna Tillgänglighetsinställningar.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Aktivera Tillgänglighetstjänst för att automatiskt fånga upp systemgenvägar.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Kräver WRITE_SECURE_SETTINGS-behörighet.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Pausa tangentuppfångning med Esc-tangent</string>
+    <string name="lorie_pref_filterOutWinkey">Filtrera bort uppfångad Win-tangent (Meta/Mod4).</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Tillåter dig att använda Dex-genvägar under uppfångning. Kräver Tillgänglighetstjänst för att fungera.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Tvinga teckenbaserad inmatning</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Undertrycker förslag, prediktiv skrivning och CJK-språk</string>
+
+    <string name="lorie_pref_clipboardEnable">Urklippsdelningsdelning</string>
+    <string name="lorie_pref_requestNotificationPermission">Begär aviseringsbehörighet</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR-läge</string>
+    <string name="lorie_pref_configureResponseToUserActions">Konfigurera svar på användaråtgärder</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Lagra inställningar för sekundära skärmar separat</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Öppna denna skärm på den skärm du vill konfigurera</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Justera skärmhöjd för extra tangentrad</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Kan orsaka skärmflimmer vid växling av extra tangentrad.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Inaktivera specialtangenter på extra tangentrad efter varje tangenttryckning</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Använd långt tryck för att låsa specialtangenter</string>
+    <string name="lorie_pref_opacityEKBar">Opacitet för extra tangentrad, %</string>
+    <string name="lorie_pref_extra_keys_config">Konfiguration av extra tangenter</string>
+
+    <string name="lorie_pref_swipeUpAction">Svep med tre fingrar uppåt</string>
+    <string name="lorie_pref_swipeDownAction">Svep med tre fingrar nedåt</string>
+    <string name="lorie_pref_volumeUpAction">Volym upp</string>
+    <string name="lorie_pref_volumeDownAction">Volym ner</string>
+    <string name="lorie_pref_backButtonAction">Tillbaka-knapp</string>
+    <string name="lorie_pref_notificationTapAction">Aviseringstryck</string>
+    <string name="lorie_pref_notificationButton0Action">Första aviseringsknappen</string>
+    <string name="lorie_pref_notificationButton1Action">Andra aviseringsknappen</string>
+    <string name="lorie_pref_mediaKeysAction">Medietangenter</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Kräver att \"skärmupplösningsläge\" är \"exact\" eller \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Kräver uppfångning av systemgenvägar med Dex-läge eller Tillgänglighetstjänst</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Kräver att \"pekskärmsinmatningsläge\" är \"Trackpad\" och att \"skärmupplösningsläge\" inte är \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Pekplatta</string>
+    <string name="lorie_touchMode_simulated">Simulerad pekskärm</string>
+    <string name="lorie_touchMode_direct">Direkt beröring</string>
+
+    <string name="lorie_displayResolution_native">nativ</string>
+    <string name="lorie_displayResolution_scaled">skalad</string>
+    <string name="lorie_displayResolution_exact">exakt</string>
+    <string name="lorie_displayResolution_custom">anpassad</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilinjär</string>
+    <string name="lorie_displayFiltering_nearest">närmaste granne</string>
+
+    <string name="lorie_transformCapturedPointer_no">Nej</string>
+    <string name="lorie_transformCapturedPointer_cw">Medurs</string>
+    <string name="lorie_transformCapturedPointer_cc">Moturs</string>
+    <string name="lorie_transformCapturedPointer_ud">Upp och ner</string>
+    <string name="lorie_transformCapturedPointer_at">Automatisk (för pekplatta)</string>
+
+    <string name="lorie_userAction_noAction">ingen åtgärd</string>
+    <string name="lorie_userAction_noActionWithText">ingen åtgärd (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">växla mjukvarutangentbord</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">växla extra tangentrad</string>
+    <string name="lorie_userAction_openPreferences">öppna inställningar</string>
+    <string name="lorie_userAction_releaseCaptures">frigör pekar- och tangentbordsfångst</string>
+    <string name="lorie_userAction_toggleFullscreen">växla helskärm</string>
+    <string name="lorie_userAction_restartActivity">starta om aktivitet</string>
+    <string name="lorie_userAction_exit">avsluta</string>
+    <string name="lorie_userAction_sendVolumeDown">skicka volym ner</string>
+    <string name="lorie_userAction_sendVolumeUp">skicka volym upp</string>
+    <string name="lorie_userAction_sendMediaAction">skicka medieåtgärd</string>
+    <string name="lorie_userAction_androidVolumeControl">Android volymkontroll</string>
+    <string name="lorie_userAction_androidMediaControl">Android mediekontroll</string>
+
+    <string name="lorie_orientation_auto">automatisk</string>
+    <string name="lorie_orientation_portrait">stående</string>
+    <string name="lorie_orientation_landscape">liggande</string>
+    <string name="lorie_orientation_reversePortrait">omvänd stående</string>
+    <string name="lorie_orientation_reverseLandscape">omvänd liggande</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Kopierat till urklipp</string>
+    <string name="lorie_toast_wrong_resolution_format">Felaktigt upplösningsformat</string>
+    <string name="lorie_dialog_permission_denied_title">Behörighet nekad</string>
+    <string name="lorie_dialog_permission_denied_message">Android kräver WRITE_SECURE_SETTINGS-behörighet för att automatiskt starta tillgänglighetstjänsten.\nVänligen kör detta kommando med ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Kunde inte ladda det inbyggda biblioteket. Har du installerat rätt APK? Prova universal-versionen.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

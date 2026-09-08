@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_language_welcome">歡迎使用 Tiny Computer</string>
+    <string name="tc4_language_title">App 語言</string>
+    <string name="tc4_language_intro">請選擇介面語言，之後可以在設定中更改。Wine Controller 與 Windows 語言設定是獨立的。</string>
+    <string name="tc4_language_desc">更改 App 介面語言，不會更改 Wine Controller、Windows 或快捷命令。</string>
+    <string name="tc4_language_continue">繼續</string>
+    <string name="tc4_language_save_failed">無法儲存語言，請重試。</string>
+</resources>

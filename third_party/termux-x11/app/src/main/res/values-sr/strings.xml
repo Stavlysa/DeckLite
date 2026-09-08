@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Није повезано</string>
+    <string name="preferences_button_text">   ПОДЕШАВАЊА   </string>
+    <string name="help_button_text">   ПОМОЋ   </string>
+    <string name="exit_button_text">   ИЗЛАЗ   </string>
+    <string name="extra_keys_config_desc">Овде можете подесити вредност extra-keys променљиве као у Termux апликацији (прочитајте <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">ово</a>) и још \n
+Нпр. <b>META</b> за <i>META тастер</i>, \n
+<b>KEYBOARD</b> за <i>тастер за пребацивање софтверске тастатуре</i>, \n
+<b>PREFERENCES</b> за <i>тастер за отварање подешавања</i>, \n
+<b>MOUSE_HELPER</b> за <i>тастер за пребацивање помоћника миша</i>, \n
+<b>STYLUS_HELPER</b> за <i>тастер за пребацивање преклапања клика оловке</i>, \n
+<b>EXIT</b> за <i>тастер за излаз из апликације</i>.</string>
+    <string name="lorie_notification_content_text">Повуците надоле да прикажете опције</string>
+    <string name="lorie_notification_open_preferences">Подешавања</string>
+    <string name="lorie_notification_exit">Излаз</string>
+    <string name="lorie_notification_restart_activity">Поново покрени</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Преклопи IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Преклопи додатну тастатуру</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Ослободи хватања</string>
+    <string name="lorie_notification_toggle_fullscreen">Преклопи цео екран</string>
+
+    <string name="lorie_pref_main">Подешавања</string>
+    <string name="lorie_pref_output">Излаз</string>
+    <string name="lorie_pref_pointer">Показивач</string>
+    <string name="lorie_pref_kbd">Тастатура</string>
+    <string name="lorie_pref_other">Остало</string>
+    <string name="lorie_pref_version">Верзија</string>
+    <string name="lorie_pref_ekbar">Подешавања траке додатних тастера</string>
+    <string name="lorie_pref_userActions">Одговор на радње корисника</string>
+
+    <string name="lorie_pref_displayResolutionMode">Режим резолуције екрана</string>
+    <string name="lorie_pref_displayScale">Размера екрана, %</string>
+    <string name="lorie_pref_displayResolutionExact">Резолуција екрана</string>
+    <string name="lorie_pref_displayResolutionCustom">Резолуција екрана</string>
+    <string name="lorie_pref_displayFilteringMode">Режим филтрирања екрана</string>
+    <string name="lorie_pref_adjustResolution">Прилагоди подешену резолуцију да одговара оријентацији екрана</string>
+    <string name="lorie_pref_displayStretch">Растегни да стане на екран</string>
+    <string name="lorie_pref_Reseed">Поново подеси екран док је софтверска тастатура отворена</string>
+    <string name="lorie_pref_Reseed_summary">Величина екрана ће бити прилагођена док је софтверска тастатура отворена.</string>
+    <string name="lorie_pref_PIP">Слика у слици режим</string>
+    <string name="lorie_pref_PIP_summary">Прикажи апликацију у PIP режиму када се притисне дугме за почетни екран или дугме недавних апликација</string>
+    <string name="lorie_pref_fullscreen">Цео екран</string>
+    <string name="lorie_pref_fullscreen_summary">Преклопи имерзивни режим на дисплеју вашег уређаја</string>
+    <string name="lorie_pref_forceOrientation">Оријентација екрана</string>
+    <string name="lorie_pref_hideCutout">Сакриј изрез дисплеја (ако постоји)</string>
+    <string name="lorie_pref_keepScreenOn">Задржи екран укључен</string>
+
+    <string name="lorie_pref_touchMode">Режим уноса додиром</string>
+    <string name="lorie_pref_scaleTouchpad">Примени фактор размере екрана на додирну таблу</string>
+    <string name="lorie_pref_showStylusClickOverride">Прикажи опције клика оловком</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Преклапање додира оловке, леви, средњи или десни клик (само оловка)</string>
+    <string name="lorie_pref_stylusIsMouse">Омогући режим миша за оловку</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Нека ваша оловка ради као миш. Када је активирана, оловка ће само померати курсор и слати кликове миша, игноришући притисак, угао и нагиб.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Режим модификатора контакта дугмета оловке</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Омогућите ову опцију да шаљете десни или средњи тастер миша само када оловка додирује екран док је дугме притиснуто.</string>
+    <string name="lorie_pref_showMouseHelper">Прикажи преклапање помоћника клика миша</string>
+    <string name="lorie_pref_showMouseHelper_summary">Дугмад миша на екрану употребљива са додирном таблом</string>
+    <string name="lorie_pref_pointerCapture">Ухвати спољне показивачке уређаје када је могуће</string>
+    <string name="lorie_pref_pointerCapture_summary">Пресретни све хардверске догађаје показивача. Показивач се враћа у Android након притиска Escape тастера.</string>
+    <string name="lorie_pref_transformCapturedPointer">Трансформиши покрете ухваћеног показивача</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Фактор брзине ухваћеног показивача, %</string>
+    <string name="lorie_pref_tapToMove">Омогући додирни-за-померање за додирне табле</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignoriši ulazne događaje gejmpada</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Spreči prosleđivanje događaja gejmpada i džojstika X serveru</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Прикажи додатну тастатуру</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Прикажи тастатуру са додатним тастерима.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Прикажи IME са спољном тастатуром</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Прикажи софтверску тастатуру док је хардверска тастатура повезана.</string>
+    <string name="lorie_pref_preferScancodes">Преферирај кодове скенирања када је могуће</string>
+    <string name="lorie_pref_preferScancodes_summary">Пусти X сервер да обрађује распоред хардверске тастатуре (са DE подешавањима или setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Заобилазно решење за кодове скенирања хардверске тастатуре</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Исправља кодове скенирања на неким уређајима. Може изазвати проблеме са више распореда.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Пресретни системске пречице</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Само Samsung Dex. Омогућава пресретање \"Alt+F4\", \"Meta+D\", \"Meta+E\", итд.</string>
+    <string name="lorie_pref_enableAccessibilityService">Омогући услугу приступачности за ручно пресретање системских пречица.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Отвори подешавања приступачности.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Омогући услугу приступачности за аутоматско пресретање системских пречица.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Захтева дозволу WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Паузирај пресретање тастера помоћу Esc тастера</string>
+    <string name="lorie_pref_filterOutWinkey">Филтрирај пресретнути Win (Meta/Mod4) тастер.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Омогућава вам да користите Dex пречице током пресретања. Захтева услугу приступачности за рад.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Присили унос заснован на знаковима</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Потискује предлоге, предиктивно куцање и CJK језике</string>
+
+    <string name="lorie_pref_clipboardEnable">Дељење међуспремника</string>
+    <string name="lorie_pref_requestNotificationPermission">Затражи дозволу за обавештења</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR режим</string>
+    <string name="lorie_pref_configureResponseToUserActions">Подеси одговор на радње корисника</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Чувај подешавања за секундарне дисплеје одвојено</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Отворите овај екран на дисплеју који желите да конфигуришете</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Прилагоди висину дисплеја за траку додатних тастера</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Може изазвати треперење екрана при пребацивању траке додатних тастера.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Деактивирај специјалне тастере на траци додатних тастера након сваког притиска</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Користи дуги додир за закључавање специјалних тастера</string>
+    <string name="lorie_pref_opacityEKBar">Непрозирност траке додатних тастера, %</string>
+    <string name="lorie_pref_extra_keys_config">Конфигурација додатних тастера</string>
+
+    <string name="lorie_pref_swipeUpAction">Превуци са три прста нагоре</string>
+    <string name="lorie_pref_swipeDownAction">Превуци са три прста надоле</string>
+    <string name="lorie_pref_volumeUpAction">Појачај</string>
+    <string name="lorie_pref_volumeDownAction">Стишај</string>
+    <string name="lorie_pref_backButtonAction">Дугме назад</string>
+    <string name="lorie_pref_notificationTapAction">Додир обавештења</string>
+    <string name="lorie_pref_notificationButton0Action">Прво дугме обавештења</string>
+    <string name="lorie_pref_notificationButton1Action">Друго дугме обавештења</string>
+    <string name="lorie_pref_mediaKeysAction">Медијски тастери</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Захтева да \"режим резолуције екрана\" буде \"exact\" или \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Захтева пресретање системских пречица са Dex режимом или услугом приступачности</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Захтева да \"режим уноса додиром\" буде \"Trackpad\" а \"режим резолуције екрана\" не буде \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Додирна табла</string>
+    <string name="lorie_touchMode_simulated">Симулирани екран осетљив на додир</string>
+    <string name="lorie_touchMode_direct">Директан додир</string>
+
+    <string name="lorie_displayResolution_native">изворно</string>
+    <string name="lorie_displayResolution_scaled">скалирано</string>
+    <string name="lorie_displayResolution_exact">тачно</string>
+    <string name="lorie_displayResolution_custom">прилагођено</string>
+
+    <string name="lorie_displayFiltering_bilinear">билинеарно</string>
+    <string name="lorie_displayFiltering_nearest">најближи сусед</string>
+
+    <string name="lorie_transformCapturedPointer_no">Не</string>
+    <string name="lorie_transformCapturedPointer_cw">У смеру казаљке</string>
+    <string name="lorie_transformCapturedPointer_cc">Супротно од казаљке</string>
+    <string name="lorie_transformCapturedPointer_ud">Наопачке</string>
+    <string name="lorie_transformCapturedPointer_at">Аутоматски (за додирну таблу)</string>
+
+    <string name="lorie_userAction_noAction">без радње</string>
+    <string name="lorie_userAction_noActionWithText">без радње (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">преклопи софтверску тастатуру</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">преклопи траку додатних тастера</string>
+    <string name="lorie_userAction_openPreferences">отвори подешавања</string>
+    <string name="lorie_userAction_releaseCaptures">ослободи хватање показивача и тастатуре</string>
+    <string name="lorie_userAction_toggleFullscreen">преклопи цео екран</string>
+    <string name="lorie_userAction_restartActivity">поново покрени активност</string>
+    <string name="lorie_userAction_exit">изађи</string>
+    <string name="lorie_userAction_sendVolumeDown">пошаљи стишавање</string>
+    <string name="lorie_userAction_sendVolumeUp">пошаљи појачавање</string>
+    <string name="lorie_userAction_sendMediaAction">пошаљи медијску радњу</string>
+    <string name="lorie_userAction_androidVolumeControl">Android контрола јачине звука</string>
+    <string name="lorie_userAction_androidMediaControl">Android контрола медија</string>
+
+    <string name="lorie_orientation_auto">аутоматски</string>
+    <string name="lorie_orientation_portrait">усправно</string>
+    <string name="lorie_orientation_landscape">водоравно</string>
+    <string name="lorie_orientation_reversePortrait">обрнуто усправно</string>
+    <string name="lorie_orientation_reverseLandscape">обрнуто водоравно</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Копирано у међуспремник</string>
+    <string name="lorie_toast_wrong_resolution_format">Погрешан формат резолуције</string>
+    <string name="lorie_dialog_permission_denied_title">Дозвола одбијена</string>
+    <string name="lorie_dialog_permission_denied_message">Android захтева WRITE_SECURE_SETTINGS дозволу за аутоматско покретање услуге приступачности.\nМолимо вас да покренете ову команду користећи ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Неуспешно учитавање изворне библиотеке. Да ли сте инсталирали исправан APK? Пробајте universal верзију.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

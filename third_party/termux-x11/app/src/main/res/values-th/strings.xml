@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">ไม่ได้เชื่อมต่อ</string>
+    <string name="preferences_button_text">   การตั้งค่า   </string>
+    <string name="help_button_text">   ช่วยเหลือ   </string>
+    <string name="exit_button_text">   ออก   </string>
+    <string name="extra_keys_config_desc">ที่นี่คุณสามารถตั้งค่าตัวแปร extra-keys ได้เหมือนในแอป Termux (อ่าน<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">ที่นี่</a>) และอื่นๆ \n
+เช่น <b>META</b> สำหรับ <i>ปุ่ม META</i>, \n
+<b>KEYBOARD</b> สำหรับ <i>ปุ่มสลับแป้นพิมพ์เสมือน</i>, \n
+<b>PREFERENCES</b> สำหรับ <i>ปุ่มเปิดการตั้งค่า</i>, \n
+<b>MOUSE_HELPER</b> สำหรับ <i>ปุ่มสลับตัวช่วยเมาส์</i>, \n
+<b>STYLUS_HELPER</b> สำหรับ <i>ปุ่มสลับโอเวอร์เลย์คลิกปากกาสไตลัส</i>, \n
+<b>EXIT</b> สำหรับ <i>ปุ่มออกจากแอป</i></string>
+    <string name="lorie_notification_content_text">ดึงลงเพื่อแสดงตัวเลือก</string>
+    <string name="lorie_notification_open_preferences">การตั้งค่า</string>
+    <string name="lorie_notification_exit">ออก</string>
+    <string name="lorie_notification_restart_activity">เริ่มใหม่</string>
+    <string name="lorie_notification_toggle_soft_keyboard">สลับ IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">สลับแป้นพิมพ์เพิ่มเติม</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">ปล่อยการจับภาพ</string>
+    <string name="lorie_notification_toggle_fullscreen">สลับเต็มหน้าจอ</string>
+
+    <string name="lorie_pref_main">การตั้งค่า</string>
+    <string name="lorie_pref_output">เอาต์พุต</string>
+    <string name="lorie_pref_pointer">ตัวชี้</string>
+    <string name="lorie_pref_kbd">แป้นพิมพ์</string>
+    <string name="lorie_pref_other">อื่นๆ</string>
+    <string name="lorie_pref_version">เวอร์ชัน</string>
+    <string name="lorie_pref_ekbar">การตั้งค่าแถบปุ่มพิเศษ</string>
+    <string name="lorie_pref_userActions">การตอบสนองต่อการกระทำของผู้ใช้</string>
+
+    <string name="lorie_pref_displayResolutionMode">โหมดความละเอียดการแสดงผล</string>
+    <string name="lorie_pref_displayScale">มาตราส่วนการแสดงผล, %</string>
+    <string name="lorie_pref_displayResolutionExact">ความละเอียดการแสดงผล</string>
+    <string name="lorie_pref_displayResolutionCustom">ความละเอียดการแสดงผล</string>
+    <string name="lorie_pref_displayFilteringMode">โหมดการกรองการแสดงผล</string>
+    <string name="lorie_pref_adjustResolution">ปรับความละเอียดที่ตั้งไว้ให้พอดีกับแนวหน้าจอ</string>
+    <string name="lorie_pref_displayStretch">ยืดให้พอดีกับจอ</string>
+    <string name="lorie_pref_Reseed">ปรับหน้าจอใหม่เมื่อเปิดแป้นพิมพ์เสมือนอยู่</string>
+    <string name="lorie_pref_Reseed_summary">ขนาดหน้าจอจะถูกปรับขณะที่แป้นพิมพ์เสมือนเปิดอยู่</string>
+    <string name="lorie_pref_PIP">โหมดภาพในภาพ</string>
+    <string name="lorie_pref_PIP_summary">แสดงแอปในโหมด PIP เมื่อกดปุ่มหน้าแรกหรือปุ่มแอปล่าสุด</string>
+    <string name="lorie_pref_fullscreen">เต็มหน้าจอ</string>
+    <string name="lorie_pref_fullscreen_summary">สลับโหมดเต็มจอบนหน้าจออุปกรณ์ของคุณ</string>
+    <string name="lorie_pref_forceOrientation">แนวหน้าจอ</string>
+    <string name="lorie_pref_hideCutout">ซ่อนรอยบากของจอ (ถ้ามี)</string>
+    <string name="lorie_pref_keepScreenOn">เปิดหน้าจอค้างไว้</string>
+
+    <string name="lorie_pref_touchMode">โหมดการป้อนข้อมูลหน้าจอสัมผัส</string>
+    <string name="lorie_pref_scaleTouchpad">ใช้ปัจจัยมาตราส่วนการแสดงผลกับทัชแพด</string>
+    <string name="lorie_pref_showStylusClickOverride">แสดงตัวเลือกคลิกปากกาสไตลัส</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">การแทนที่สัมผัสปากกาสไตลัส คลิกซ้าย กลาง หรือขวา (เฉพาะปากกาสไตลัส)</string>
+    <string name="lorie_pref_stylusIsMouse">เปิดใช้งานโหมดเมาส์ปากกาสไตลัส</string>
+    <string name="lorie_pref_stylusIsMouse_summary">ทำให้ปากกาสไตลัสของคุณทำงานเหมือนเมาส์ เมื่อเปิดใช้งาน ปากกาสไตลัสจะย้ายเคอร์เซอร์และส่งคลิกเมาส์เท่านั้น โดยไม่สนใจแรงกด มุม และความเอียง</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">โหมดตัวปรับแต่งสัมผัสปุ่มปากกาสไตลัส</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">เปิดใช้งานตัวเลือกนี้เพื่อส่งปุ่มเมาส์ขวาหรือกลางเฉพาะเมื่อปากกาสไตลัสสัมผัสหน้าจอขณะกดปุ่ม</string>
+    <string name="lorie_pref_showMouseHelper">แสดงโอเวอร์เลย์ตัวช่วยคลิกเมาส์</string>
+    <string name="lorie_pref_showMouseHelper_summary">ปุ่มเมาส์บนหน้าจอที่ใช้ได้กับทัชแพด</string>
+    <string name="lorie_pref_pointerCapture">จับภาพอุปกรณ์ชี้ภายนอกเมื่อเป็นไปได้</string>
+    <string name="lorie_pref_pointerCapture_summary">ดักจับเหตุการณ์ตัวชี้ฮาร์ดแวร์ทั้งหมด ตัวชี้กลับสู่ Android หลังจากกดปุ่ม Escape</string>
+    <string name="lorie_pref_transformCapturedPointer">แปลงการเคลื่อนที่ของตัวชี้ที่ถูกจับ</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">ปัจจัยความเร็วของตัวชี้ที่ถูกจับ, %</string>
+    <string name="lorie_pref_tapToMove">เปิดใช้งานแตะเพื่อย้ายสำหรับทัชแพด</string>
+    <string name="lorie_pref_ignoreGamepadEvents">ไม่สนใจเหตุการณ์อินพุตของเกมแพด</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">ป้องกันไม่ให้เหตุการณ์เกมแพดและจอยสติ๊กถูกส่งต่อไปยังเซิร์ฟเวอร์ X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">แสดงแป้นพิมพ์เพิ่มเติม</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">แสดงแป้นพิมพ์พร้อมปุ่มเพิ่มเติม</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">แสดง IME กับแป้นพิมพ์ภายนอก</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">แสดงแป้นพิมพ์ซอฟต์แวร์ขณะที่แป้นพิมพ์ฮาร์ดแวร์เชื่อมต่ออยู่</string>
+    <string name="lorie_pref_preferScancodes">เลือกใช้สแกนโค้ดเมื่อเป็นไปได้</string>
+    <string name="lorie_pref_preferScancodes_summary">ให้เซิร์ฟเวอร์ X จัดการเค้าโครงแป้นพิมพ์ฮาร์ดแวร์ (ด้วยการตั้งค่า DE หรือ setxkbmap)</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">วิธีแก้ไขสแกนโค้ดแป้นพิมพ์ฮาร์ดแวร์</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">แก้ไขสแกนโค้ดในบางอุปกรณ์ อาจทำให้เกิดปัญหากับหลายเค้าโครง</string>
+    <string name="lorie_pref_dexMetaKeyCapture">ดักจับทางลัดระบบ</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Samsung Dex เท่านั้น อนุญาตให้ดักจับ \"Alt+F4\", \"Meta+D\", \"Meta+E\" ฯลฯ</string>
+    <string name="lorie_pref_enableAccessibilityService">เปิดใช้งานบริการการเข้าถึงเพื่อดักจับทางลัดระบบด้วยตนเอง</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">เปิดการตั้งค่าการเข้าถึง</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">เปิดใช้งานบริการการเข้าถึงเพื่อดักจับทางลัดระบบโดยอัตโนมัติ</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">ต้องการสิทธิ์ WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">หยุดการดักจับปุ่มด้วยปุ่ม Esc ชั่วคราว</string>
+    <string name="lorie_pref_filterOutWinkey">กรองปุ่ม Win (Meta/Mod4) ที่ถูกดักจับ</string>
+    <string name="lorie_pref_filterOutWinkey_summary">ช่วยให้คุณใช้ทางลัด Dex ขณะดักจับได้ ต้องการบริการการเข้าถึงจึงจะทำงาน</string>
+    <string name="lorie_pref_enforceCharBasedInput">บังคับใช้การป้อนข้อมูลแบบตัวอักษร</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">ระงับคำแนะนำ การพิมพ์เชิงทำนาย และภาษา CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">การแชร์คลิปบอร์ด</string>
+    <string name="lorie_pref_requestNotificationPermission">ขอสิทธิ์การแจ้งเตือน</string>
+    <string name="lorie_pref_xrMode">โหมด Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">กำหนดค่าการตอบสนองต่อการกระทำของผู้ใช้</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">จัดเก็บการตั้งค่าสำหรับหน้าจอรองแยกต่างหาก</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">เปิดหน้าจอนี้บนจอที่คุณต้องการกำหนดค่า</string>
+
+    <string name="lorie_pref_adjustHeightForEK">ปรับความสูงหน้าจอสำหรับแถบปุ่มพิเศษ</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">อาจทำให้หน้าจอกะพริบระหว่างสลับแถบปุ่มพิเศษ</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">ปิดใช้งานปุ่มพิเศษบนแถบปุ่มพิเศษหลังจากกดแต่ละครั้ง</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">ใช้การแตะค้างเพื่อล็อคปุ่มพิเศษ</string>
+    <string name="lorie_pref_opacityEKBar">ความทึบของแถบปุ่มพิเศษ, %</string>
+    <string name="lorie_pref_extra_keys_config">การกำหนดค่าปุ่มพิเศษ</string>
+
+    <string name="lorie_pref_swipeUpAction">สามนิ้วปัดขึ้น</string>
+    <string name="lorie_pref_swipeDownAction">สามนิ้วปัดลง</string>
+    <string name="lorie_pref_volumeUpAction">เพิ่มเสียง</string>
+    <string name="lorie_pref_volumeDownAction">ลดเสียง</string>
+    <string name="lorie_pref_backButtonAction">ปุ่มย้อนกลับ</string>
+    <string name="lorie_pref_notificationTapAction">แตะการแจ้งเตือน</string>
+    <string name="lorie_pref_notificationButton0Action">ปุ่มแรกของการแจ้งเตือน</string>
+    <string name="lorie_pref_notificationButton1Action">ปุ่มที่สองของการแจ้งเตือน</string>
+    <string name="lorie_pref_mediaKeysAction">ปุ่มสื่อ</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">ต้องการให้ \"โหมดความละเอียดการแสดงผล\" เป็น \"exact\" หรือ \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">ต้องการการดักจับทางลัดระบบด้วยโหมด Dex หรือบริการการเข้าถึง</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">ต้องการให้ \"โหมดการป้อนข้อมูลหน้าจอสัมผัส\" เป็น \"Trackpad\" และ \"โหมดความละเอียดการแสดงผล\" ไม่เป็น \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">ทัชแพด</string>
+    <string name="lorie_touchMode_simulated">หน้าจอสัมผัสจำลอง</string>
+    <string name="lorie_touchMode_direct">สัมผัสโดยตรง</string>
+
+    <string name="lorie_displayResolution_native">เนทีฟ</string>
+    <string name="lorie_displayResolution_scaled">ปรับขนาด</string>
+    <string name="lorie_displayResolution_exact">แม่นยำ</string>
+    <string name="lorie_displayResolution_custom">กำหนดเอง</string>
+
+    <string name="lorie_displayFiltering_bilinear">ไบลิเนียร์</string>
+    <string name="lorie_displayFiltering_nearest">เพื่อนบ้านใกล้สุด</string>
+
+    <string name="lorie_transformCapturedPointer_no">ไม่</string>
+    <string name="lorie_transformCapturedPointer_cw">ตามเข็มนาฬิกา</string>
+    <string name="lorie_transformCapturedPointer_cc">ทวนเข็มนาฬิกา</string>
+    <string name="lorie_transformCapturedPointer_ud">กลับหัว</string>
+    <string name="lorie_transformCapturedPointer_at">อัตโนมัติ (สำหรับทัชแพด)</string>
+
+    <string name="lorie_userAction_noAction">ไม่มีการกระทำ</string>
+    <string name="lorie_userAction_noActionWithText">ไม่มีการกระทำ (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">สลับแป้นพิมพ์เสมือน</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">สลับแถบปุ่มเพิ่มเติม</string>
+    <string name="lorie_userAction_openPreferences">เปิดการตั้งค่า</string>
+    <string name="lorie_userAction_releaseCaptures">ปล่อยการจับตัวชี้และแป้นพิมพ์</string>
+    <string name="lorie_userAction_toggleFullscreen">สลับเต็มหน้าจอ</string>
+    <string name="lorie_userAction_restartActivity">เริ่มกิจกรรมใหม่</string>
+    <string name="lorie_userAction_exit">ออก</string>
+    <string name="lorie_userAction_sendVolumeDown">ส่งลดเสียง</string>
+    <string name="lorie_userAction_sendVolumeUp">ส่งเพิ่มเสียง</string>
+    <string name="lorie_userAction_sendMediaAction">ส่งการกระทำสื่อ</string>
+    <string name="lorie_userAction_androidVolumeControl">ควบคุมเสียง Android</string>
+    <string name="lorie_userAction_androidMediaControl">ควบคุมสื่อ Android</string>
+
+    <string name="lorie_orientation_auto">อัตโนมัติ</string>
+    <string name="lorie_orientation_portrait">แนวตั้ง</string>
+    <string name="lorie_orientation_landscape">แนวนอน</string>
+    <string name="lorie_orientation_reversePortrait">แนวตั้งกลับด้าน</string>
+    <string name="lorie_orientation_reverseLandscape">แนวนอนกลับด้าน</string>
+
+    <string name="lorie_toast_copied_to_clipboard">คัดลอกไปยังคลิปบอร์ดแล้ว</string>
+    <string name="lorie_toast_wrong_resolution_format">รูปแบบความละเอียดไม่ถูกต้อง</string>
+    <string name="lorie_dialog_permission_denied_title">ปฏิเสธการอนุญาต</string>
+    <string name="lorie_dialog_permission_denied_message">Android ต้องการสิทธิ์ WRITE_SECURE_SETTINGS เพื่อเริ่มบริการการเข้าถึงโดยอัตโนมัติ\nโปรดเรียกใช้คำสั่งนี้โดยใช้ ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">ไม่สามารถโหลดไลบรารีเนทีฟได้ คุณติดตั้ง APK ถูกต้องหรือไม่? ลองใช้เวอร์ชัน universal</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

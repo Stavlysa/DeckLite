@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Steam ARM64
+Comment=Native ARM64 Steam beta with Proton 11/FEX game compatibility
+Exec=/usr/local/bin/steam-arm64
+Icon=steam
+Terminal=false
+Categories=Game;
+StartupNotify=true
+

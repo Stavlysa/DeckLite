@@ -1,0 +1,175 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">未连接</string>
+    <string name="preferences_button_text">   偏好设置   </string>
+    <string name="help_button_text">   帮助   </string>
+    <string name="exit_button_text">   退出   </string>
+    <string name="extra_keys_config_desc">在这里您可以像在 Termux 应用程序中一样设置 extra-keys 变量的值（请阅读<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">此内容</a>）等等 \n
+例如<b>META</b> 代表 <i>META 键</i>, \n
+<b>KEYBOARD</b> 代表 <i>软键盘切换键</i>, \n
+<b>PREFERENCES</b> 代表 <i>偏好设置打开键</i>, \n
+<b>MOUSE_HELPER</b> 代表 <i>鼠标助手切换键</i>, \n
+<b>STYLUS_HELPER</b> 代表 <i>手写笔点击覆盖层切换键</i>, \n
+<b>EXIT</b> 代表 <i>应用程序退出键</i>。</string>
+    <string name="lorie_notification_content_text">下拉以显示选项</string>
+    <string name="lorie_notification_open_preferences">偏好设置</string>
+    <string name="lorie_notification_exit">退出</string>
+    <string name="lorie_notification_restart_activity">重启</string>
+    <string name="lorie_notification_toggle_soft_keyboard">切换输入法</string>
+    <string name="lorie_notification_toggle_additional_key_bar">切换小键盘</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">释放捕获</string>
+    <string name="lorie_notification_toggle_fullscreen">切换全屏</string>
+
+    <string name="lorie_pref_main">偏好设置</string>
+    <string name="lorie_pref_output">输出</string>
+    <string name="lorie_pref_pointer">鼠标指针</string>
+    <string name="lorie_pref_kbd">键盘</string>
+    <string name="lorie_pref_other">其他</string>
+    <string name="lorie_pref_version">版本</string>
+    <string name="lorie_pref_ekbar">额外按键栏偏好设置</string>
+    <string name="lorie_pref_userActions">对用户操作的响应</string>
+
+    <string name="lorie_pref_displayResolutionMode">显示分辨率模式</string>
+    <string name="lorie_pref_displayScale">显示比例, %</string>
+    <string name="lorie_pref_displayResolutionExact">显示分辨率</string>
+    <string name="lorie_pref_displayResolutionCustom">显示分辨率</string>
+    <string name="lorie_pref_displayFilteringMode">显示过滤模式</string>
+    <string name="lorie_pref_adjustResolution">调整设定的分辨率以适应屏幕方向</string>
+    <string name="lorie_pref_displayStretch">拉伸以适应显示</string>
+    <string name="lorie_pref_Reseed">软键盘打开时重设屏幕</string>
+    <string name="lorie_pref_Reseed_summary">软键盘打开时将调整屏幕大小。</string>
+    <string name="lorie_pref_PIP">画中画模式</string>
+    <string name="lorie_pref_PIP_summary">按下主屏幕按钮或最近任务按钮时，以画中画模式显示应用程序</string>
+    <string name="lorie_pref_fullscreen">全屏</string>
+    <string name="lorie_pref_fullscreen_summary">在您的设备显示屏上切换沉浸式模式</string>
+    <string name="lorie_pref_forceOrientation">屏幕方向</string>
+    <string name="lorie_pref_hideCutout">在异形屏上全屏显示</string>
+    <string name="lorie_pref_keepScreenOn">保持屏幕常亮</string>
+
+    <string name="lorie_pref_touchMode">触摸屏输入模式</string>
+    <string name="lorie_pref_scaleTouchpad">将显示比例因子应用于触摸板</string>
+    <string name="lorie_pref_showStylusClickOverride">显示手写笔点击选项</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">手写笔触摸覆盖，左、中或右键单击（仅限手写笔）</string>
+    <string name="lorie_pref_stylusIsMouse">启用手写笔鼠标模式</string>
+    <string name="lorie_pref_stylusIsMouse_summary">让您的手写笔像鼠标一样工作。激活后，手写笔将只移动光标并发送鼠标点击，忽略压力、角度和倾斜。</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">手写笔按钮接触修饰符模式</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">启用此选项可在按下按钮的同时手写笔触摸屏幕时发送右键或中键单击。</string>
+    <string name="lorie_pref_showMouseHelper">显示鼠标点击助手覆盖层</string>
+    <string name="lorie_pref_showMouseHelper_summary">可与触摸板一起使用的屏幕鼠标按钮</string>
+    <string name="lorie_pref_pointerCapture">尽可能捕获外部指针设备</string>
+    <string name="lorie_pref_pointerCapture_summary">拦截所有硬件指针事件。按下 Esc 键后指针返回到 Android。</string>
+    <string name="lorie_pref_transformCapturedPointer">转换捕获的指针移动</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">捕获的指针速度因子, %</string>
+    <string name="lorie_pref_tapToMove">为触摸板启用点击移动</string>
+    <string name="lorie_pref_ignoreGamepadEvents">忽略游戏手柄输入事件</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">阻止游戏手柄和摇杆事件转发到 X 服务器</string>
+
+    <string name="lorie_pref_showAdditionalKbd">显示小键盘</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">显示带有小按键的键盘。</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">连接外部键盘时显示输入法</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">连接硬件键盘时显示软件键盘。</string>
+    <string name="lorie_pref_preferScancodes">尽可能首选扫描码</string>
+    <string name="lorie_pref_preferScancodes_summary">让 X 服务器处理硬件键盘布局（使用 DE 设置或 setxkbmap）。</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">硬件键盘扫描码解决方法</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">修复某些设备上的扫描码。可能会导致多个布局出现问题。</string>
+    <string name="lorie_pref_dexMetaKeyCapture">拦截系统快捷键</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">仅限三星 Dex。允许拦截"Alt+F4"、"Meta+D"、"Meta+E"等。</string>
+    <string name="lorie_pref_enableAccessibilityService">手动启用无障碍服务以拦截系统快捷键。</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">打开无障碍设置。</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">自动启用无障碍服务以拦截系统快捷键。</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">需要 WRITE_SECURE_SETTINGS 权限。</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">使用 Esc 键暂停按键拦截</string>
+    <string name="lorie_pref_filterOutWinkey">过滤掉被拦截的 Win (Meta/Mod4) 键。</string>
+    <string name="lorie_pref_filterOutWinkey_summary">允许您在拦截时使用 Dex 快捷键。需要无障碍服务才能工作。</string>
+    <string name="lorie_pref_enforceCharBasedInput">强制执行基于字符的输入</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">禁止建议、预测性输入和中日韩语言</string>
+
+    <string name="lorie_pref_clipboardEnable">剪贴板共享</string>
+    <string name="lorie_pref_requestNotificationPermission">请求通知权限</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR 模式</string>
+    <string name="lorie_pref_configureResponseToUserActions">配置对用户操作的响应</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">单独存储辅助显示器的偏好设置</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">在要配置的显示器上打开此屏幕</string>
+
+    <string name="lorie_pref_adjustHeightForEK">为小键盘栏调整显示高度</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">切换小键盘栏时可能会导致屏幕闪烁。</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">每次按键后停用小键盘栏上的特殊按键</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">使用长按锁定特殊按键</string>
+    <string name="lorie_pref_opacityEKBar">小键盘栏的不透明度, %</string>
+    <string name="lorie_pref_extra_keys_config">小键盘配置</string>
+
+    <string name="lorie_pref_swipeUpAction">三指向上滑动</string>
+    <string name="lorie_pref_swipeDownAction">三指向下滑动</string>
+    <string name="lorie_pref_volumeUpAction">音量加</string>
+    <string name="lorie_pref_volumeDownAction">音量减</string>
+    <string name="lorie_pref_backButtonAction">返回按钮</string>
+    <string name="lorie_pref_notificationTapAction">通知点击</string>
+    <string name="lorie_pref_notificationButton0Action">通知第一个按钮</string>
+    <string name="lorie_pref_notificationButton1Action">通知第二个按钮</string>
+    <string name="lorie_pref_mediaKeysAction">媒体键</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">需要将"显示分辨率模式"设置为"exact"或"custom"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">需要使用 Dex 模式或无障碍服务拦截系统快捷键</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">需要将"触摸屏输入模式"设置为"Trackpad"且"显示分辨率模式"不为"native"</string>
+
+    <!-- 触摸屏输入模式条目 -->
+    <string name="lorie_touchMode_trackpad">触摸板</string>
+    <string name="lorie_touchMode_simulated">模拟触摸屏</string>
+    <string name="lorie_touchMode_direct">直接触摸</string>
+
+    <!-- 显示分辨率选项 -->
+    <string name="lorie_displayResolution_native">原生</string>
+    <string name="lorie_displayResolution_scaled">缩放</string>
+    <string name="lorie_displayResolution_exact">精确</string>
+    <string name="lorie_displayResolution_custom">自定义</string>
+
+    <!-- 显示过滤选项 -->
+    <string name="lorie_displayFiltering_bilinear">双线性</string>
+    <string name="lorie_displayFiltering_nearest">邻近</string>
+
+    <!-- 指针变换选项 -->
+    <string name="lorie_transformCapturedPointer_no">否</string>
+    <string name="lorie_transformCapturedPointer_cw">顺时针</string>
+    <string name="lorie_transformCapturedPointer_cc">逆时针</string>
+    <string name="lorie_transformCapturedPointer_ud">上下颠倒</string>
+    <string name="lorie_transformCapturedPointer_at">自动（触摸板）</string>
+
+    <!-- 用户操作选项 -->
+    <string name="lorie_userAction_noAction">无操作</string>
+    <string name="lorie_userAction_noActionWithText">无操作（%1$s）</string>
+    <string name="lorie_userAction_toggleSoftKbd">切换软键盘</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">切换小键盘</string>
+    <string name="lorie_userAction_openPreferences">打开偏好设置</string>
+    <string name="lorie_userAction_releaseCaptures">释放指针和键盘捕获</string>
+    <string name="lorie_userAction_toggleFullscreen">切换全屏</string>
+    <string name="lorie_userAction_restartActivity">重启活动</string>
+    <string name="lorie_userAction_exit">退出</string>
+    <string name="lorie_userAction_sendVolumeDown">发送音量减</string>
+    <string name="lorie_userAction_sendVolumeUp">发送音量加</string>
+    <string name="lorie_userAction_sendMediaAction">发送媒体操作</string>
+    <string name="lorie_userAction_androidVolumeControl">安卓音量控制</string>
+    <string name="lorie_userAction_androidMediaControl">安卓媒体控制</string>
+
+    <!-- 屏幕方向选项 -->
+    <string name="lorie_orientation_auto">自动</string>
+    <string name="lorie_orientation_portrait">纵向</string>
+    <string name="lorie_orientation_landscape">横向</string>
+    <string name="lorie_orientation_reversePortrait">反向纵向</string>
+    <string name="lorie_orientation_reverseLandscape">反向横向</string>
+
+    <!-- 提示和对话框消息 -->
+    <string name="lorie_toast_copied_to_clipboard">已复制到剪贴板</string>
+    <string name="lorie_toast_wrong_resolution_format">分辨率格式错误</string>
+    <string name="lorie_dialog_permission_denied_title">权限被拒绝</string>
+    <string name="lorie_dialog_permission_denied_message">Android 需要 WRITE_SECURE_SETTINGS 权限才能自动启动无障碍服务。\n请使用 ADB 执行以下命令：\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">无法加载原生库。您安装了正确的 APK 吗？请尝试 universal 版本。</string>
+
+    <!-- 无障碍服务标签 -->
+    <string name="lorie_key_interceptor_label">Termux:X11 按键拦截器</string>
+</resources>

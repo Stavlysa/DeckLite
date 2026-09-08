@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">कनेक्ट नहीं है</string>
+    <string name="preferences_button_text">   प्राथमिकताएं   </string>
+    <string name="help_button_text">   सहायता   </string>
+    <string name="exit_button_text">   बाहर निकलें   </string>
+    <string name="extra_keys_config_desc">यहां आप Termux ऐप की तरह extra-keys वेरिएबल का मान सेट कर सकते हैं (<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">यह</a> पढ़ें) और अधिक \n
+उदा. <b>META</b> के लिए <i>META कुंजी</i>, \n
+<b>KEYBOARD</b> के लिए <i>सॉफ्ट कीबोर्ड टॉगल कुंजी</i>, \n
+<b>PREFERENCES</b> के लिए <i>प्राथमिकताएं खोलने की कुंजी</i>, \n
+<b>MOUSE_HELPER</b> के लिए <i>माउस हेल्पर टॉगल कुंजी</i>, \n
+<b>STYLUS_HELPER</b> के लिए <i>स्टाइलस क्लिक ओवरले टॉगल कुंजी</i>, \n
+<b>EXIT</b> के लिए <i>ऐप से बाहर निकलने की कुंजी</i>।</string>
+    <string name="lorie_notification_content_text">विकल्प दिखाने के लिए नीचे खींचें</string>
+    <string name="lorie_notification_open_preferences">प्राथमिकताएं</string>
+    <string name="lorie_notification_exit">बाहर निकलें</string>
+    <string name="lorie_notification_restart_activity">पुनः आरंभ करें</string>
+    <string name="lorie_notification_toggle_soft_keyboard">IME टॉगल करें</string>
+    <string name="lorie_notification_toggle_additional_key_bar">अतिरिक्त कीबोर्ड टॉगल करें</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">कैप्चर छोड़ें</string>
+    <string name="lorie_notification_toggle_fullscreen">फ़ुलस्क्रीन टॉगल करें</string>
+
+    <string name="lorie_pref_main">प्राथमिकताएं</string>
+    <string name="lorie_pref_output">आउटपुट</string>
+    <string name="lorie_pref_pointer">पॉइंटर</string>
+    <string name="lorie_pref_kbd">कीबोर्ड</string>
+    <string name="lorie_pref_other">अन्य</string>
+    <string name="lorie_pref_version">संस्करण</string>
+    <string name="lorie_pref_ekbar">अतिरिक्त कुंजी बार प्राथमिकताएं</string>
+    <string name="lorie_pref_userActions">उपयोगकर्ता क्रियाओं पर प्रतिक्रिया</string>
+
+    <string name="lorie_pref_displayResolutionMode">डिस्प्ले रिज़ॉल्यूशन मोड</string>
+    <string name="lorie_pref_displayScale">डिस्प्ले स्केल, %</string>
+    <string name="lorie_pref_displayResolutionExact">डिस्प्ले रिज़ॉल्यूशन</string>
+    <string name="lorie_pref_displayResolutionCustom">डिस्प्ले रिज़ॉल्यूशन</string>
+    <string name="lorie_pref_displayFilteringMode">डिस्प्ले फ़िल्टरिंग मोड</string>
+    <string name="lorie_pref_adjustResolution">स्क्रीन ओरिएंटेशन के अनुसार सेट रिज़ॉल्यूशन समायोजित करें</string>
+    <string name="lorie_pref_displayStretch">डिस्प्ले में फ़िट करने के लिए खींचें</string>
+    <string name="lorie_pref_Reseed">सॉफ्ट कीबोर्ड खुला होने पर स्क्रीन पुनः समायोजित करें</string>
+    <string name="lorie_pref_Reseed_summary">सॉफ्ट कीबोर्ड खुले होने पर स्क्रीन का आकार समायोजित किया जाएगा।</string>
+    <string name="lorie_pref_PIP">पिक्चर-इन-पिक्चर मोड</string>
+    <string name="lorie_pref_PIP_summary">होम बटन या हाल के ऐप्स बटन दबाने पर ऐप को PIP मोड में दिखाएं</string>
+    <string name="lorie_pref_fullscreen">फ़ुलस्क्रीन</string>
+    <string name="lorie_pref_fullscreen_summary">अपने डिवाइस डिस्प्ले में इमर्सिव मोड टॉगल करें</string>
+    <string name="lorie_pref_forceOrientation">स्क्रीन ओरिएंटेशन</string>
+    <string name="lorie_pref_hideCutout">डिस्प्ले कटआउट छुपाएं (यदि कोई है)</string>
+    <string name="lorie_pref_keepScreenOn">स्क्रीन चालू रखें</string>
+
+    <string name="lorie_pref_touchMode">टचस्क्रीन इनपुट मोड</string>
+    <string name="lorie_pref_scaleTouchpad">टचपैड पर डिस्प्ले स्केल फ़ैक्टर लागू करें</string>
+    <string name="lorie_pref_showStylusClickOverride">स्टाइलस क्लिक विकल्प दिखाएं</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">स्टाइलस टच ओवरराइड, बायां, मध्य या दायां क्लिक (केवल स्टाइलस)</string>
+    <string name="lorie_pref_stylusIsMouse">स्टाइलस माउस मोड सक्षम करें</string>
+    <string name="lorie_pref_stylusIsMouse_summary">अपने स्टाइलस को माउस की तरह काम करने दें। सक्रिय होने पर, स्टाइलस केवल कर्सर को घुमाएगा और माउस क्लिक भेजेगा, दबाव, कोण और झुकाव को अनदेखा करते हुए।</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">स्टाइलस बटन संपर्क संशोधक मोड</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">बटन दबाए रखने पर स्टाइलस स्क्रीन को छूने पर केवल दायां या मध्य माउस बटन भेजने के लिए इस विकल्प को सक्षम करें।</string>
+    <string name="lorie_pref_showMouseHelper">माउस क्लिक हेल्पर ओवरले दिखाएं</string>
+    <string name="lorie_pref_showMouseHelper_summary">टचपैड के साथ उपयोग करने योग्य ऑनस्क्रीन माउस बटन</string>
+    <string name="lorie_pref_pointerCapture">संभव होने पर बाहरी पॉइंटर डिवाइस कैप्चर करें</string>
+    <string name="lorie_pref_pointerCapture_summary">सभी हार्डवेयर पॉइंटर ईवेंट को इंटरसेप्ट करें। Escape कुंजी दबाने के बाद पॉइंटर Android पर वापस आ जाता है।</string>
+    <string name="lorie_pref_transformCapturedPointer">कैप्चर किए गए पॉइंटर मूवमेंट को रूपांतरित करें</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">कैप्चर किए गए पॉइंटर की गति कारक, %</string>
+    <string name="lorie_pref_tapToMove">टचपैड के लिए टैप-टू-मूव सक्षम करें</string>
+    <string name="lorie_pref_ignoreGamepadEvents">गेमपैड इनपुट ईवेंट अनदेखा करें</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">गेमपैड और जॉयस्टिक ईवेंट को X सर्वर पर अग्रेषित होने से रोकें</string>
+
+    <string name="lorie_pref_showAdditionalKbd">अतिरिक्त कीबोर्ड दिखाएं</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">अतिरिक्त कुंजियों वाला कीबोर्ड दिखाएं।</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">बाहरी कीबोर्ड के साथ IME दिखाएं</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">हार्डवेयर कीबोर्ड कनेक्ट होने पर सॉफ़्टवेयर कीबोर्ड दिखाएं।</string>
+    <string name="lorie_pref_preferScancodes">संभव होने पर स्कैनकोड को प्राथमिकता दें</string>
+    <string name="lorie_pref_preferScancodes_summary">X सर्वर को हार्डवेयर कीबोर्ड लेआउट को संभालने दें (DE सेटिंग्स या setxkbmap के साथ)।</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">हार्डवेयर कीबोर्ड स्कैनकोड वर्कअराउंड</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">कुछ डिवाइस पर स्कैनकोड ठीक करता है। कई लेआउट के साथ समस्याएं पैदा कर सकता है।</string>
+    <string name="lorie_pref_dexMetaKeyCapture">सिस्टम शॉर्टकट इंटरसेप्ट करें</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">केवल Samsung Dex। \"Alt+F4\", \"Meta+D\", \"Meta+E\" आदि को इंटरसेप्ट करने की अनुमति देता है।</string>
+    <string name="lorie_pref_enableAccessibilityService">सिस्टम शॉर्टकट को मैन्युअल रूप से इंटरसेप्ट करने के लिए एक्सेसिबिलिटी सेवा सक्षम करें।</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">एक्सेसिबिलिटी सेटिंग्स खोलें।</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">सिस्टम शॉर्टकट को स्वचालित रूप से इंटरसेप्ट करने के लिए एक्सेसिबिलिटी सेवा सक्षम करें।</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">WRITE_SECURE_SETTINGS अनुमति की आवश्यकता है।</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Esc कुंजी से कुंजी इंटरसेप्शन रोकें</string>
+    <string name="lorie_pref_filterOutWinkey">इंटरसेप्ट की गई Win (Meta/Mod4) कुंजी को फ़िल्टर करें।</string>
+    <string name="lorie_pref_filterOutWinkey_summary">इंटरसेप्शन के दौरान Dex शॉर्टकट का उपयोग करने की अनुमति देता है। काम करने के लिए एक्सेसिबिलिटी सेवा की आवश्यकता है।</string>
+    <string name="lorie_pref_enforceCharBasedInput">अक्षर-आधारित इनपुट लागू करें</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">सुझावों, पूर्वानुमानित टाइपिंग और CJK भाषाओं को दबाता है</string>
+
+    <string name="lorie_pref_clipboardEnable">क्लिपबोर्ड साझाकरण</string>
+    <string name="lorie_pref_requestNotificationPermission">सूचना अनुमति का अनुरोध करें</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR मोड</string>
+    <string name="lorie_pref_configureResponseToUserActions">उपयोगकर्ता क्रियाओं पर प्रतिक्रिया कॉन्फ़िगर करें</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">द्वितीयक डिस्प्ले के लिए प्राथमिकताएं अलग से संग्रहीत करें</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">जिस डिस्प्ले को आप कॉन्फ़िगर करना चाहते हैं उस पर यह स्क्रीन खोलें</string>
+
+    <string name="lorie_pref_adjustHeightForEK">अतिरिक्त कुंजी बार के लिए डिस्प्ले ऊंचाई समायोजित करें</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">अतिरिक्त कुंजी बार टॉगल करने के दौरान स्क्रीन फ़्लिकरिंग का कारण बन सकता है।</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">प्रत्येक कीप्रेस के बाद अतिरिक्त कुंजी बार पर विशेष कुंजियां निष्क्रिय करें</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">विशेष कुंजियों को लॉक करने के लिए लंबा टैप उपयोग करें</string>
+    <string name="lorie_pref_opacityEKBar">अतिरिक्त कुंजी बार की अपारदर्शिता, %</string>
+    <string name="lorie_pref_extra_keys_config">अतिरिक्त कुंजी कॉन्फ़िगरेशन</string>
+
+    <string name="lorie_pref_swipeUpAction">तीन अंगुलियों से ऊपर स्वाइप करें</string>
+    <string name="lorie_pref_swipeDownAction">तीन अंगुलियों से नीचे स्वाइप करें</string>
+    <string name="lorie_pref_volumeUpAction">वॉल्यूम बढ़ाएं</string>
+    <string name="lorie_pref_volumeDownAction">वॉल्यूम घटाएं</string>
+    <string name="lorie_pref_backButtonAction">वापसी बटन</string>
+    <string name="lorie_pref_notificationTapAction">सूचना टैप</string>
+    <string name="lorie_pref_notificationButton0Action">सूचना पहला बटन</string>
+    <string name="lorie_pref_notificationButton1Action">सूचना दूसरा बटन</string>
+    <string name="lorie_pref_mediaKeysAction">मीडिया कुंजियां</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">आवश्यक है कि \"डिस्प्ले रिज़ॉल्यूशन मोड\" \"exact\" या \"custom\" हो</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Dex मोड या एक्सेसिबिलिटी सेवा के साथ सिस्टम शॉर्टकट इंटरसेप्ट करना आवश्यक है</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">आवश्यक है कि \"टचस्क्रीन इनपुट मोड\" \"Trackpad\" हो और \"डिस्प्ले रिज़ॉल्यूशन मोड\" \"native\" न हो</string>
+
+    <string name="lorie_touchMode_trackpad">टचपैड</string>
+    <string name="lorie_touchMode_simulated">सिम्युलेटेड टचस्क्रीन</string>
+    <string name="lorie_touchMode_direct">सीधा स्पर्श</string>
+
+    <string name="lorie_displayResolution_native">मूल</string>
+    <string name="lorie_displayResolution_scaled">स्केल किया हुआ</string>
+    <string name="lorie_displayResolution_exact">सटीक</string>
+    <string name="lorie_displayResolution_custom">कस्टम</string>
+
+    <string name="lorie_displayFiltering_bilinear">द्विरेखीय</string>
+    <string name="lorie_displayFiltering_nearest">निकटतम पड़ोसी</string>
+
+    <string name="lorie_transformCapturedPointer_no">नहीं</string>
+    <string name="lorie_transformCapturedPointer_cw">दक्षिणावर्त</string>
+    <string name="lorie_transformCapturedPointer_cc">वामावर्त</string>
+    <string name="lorie_transformCapturedPointer_ud">उल्टा</string>
+    <string name="lorie_transformCapturedPointer_at">स्वचालित (टचपैड के लिए)</string>
+
+    <string name="lorie_userAction_noAction">कोई क्रिया नहीं</string>
+    <string name="lorie_userAction_noActionWithText">कोई क्रिया नहीं (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">सॉफ्ट कीबोर्ड टॉगल करें</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">अतिरिक्त कुंजी बार टॉगल करें</string>
+    <string name="lorie_userAction_openPreferences">प्राथमिकताएं खोलें</string>
+    <string name="lorie_userAction_releaseCaptures">पॉइंटर और कीबोर्ड कैप्चर छोड़ें</string>
+    <string name="lorie_userAction_toggleFullscreen">फ़ुलस्क्रीन टॉगल करें</string>
+    <string name="lorie_userAction_restartActivity">गतिविधि पुनः आरंभ करें</string>
+    <string name="lorie_userAction_exit">बाहर निकलें</string>
+    <string name="lorie_userAction_sendVolumeDown">वॉल्यूम घटाना भेजें</string>
+    <string name="lorie_userAction_sendVolumeUp">वॉल्यूम बढ़ाना भेजें</string>
+    <string name="lorie_userAction_sendMediaAction">मीडिया क्रिया भेजें</string>
+    <string name="lorie_userAction_androidVolumeControl">Android वॉल्यूम नियंत्रण</string>
+    <string name="lorie_userAction_androidMediaControl">Android मीडिया नियंत्रण</string>
+
+    <string name="lorie_orientation_auto">स्वचालित</string>
+    <string name="lorie_orientation_portrait">पोर्ट्रेट</string>
+    <string name="lorie_orientation_landscape">लैंडस्केप</string>
+    <string name="lorie_orientation_reversePortrait">रिवर्स पोर्ट्रेट</string>
+    <string name="lorie_orientation_reverseLandscape">रिवर्स लैंडस्केप</string>
+
+    <string name="lorie_toast_copied_to_clipboard">क्लिपबोर्ड पर कॉपी किया गया</string>
+    <string name="lorie_toast_wrong_resolution_format">गलत रिज़ॉल्यूशन प्रारूप</string>
+    <string name="lorie_dialog_permission_denied_title">अनुमति अस्वीकृत</string>
+    <string name="lorie_dialog_permission_denied_message">एक्सेसिबिलिटी सेवा को स्वचालित रूप से प्रारंभ करने के लिए Android को WRITE_SECURE_SETTINGS अनुमति की आवश्यकता है।\nकृपया ADB का उपयोग करके यह कमांड चलाएं:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">नेटिव लाइब्रेरी लोड करने में विफल। क्या आपने सही APK इंस्टॉल किया है? universal संस्करण आज़माएं।</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

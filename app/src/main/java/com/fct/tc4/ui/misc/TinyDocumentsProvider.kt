@@ -88,7 +88,7 @@ class TinyDocumentsProvider : DocumentsProvider() {
         if (sep < 0) throw FileNotFoundException("Invalid docId: $docId")
         val rootType = docId.substring(0, sep)
         val relative = docId.substring(sep + 1)
-        val file = File(getRootDir(rootType), relative)
+        val file = DocumentPathGuard.resolve(dataDir, publicDir, Global.installedContainers, rootType, relative)
         if (!file.exists()) throw FileNotFoundException(file.absolutePath)
         return file
     }
@@ -102,7 +102,7 @@ class TinyDocumentsProvider : DocumentsProvider() {
         if (sep < 0) throw FileNotFoundException("Invalid docId: $docId")
         val rootType = docId.substring(0, sep)
         val relative = docId.substring(sep + 1)
-        return File(getRootDir(rootType), relative)
+        return DocumentPathGuard.resolve(dataDir, publicDir, Global.installedContainers, rootType, relative)
     }
 
     private fun fileToDocId(rootType: String, file: File): String {
@@ -110,6 +110,7 @@ class TinyDocumentsProvider : DocumentsProvider() {
         val relative = file.absolutePath
             .removePrefix(rootDir.absolutePath)
             .removePrefix("/")
+        DocumentPathGuard.resolve(dataDir, publicDir, Global.installedContainers, rootType, relative)
         return "$rootType:$relative"
     }
 
@@ -161,7 +162,7 @@ class TinyDocumentsProvider : DocumentsProvider() {
         } else {
             val parent = docIdToFile("$rootType:$relative")
             parent.listFiles()?.forEach { child ->
-                includeFile(result, null, child, rootType)
+                try { includeFile(result, null, child, rootType) } catch (_: FileNotFoundException) { }
             }
         }
         return result
@@ -203,8 +204,11 @@ class TinyDocumentsProvider : DocumentsProvider() {
         }
 
         val maxResults = 50
+        val visited = mutableSetOf<String>()
         while (pending.isNotEmpty() && result.count < maxResults) {
             val file = pending.removeFirst()
+            try { fileToDocId(rootType, file) } catch (_: FileNotFoundException) { continue }
+            if (!visited.add(file.canonicalPath)) continue
             if (file.isDirectory) {
                 file.listFiles()?.forEach { pending.add(it) }
             } else if (file.name.lowercase().contains(queryLower)) {
@@ -215,14 +219,18 @@ class TinyDocumentsProvider : DocumentsProvider() {
     }
 
     override fun isChildDocument(parentDocumentId: String, documentId: String): Boolean {
-        if (!documentId.startsWith(parentDocumentId)) return false
-        return documentId.length == parentDocumentId.length ||
-                documentId[parentDocumentId.length] == '/'
+        return try {
+            if (parentDocumentId.substringBefore(':') != documentId.substringBefore(':')) return false
+            val parent = docIdToFile(parentDocumentId).canonicalPath
+            val child = docIdToFile(documentId).canonicalPath
+            child == parent || child.startsWith(parent + File.separator)
+        } catch (_: FileNotFoundException) { false }
     }
 
     override fun createDocument(
         parentDocumentId: String, mimeType: String, displayName: String
     ): String {
+        DocumentPathGuard.requireName(displayName)
         val parent = docIdToParentFile(parentDocumentId)
         val rootType = parentDocumentId.substringBefore(':')
 
@@ -254,8 +262,10 @@ class TinyDocumentsProvider : DocumentsProvider() {
     }
 
     override fun renameDocument(documentId: String, displayName: String): String {
+        DocumentPathGuard.requireName(displayName)
         val file = docIdToFile(documentId)
         val rootType = documentId.substringBefore(':')
+        if (file.canonicalFile == getRootDir(rootType).canonicalFile) throw FileNotFoundException("Read-only root")
 
         // 禁止重命名容器/公共根目录本身
         val isRootLevel = when (rootType) {
@@ -275,6 +285,7 @@ class TinyDocumentsProvider : DocumentsProvider() {
     override fun deleteDocument(documentId: String) {
         val file = docIdToFile(documentId)
         val rootType = documentId.substringBefore(':')
+        if (file.canonicalFile == getRootDir(rootType).canonicalFile) throw FileNotFoundException("Read-only root")
 
         if (rootType == ROOT_CONTAINERS &&
             file.parentFile?.absolutePath == dataDir.absolutePath

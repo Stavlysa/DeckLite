@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_builtin_copying">正在準備並驗證內建容器：%1$d%%\n%2$s / %3$s</string>
+    <string name="tc4_builtin_space">安裝內建容器需要 %1$s 可用空間。目前可用：%2$s。請釋出空間後重試。</string>
+    <string name="tc4_builtin_existing">發現既有的容器目錄。為保護資料，已停止自動安裝。請透過容器管理繼續操作。</string>
+</resources>

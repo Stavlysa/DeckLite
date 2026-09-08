@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Opt-in per launch: do not overwrite the user's global Wine display preference.
+export DECKLITE_WINE_DISPLAY_MODE=borderless
+exec /opt/tiny/steam-arm64/run-exe.sh "$@"

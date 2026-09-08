@@ -29,8 +29,8 @@ android {
         applicationId = "com.fct.tc4"
         minSdk = 28
         targetSdk = 37
-        versionCode = 4
-        versionName = "4.2.3"
+        versionCode = 15
+        versionName = "4.4.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters.add("arm64-v8a")
@@ -39,6 +39,9 @@ android {
 
     buildTypes {
         release {
+            isDebuggable = false
+            // Keep the existing private signing identity for non-destructive upgrades.
+            signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -77,6 +80,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.preference.ktx)
     implementation(libs.material)
     implementation(libs.viewpagerindicator)
     implementation(libs.blurview)
@@ -85,7 +89,7 @@ dependencies {
     implementation(libs.coil.gif)
     implementation(libs.coil.svg)
     implementation(libs.avnc)
-    implementation(libs.termux.x11)
+    implementation(project(":decklite-x11"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

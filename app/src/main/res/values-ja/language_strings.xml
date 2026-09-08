@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_language_welcome">Tiny Computer へようこそ</string>
+    <string name="tc4_language_title">アプリの言語</string>
+    <string name="tc4_language_intro">表示言語を選んでください。後から設定で変更できます。Wine Controller と Windows の言語設定は独立しています。</string>
+    <string name="tc4_language_desc">アプリの表示言語を変更します。Wine Controller、Windows、クイックコマンドは変更されません。</string>
+    <string name="tc4_language_continue">続ける</string>
+    <string name="tc4_language_save_failed">言語を保存できませんでした。もう一度お試しください。</string>
+</resources>

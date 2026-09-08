@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Resource Monitor
+Comment=View live device CPU, Adreno GPU, memory, and all readable processes
+Exec=/usr/local/bin/resource-monitor
+Icon=org.gnome.SystemMonitor
+Terminal=false
+Categories=System;Monitor;
+StartupNotify=true

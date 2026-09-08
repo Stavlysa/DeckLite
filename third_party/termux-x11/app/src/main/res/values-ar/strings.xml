@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">غير متصل</string>
+    <string name="preferences_button_text">   الإعدادات   </string>
+    <string name="help_button_text">   مساعدة   </string>
+    <string name="exit_button_text">   خروج   </string>
+    <string name="extra_keys_config_desc">هنا يمكنك تعيين قيمة متغير extra-keys كما في تطبيق Termux (اقرأ <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">هذا</a>) والمزيد \n
+مثلاً <b>META</b> لـ <i>مفتاح META</i>, \n
+<b>KEYBOARD</b> لـ <i>مفتاح تبديل لوحة المفاتيح الناعمة</i>, \n
+<b>PREFERENCES</b> لـ <i>مفتاح فتح الإعدادات</i>, \n
+<b>MOUSE_HELPER</b> لـ <i>مفتاح تبديل مساعد الفأرة</i>, \n
+<b>STYLUS_HELPER</b> لـ <i>مفتاح تبديل تراكب نقر القلم</i>, \n
+<b>EXIT</b> لـ <i>مفتاح خروج التطبيق</i>.</string>
+    <string name="lorie_notification_content_text">اسحب للأسفل لإظهار الخيارات</string>
+    <string name="lorie_notification_open_preferences">الإعدادات</string>
+    <string name="lorie_notification_exit">خروج</string>
+    <string name="lorie_notification_restart_activity">إعادة تشغيل</string>
+    <string name="lorie_notification_toggle_soft_keyboard">تبديل IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">تبديل لوحة المفاتيح الإضافية</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">تحرير الالتقاط</string>
+    <string name="lorie_notification_toggle_fullscreen">تبديل ملء الشاشة</string>
+
+    <string name="lorie_pref_main">الإعدادات</string>
+    <string name="lorie_pref_output">الإخراج</string>
+    <string name="lorie_pref_pointer">المؤشر</string>
+    <string name="lorie_pref_kbd">لوحة المفاتيح</string>
+    <string name="lorie_pref_other">أخرى</string>
+    <string name="lorie_pref_version">الإصدار</string>
+    <string name="lorie_pref_ekbar">إعدادات شريط المفاتيح الإضافية</string>
+    <string name="lorie_pref_userActions">الاستجابة لإجراءات المستخدم</string>
+
+    <string name="lorie_pref_displayResolutionMode">وضع دقة العرض</string>
+    <string name="lorie_pref_displayScale">مقياس العرض، %</string>
+    <string name="lorie_pref_displayResolutionExact">دقة العرض</string>
+    <string name="lorie_pref_displayResolutionCustom">دقة العرض</string>
+    <string name="lorie_pref_displayFilteringMode">وضع تصفية العرض</string>
+    <string name="lorie_pref_adjustResolution">ضبط الدقة المحددة لتناسب اتجاه الشاشة</string>
+    <string name="lorie_pref_displayStretch">تمديد ليناسب العرض</string>
+    <string name="lorie_pref_Reseed">إعادة ضبط الشاشة أثناء فتح لوحة المفاتيح الناعمة</string>
+    <string name="lorie_pref_Reseed_summary">سيتم ضبط حجم الشاشة أثناء فتح لوحة المفاتيح الناعمة.</string>
+    <string name="lorie_pref_PIP">وضع صورة داخل صورة</string>
+    <string name="lorie_pref_PIP_summary">إظهار التطبيق في وضع صورة داخل صورة عند الضغط على زر الصفحة الرئيسية أو زر التطبيقات الحديثة</string>
+    <string name="lorie_pref_fullscreen">ملء الشاشة</string>
+    <string name="lorie_pref_fullscreen_summary">تبديل الوضع الشامل في شاشة جهازك</string>
+    <string name="lorie_pref_forceOrientation">اتجاه الشاشة</string>
+    <string name="lorie_pref_hideCutout">إخفاء فتحة الشاشة (إن وجدت)</string>
+    <string name="lorie_pref_keepScreenOn">إبقاء الشاشة قيد التشغيل</string>
+
+    <string name="lorie_pref_touchMode">وضع إدخال شاشة اللمس</string>
+    <string name="lorie_pref_scaleTouchpad">تطبيق عامل مقياس العرض على لوحة اللمس</string>
+    <string name="lorie_pref_showStylusClickOverride">إظهار خيارات نقر القلم</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">تجاوز لمس القلم، نقر يسار أو وسط أو يمين (القلم فقط)</string>
+    <string name="lorie_pref_stylusIsMouse">تمكين وضع الفأرة للقلم</string>
+    <string name="lorie_pref_stylusIsMouse_summary">اجعل قلمك يعمل مثل الفأرة. عند التفعيل، سيحرك القلم المؤشر فقط ويرسل نقرات الفأرة، متجاهلاً الضغط والزاوية والميل.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">وضع معدل تلامس زر القلم</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">مكّن هذا الخيار لإرسال أزرار الفأرة اليمنى أو الوسطى فقط عندما يلمس القلم الشاشة أثناء الضغط على الزر.</string>
+    <string name="lorie_pref_showMouseHelper">إظهار تراكب مساعد نقر الفأرة</string>
+    <string name="lorie_pref_showMouseHelper_summary">أزرار فأرة على الشاشة قابلة للاستخدام مع لوحة اللمس</string>
+    <string name="lorie_pref_pointerCapture">التقاط أجهزة المؤشر الخارجية عند الإمكان</string>
+    <string name="lorie_pref_pointerCapture_summary">اعتراض جميع أحداث المؤشر الخارجية. يعود المؤشر إلى Android بعد الضغط على مفتاح Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">تحويل حركات المؤشر الملتقطة</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">عامل سرعة المؤشر الملتقط، %</string>
+    <string name="lorie_pref_tapToMove">تمكين النقر للتحريك للوحات اللمس</string>
+    <string name="lorie_pref_ignoreGamepadEvents">تجاهل أحداث إدخال ذراع التحكم</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">منع إعادة توجيه أحداث ذراع التحكم وعصا التحكم إلى خادم X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">إظهار لوحة مفاتيح إضافية</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">إظهار لوحة مفاتيح بمفاتيح إضافية.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">إظهار IME مع لوحة مفاتيح خارجية</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">إظهار لوحة المفاتيح البرمجية أثناء اتصال لوحة مفاتيح خارجية.</string>
+    <string name="lorie_pref_preferScancodes">تفضيل رموز المسح عند الإمكان</string>
+    <string name="lorie_pref_preferScancodes_summary">السماح لخادم X بمعالجة تخطيط لوحة المفاتيح الخارجية (مع إعدادات DE أو setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">حل بديل لرموز مسح لوحة المفاتيح الخارجية</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">يصلح رموز المسح على بعض الأجهزة. قد يسبب مشاكل مع تخطيطات متعددة.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">اعتراض اختصارات النظام</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Samsung Dex فقط. يسمح باعتراض \"Alt+F4\"، \"Meta+D\"، \"Meta+E\"، إلخ.</string>
+    <string name="lorie_pref_enableAccessibilityService">تمكين خدمة الوصول لاعتراض اختصارات النظام يدوياً.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">فتح إعدادات الوصول.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">تمكين خدمة الوصول لاعتراض اختصارات النظام تلقائياً.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">يتطلب صلاحية WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">إيقاف اعتراض المفاتيح مؤقتاً بمفتاح Esc</string>
+    <string name="lorie_pref_filterOutWinkey">تصفية مفتاح Win (Meta/Mod4) المعترض.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">يسمح لك باستخدام اختصارات Dex أثناء الاعتراض. يتطلب خدمة الوصول للعمل.</string>
+    <string name="lorie_pref_enforceCharBasedInput">فرض الإدخال القائم على الأحرف</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">يمنع الاقتراحات والكتابة التنبؤية ولغات CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">مشاركة الحافظة</string>
+    <string name="lorie_pref_requestNotificationPermission">طلب صلاحية الإشعارات</string>
+    <string name="lorie_pref_xrMode">وضع Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">تكوين الاستجابة لإجراءات المستخدم</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">تخزين إعدادات الشاشات الثانوية بشكل منفصل</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">افتح هذه الشاشة على الشاشة التي تريد تكوينها</string>
+
+    <string name="lorie_pref_adjustHeightForEK">ضبط ارتفاع الشاشة لشريط المفاتيح الإضافية</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">قد يسبب وميض الشاشة أثناء تبديل شريط المفاتيح الإضافية.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">إلغاء تنشيط المفاتيح الخاصة على شريط المفاتيح الإضافية بعد كل ضغطة مفتاح</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">استخدم الضغط المطول لقفل المفاتيح الخاصة</string>
+    <string name="lorie_pref_opacityEKBar">شفافية شريط المفاتيح الإضافية، %</string>
+    <string name="lorie_pref_extra_keys_config">تكوين المفاتيح الإضافية</string>
+
+    <string name="lorie_pref_swipeUpAction">تمرير ثلاثة أصابع لأعلى</string>
+    <string name="lorie_pref_swipeDownAction">تمرير ثلاثة أصابع لأسفل</string>
+    <string name="lorie_pref_volumeUpAction">رفع الصوت</string>
+    <string name="lorie_pref_volumeDownAction">خفض الصوت</string>
+    <string name="lorie_pref_backButtonAction">زر الرجوع</string>
+    <string name="lorie_pref_notificationTapAction">نقر الإشعار</string>
+    <string name="lorie_pref_notificationButton0Action">الزر الأول للإشعار</string>
+    <string name="lorie_pref_notificationButton1Action">الزر الثاني للإشعار</string>
+    <string name="lorie_pref_mediaKeysAction">مفاتيح الوسائط</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">يتطلب أن يكون \"وضع دقة العرض\" \"exact\" أو \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">يتطلب اعتراض اختصارات النظام بوضع Dex أو خدمة الوصول</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">يتطلب أن يكون \"وضع إدخال شاشة اللمس\" \"Trackpad\" وألا يكون \"وضع دقة العرض\" \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">لوحة اللمس</string>
+    <string name="lorie_touchMode_simulated">شاشة لمس محاكاة</string>
+    <string name="lorie_touchMode_direct">لمس مباشر</string>
+
+    <string name="lorie_displayResolution_native">أصلي</string>
+    <string name="lorie_displayResolution_scaled">مُقَيَّس</string>
+    <string name="lorie_displayResolution_exact">دقيق</string>
+    <string name="lorie_displayResolution_custom">مخصص</string>
+
+    <string name="lorie_displayFiltering_bilinear">ثنائي الخط</string>
+    <string name="lorie_displayFiltering_nearest">أقرب جار</string>
+
+    <string name="lorie_transformCapturedPointer_no">لا</string>
+    <string name="lorie_transformCapturedPointer_cw">باتجاه عقارب الساعة</string>
+    <string name="lorie_transformCapturedPointer_cc">عكس عقارب الساعة</string>
+    <string name="lorie_transformCapturedPointer_ud">مقلوب</string>
+    <string name="lorie_transformCapturedPointer_at">تلقائي (لل touchpad)</string>
+
+    <string name="lorie_userAction_noAction">بدون إجراء</string>
+    <string name="lorie_userAction_noActionWithText">بدون إجراء (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">تبديل لوحة المفاتيح الناعمة</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">تبديل شريط المفاتيح الإضافية</string>
+    <string name="lorie_userAction_openPreferences">فتح الإعدادات</string>
+    <string name="lorie_userAction_releaseCaptures">تحرير التقاط المؤشر ولوحة المفاتيح</string>
+    <string name="lorie_userAction_toggleFullscreen">تبديل ملء الشاشة</string>
+    <string name="lorie_userAction_restartActivity">إعادة تشغيل النشاط</string>
+    <string name="lorie_userAction_exit">خروج</string>
+    <string name="lorie_userAction_sendVolumeDown">إرسال خفض الصوت</string>
+    <string name="lorie_userAction_sendVolumeUp">إرسال رفع الصوت</string>
+    <string name="lorie_userAction_sendMediaAction">إرسال إجراء الوسائط</string>
+    <string name="lorie_userAction_androidVolumeControl">التحكم في صوت Android</string>
+    <string name="lorie_userAction_androidMediaControl">التحكم في وسائط Android</string>
+
+    <string name="lorie_orientation_auto">تلقائي</string>
+    <string name="lorie_orientation_portrait">عمودي</string>
+    <string name="lorie_orientation_landscape">أفقي</string>
+    <string name="lorie_orientation_reversePortrait">عمودي معكوس</string>
+    <string name="lorie_orientation_reverseLandscape">أفقي معكوس</string>
+
+    <string name="lorie_toast_copied_to_clipboard">تم النسخ إلى الحافظة</string>
+    <string name="lorie_toast_wrong_resolution_format">تنسيق الدقة خاطئ</string>
+    <string name="lorie_dialog_permission_denied_title">تم رفض الإذن</string>
+    <string name="lorie_dialog_permission_denied_message">يتطلب Android صلاحية WRITE_SECURE_SETTINGS لبدء خدمة الوصول تلقائياً.\nيرجى تشغيل هذا الأمر باستخدام ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">فشل تحميل المكتبة الأصلية. هل قمت بتثبيت APK الصحيح؟ جرب الإصدار universal.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">未接続</string>
+    <string name="preferences_button_text">   設定   </string>
+    <string name="help_button_text">   ヘルプ   </string>
+    <string name="exit_button_text">   終了   </string>
+    <string name="extra_keys_config_desc">ここではTermuxアプリと同様にextra-keys変数の値を設定できます（<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">こちら</a>をお読みください）\n
+例：<b>META</b> は <i>METAキー</i>、\n
+<b>KEYBOARD</b> は <i>ソフトキーボード切替キー</i>、\n
+<b>PREFERENCES</b> は <i>設定を開くキー</i>、\n
+<b>MOUSE_HELPER</b> は <i>マウスヘルパー切替キー</i>、\n
+<b>STYLUS_HELPER</b> は <i>スタイラスクリックオーバーレイ切替キー</i>、\n
+<b>EXIT</b> は <i>アプリ終了キー</i>。</string>
+    <string name="lorie_notification_content_text">下に引いてオプションを表示</string>
+    <string name="lorie_notification_open_preferences">設定</string>
+    <string name="lorie_notification_exit">終了</string>
+    <string name="lorie_notification_restart_activity">再起動</string>
+    <string name="lorie_notification_toggle_soft_keyboard">IME切替</string>
+    <string name="lorie_notification_toggle_additional_key_bar">追加キーボード切替</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">キャプチャ解除</string>
+    <string name="lorie_notification_toggle_fullscreen">フルスクリーン切替</string>
+
+    <string name="lorie_pref_main">設定</string>
+    <string name="lorie_pref_output">出力</string>
+    <string name="lorie_pref_pointer">ポインタ</string>
+    <string name="lorie_pref_kbd">キーボード</string>
+    <string name="lorie_pref_other">その他</string>
+    <string name="lorie_pref_version">バージョン</string>
+    <string name="lorie_pref_ekbar">追加キーバーの設定</string>
+    <string name="lorie_pref_userActions">ユーザーアクションへの応答</string>
+
+    <string name="lorie_pref_displayResolutionMode">ディスプレイ解像度モード</string>
+    <string name="lorie_pref_displayScale">ディスプレイ倍率, %</string>
+    <string name="lorie_pref_displayResolutionExact">ディスプレイ解像度</string>
+    <string name="lorie_pref_displayResolutionCustom">ディスプレイ解像度</string>
+    <string name="lorie_pref_displayFilteringMode">ディスプレイフィルタリングモード</string>
+    <string name="lorie_pref_adjustResolution">画面の向きに合わせて設定された解像度を調整</string>
+    <string name="lorie_pref_displayStretch">ディスプレイに合わせて引き伸ばす</string>
+    <string name="lorie_pref_Reseed">ソフトキーボードが開いているときに画面を再調整</string>
+    <string name="lorie_pref_Reseed_summary">ソフトキーボードが開いている間、画面サイズが調整されます。</string>
+    <string name="lorie_pref_PIP">ピクチャーインピクチャーモード</string>
+    <string name="lorie_pref_PIP_summary">ホームボタンまたは最近のアプリボタンが押されたときにアプリをPIPモードで表示</string>
+    <string name="lorie_pref_fullscreen">フルスクリーン</string>
+    <string name="lorie_pref_fullscreen_summary">デバイスのディスプレイで没入モードを切り替え</string>
+    <string name="lorie_pref_forceOrientation">画面の向き</string>
+    <string name="lorie_pref_hideCutout">ディスプレイの切り欠きを非表示（ある場合）</string>
+    <string name="lorie_pref_keepScreenOn">画面をオンに保つ</string>
+
+    <string name="lorie_pref_touchMode">タッチスクリーン入力モード</string>
+    <string name="lorie_pref_scaleTouchpad">タッチパッドにディスプレイ倍率を適用</string>
+    <string name="lorie_pref_showStylusClickOverride">スタイラスクリックオプションを表示</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">スタイラスタッチの上書き、左/中/右クリック（スタイラスのみ）</string>
+    <string name="lorie_pref_stylusIsMouse">スタイラスマウスモードを有効化</string>
+    <string name="lorie_pref_stylusIsMouse_summary">スタイラスをマウスのように動作させます。有効にすると、スタイラスはカーソルを移動してマウスクリックを送信するのみで、筆圧、角度、傾きを無視します。</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">スタイラスボタン接触修飾モード</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">このオプションを有効にすると、ボタンを押しながらスタイラスが画面に触れたときのみ右または中マウスボタンを送信します。</string>
+    <string name="lorie_pref_showMouseHelper">マウスクリックヘルパーオーバーレイを表示</string>
+    <string name="lorie_pref_showMouseHelper_summary">タッチパッドで使用可能な画面上のマウスボタン</string>
+    <string name="lorie_pref_pointerCapture">可能な場合に外部ポインタデバイスをキャプチャ</string>
+    <string name="lorie_pref_pointerCapture_summary">すべてのハードウェアポインタイベントを傍受します。Escapeキーを押すとポインタがAndroidに戻ります。</string>
+    <string name="lorie_pref_transformCapturedPointer">キャプチャされたポインタの動きを変換</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">キャプチャされたポインタの速度係数, %</string>
+    <string name="lorie_pref_tapToMove">タッチパッドのタップ移動を有効化</string>
+    <string name="lorie_pref_ignoreGamepadEvents">ゲームパッド入力イベントを無視</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">ゲームパッドとジョイスティックのイベントがXサーバーに転送されないようにする</string>
+
+    <string name="lorie_pref_showAdditionalKbd">追加キーボードを表示</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">追加キー付きキーボードを表示します。</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">外部キーボードでIMEを表示</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">ハードウェアキーボードが接続されているときにソフトウェアキーボードを表示します。</string>
+    <string name="lorie_pref_preferScancodes">可能な場合はスキャンコードを優先</string>
+    <string name="lorie_pref_preferScancodes_summary">Xサーバーにハードウェアキーボードレイアウトを処理させます（DE設定またはsetxkbmapを使用）。</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">ハードウェアキーボードのスキャンコード回避策</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">一部のデバイスでスキャンコードを修正します。複数のレイアウトで問題が発生する可能性があります。</string>
+    <string name="lorie_pref_dexMetaKeyCapture">システムショートカットを傍受</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Samsung Dexのみ。「Alt+F4」「Meta+D」「Meta+E」などの傍受を許可します。</string>
+    <string name="lorie_pref_enableAccessibilityService">システムショートカットを手動で傍受するためにアクセシビリティサービスを有効にする。</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">アクセシビリティ設定を開く。</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">システムショートカットを自動的に傍受するためにアクセシビリティサービスを有効にする。</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">WRITE_SECURE_SETTINGS権限が必要です。</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Escキーでキー傍受を一時停止</string>
+    <string name="lorie_pref_filterOutWinkey">傍受されたWin（Meta/Mod4）キーをフィルタリング。</string>
+    <string name="lorie_pref_filterOutWinkey_summary">傍受中にDexショートカットを使用できるようにします。動作にはアクセシビリティサービスが必要です。</string>
+    <string name="lorie_pref_enforceCharBasedInput">文字ベース入力を強制</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">候補、予測入力、CJK言語を抑制します</string>
+
+    <string name="lorie_pref_clipboardEnable">クリップボード共有</string>
+    <string name="lorie_pref_requestNotificationPermission">通知権限を要求</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XRモード</string>
+    <string name="lorie_pref_configureResponseToUserActions">ユーザーアクションへの応答を設定</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">セカンダリディスプレイの設定を個別に保存</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">設定したいディスプレイでこの画面を開いてください</string>
+
+    <string name="lorie_pref_adjustHeightForEK">追加キーバーに合わせてディスプレイの高さを調整</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">追加キーバーの切り替え中に画面がちらつく場合があります。</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">各キー押下後に追加キーバーの特殊キーを無効化</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">特殊キーをロックするには長押しを使用</string>
+    <string name="lorie_pref_opacityEKBar">追加キーバーの不透明度, %</string>
+    <string name="lorie_pref_extra_keys_config">追加キー設定</string>
+
+    <string name="lorie_pref_swipeUpAction">3本指で上にスワイプ</string>
+    <string name="lorie_pref_swipeDownAction">3本指で下にスワイプ</string>
+    <string name="lorie_pref_volumeUpAction">音量アップ</string>
+    <string name="lorie_pref_volumeDownAction">音量ダウン</string>
+    <string name="lorie_pref_backButtonAction">戻るボタン</string>
+    <string name="lorie_pref_notificationTapAction">通知タップ</string>
+    <string name="lorie_pref_notificationButton0Action">通知の最初のボタン</string>
+    <string name="lorie_pref_notificationButton1Action">通知の2番目のボタン</string>
+    <string name="lorie_pref_mediaKeysAction">メディアキー</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">「ディスプレイ解像度モード」が「exact」または「custom」である必要があります</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Dexモードまたはアクセシビリティサービスでシステムショートカットを傍受する必要があります</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">「タッチスクリーン入力モード」が「Trackpad」で、「ディスプレイ解像度モード」が「native」でない必要があります</string>
+
+    <string name="lorie_touchMode_trackpad">タッチパッド</string>
+    <string name="lorie_touchMode_simulated">シミュレートされたタッチスクリーン</string>
+    <string name="lorie_touchMode_direct">直接タッチ</string>
+
+    <string name="lorie_displayResolution_native">ネイティブ</string>
+    <string name="lorie_displayResolution_scaled">スケーリング</string>
+    <string name="lorie_displayResolution_exact">正確</string>
+    <string name="lorie_displayResolution_custom">カスタム</string>
+
+    <string name="lorie_displayFiltering_bilinear">バイリニア</string>
+    <string name="lorie_displayFiltering_nearest">最近傍</string>
+
+    <string name="lorie_transformCapturedPointer_no">いいえ</string>
+    <string name="lorie_transformCapturedPointer_cw">時計回り</string>
+    <string name="lorie_transformCapturedPointer_cc">反時計回り</string>
+    <string name="lorie_transformCapturedPointer_ud">上下逆</string>
+    <string name="lorie_transformCapturedPointer_at">自動（タッチパッド用）</string>
+
+    <string name="lorie_userAction_noAction">操作なし</string>
+    <string name="lorie_userAction_noActionWithText">操作なし (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">ソフトキーボードの切り替え</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">追加キーバーの切り替え</string>
+    <string name="lorie_userAction_openPreferences">設定を開く</string>
+    <string name="lorie_userAction_releaseCaptures">ポインタとキーボードのキャプチャを解除</string>
+    <string name="lorie_userAction_toggleFullscreen">フルスクリーンの切り替え</string>
+    <string name="lorie_userAction_restartActivity">アクティビティを再起動</string>
+    <string name="lorie_userAction_exit">終了</string>
+    <string name="lorie_userAction_sendVolumeDown">音量ダウンを送信</string>
+    <string name="lorie_userAction_sendVolumeUp">音量アップを送信</string>
+    <string name="lorie_userAction_sendMediaAction">メディア操作を送信</string>
+    <string name="lorie_userAction_androidVolumeControl">Android音量コントロール</string>
+    <string name="lorie_userAction_androidMediaControl">Androidメディアコントロール</string>
+
+    <string name="lorie_orientation_auto">自動</string>
+    <string name="lorie_orientation_portrait">縦向き</string>
+    <string name="lorie_orientation_landscape">横向き</string>
+    <string name="lorie_orientation_reversePortrait">逆縦向き</string>
+    <string name="lorie_orientation_reverseLandscape">逆横向き</string>
+
+    <string name="lorie_toast_copied_to_clipboard">クリップボードにコピーしました</string>
+    <string name="lorie_toast_wrong_resolution_format">解像度の形式が正しくありません</string>
+    <string name="lorie_dialog_permission_denied_title">権限が拒否されました</string>
+    <string name="lorie_dialog_permission_denied_message">アクセシビリティサービスを自動的に開始するには、AndroidにWRITE_SECURE_SETTINGS権限が必要です。\nADBを使用して以下のコマンドを実行してください：\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">ネイティブライブラリの読み込みに失敗しました。正しいAPKをインストールしましたか？universal版をお試しください。</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

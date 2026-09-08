@@ -156,9 +156,16 @@ class LauncherShortcutDialogFragment : DialogFragment() {
 
     private suspend fun createDesktopShortcut(name: String, code: String, command: String, iconPath: String?) {
         val context = requireContext()
-        val intent = android.content.Intent("com.fct.tc4.action.SHORTCUT").apply {
-            putExtra("shortcut_code", code)
-            putExtra("shortcut_command", command)
+        val vault = LauncherCommandVault(File(context.noBackupFilesDir, "launcher-commands"))
+        val token = try {
+            vault.create(code, command)
+        } catch (_: Exception) {
+            Snackbar.make(binding.root, R.string.tc4_shortcut_secure_create_failed, Snackbar.LENGTH_LONG).show()
+            return
+        }
+        val intent = android.content.Intent(context, com.fct.tc4.ui.main.MainActivity::class.java).apply {
+            action = "com.fct.tc4.action.SHORTCUT"
+            putExtra(LauncherCommandVault.EXTRA_TOKEN, token)
             addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP)
         }
 
@@ -201,8 +208,9 @@ class LauncherShortcutDialogFragment : DialogFragment() {
             val manager = context.getSystemService(android.content.pm.ShortcutManager::class.java)
             if (manager.isRequestPinShortcutSupported) {
                 @Suppress("DEPRECATION")
-                manager.requestPinShortcut(info, null)
+                if (!manager.requestPinShortcut(info, null)) vault.revoke(token)
             } else {
+                vault.revoke(token)
                 binding.root?.let {
                     Snackbar.make(it, R.string.tc4_shortcut_pin_unsupported, Snackbar.LENGTH_SHORT).show()
                 }

@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Niet verbonden</string>
+    <string name="preferences_button_text">   VOORKEUREN   </string>
+    <string name="help_button_text">   HELP   </string>
+    <string name="exit_button_text">   AFSLUITEN   </string>
+    <string name="extra_keys_config_desc">Hier kunt u de waarde van de extra-keys-variabele instellen zoals in de Termux-app (lees <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">dit</a>) en meer \n
+Bijv. <b>META</b> voor <i>META-toets</i>, \n
+<b>KEYBOARD</b> voor <i>toets voor omschakelen softwaretoetsenbord</i>, \n
+<b>PREFERENCES</b> voor <i>toets voor openen voorkeuren</i>, \n
+<b>MOUSE_HELPER</b> voor <i>toets voor omschakelen muishulp</i>, \n
+<b>STYLUS_HELPER</b> voor <i>toets voor omschakelen stylusklik-overlay</i>, \n
+<b>EXIT</b> voor <i>toets voor afsluiten app</i>.</string>
+    <string name="lorie_notification_content_text">Trek naar beneden om opties weer te geven</string>
+    <string name="lorie_notification_open_preferences">Voorkeuren</string>
+    <string name="lorie_notification_exit">Afsluiten</string>
+    <string name="lorie_notification_restart_activity">Herstarten</string>
+    <string name="lorie_notification_toggle_soft_keyboard">IME omschakelen</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Extra toetsenbord omschakelen</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Vastleggingen vrijgeven</string>
+    <string name="lorie_notification_toggle_fullscreen">Volledig scherm omschakelen</string>
+
+    <string name="lorie_pref_main">Voorkeuren</string>
+    <string name="lorie_pref_output">Uitvoer</string>
+    <string name="lorie_pref_pointer">Aanwijzer</string>
+    <string name="lorie_pref_kbd">Toetsenbord</string>
+    <string name="lorie_pref_other">Overig</string>
+    <string name="lorie_pref_version">Versie</string>
+    <string name="lorie_pref_ekbar">Voorkeuren voor extra toetsenbalk</string>
+    <string name="lorie_pref_userActions">Reactie op gebruikersacties</string>
+
+    <string name="lorie_pref_displayResolutionMode">Weergaveresolutiemodus</string>
+    <string name="lorie_pref_displayScale">Weergaveschaal, %</string>
+    <string name="lorie_pref_displayResolutionExact">Weergaveresolutie</string>
+    <string name="lorie_pref_displayResolutionCustom">Weergaveresolutie</string>
+    <string name="lorie_pref_displayFilteringMode">Weergavefiltermodus</string>
+    <string name="lorie_pref_adjustResolution">Ingestelde resolutie aanpassen aan schermoriëntatie</string>
+    <string name="lorie_pref_displayStretch">Uitrekken om scherm te vullen</string>
+    <string name="lorie_pref_Reseed">Scherm opnieuw aanpassen terwijl softwaretoetsenbord geopend is</string>
+    <string name="lorie_pref_Reseed_summary">De schermgrootte wordt aangepast terwijl het softwaretoetsenbord geopend is.</string>
+    <string name="lorie_pref_PIP">Beeld-in-beeld-modus</string>
+    <string name="lorie_pref_PIP_summary">App in PIP-modus weergeven wanneer de homeknop of recente-apps-knop wordt ingedrukt</string>
+    <string name="lorie_pref_fullscreen">Volledig scherm</string>
+    <string name="lorie_pref_fullscreen_summary">Meeslepende modus omschakelen op uw apparaatscherm</string>
+    <string name="lorie_pref_forceOrientation">Schermoriëntatie</string>
+    <string name="lorie_pref_hideCutout">Schermuitsparing verbergen (indien aanwezig)</string>
+    <string name="lorie_pref_keepScreenOn">Scherm ingeschakeld houden</string>
+
+    <string name="lorie_pref_touchMode">Invoermodus aanraakscherm</string>
+    <string name="lorie_pref_scaleTouchpad">Weergaveschaalfactor toepassen op touchpad</string>
+    <string name="lorie_pref_showStylusClickOverride">Stylusklikopties weergeven</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Stylus-aanraakoverschrijving, links-, midden- of rechtsklik (alleen stylus)</string>
+    <string name="lorie_pref_stylusIsMouse">Stylus-muismodus inschakelen</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Laat uw stylus werken als een muis. Wanneer geactiveerd, zal de stylus alleen de cursor verplaatsen en muisklikken verzenden, waarbij druk, hoek en helling worden genegeerd.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Modus voor contactmodificatie stylusknop</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Schakel deze optie in om rechter- of middelmuisknoppen alleen te verzenden wanneer de stylus het scherm aanraakt terwijl de knop wordt ingedrukt.</string>
+    <string name="lorie_pref_showMouseHelper">Overlay voor muisklikhulp weergeven</string>
+    <string name="lorie_pref_showMouseHelper_summary">Muisknoppen op het scherm te gebruiken met touchpad</string>
+    <string name="lorie_pref_pointerCapture">Externe aanwijsapparaten vastleggen wanneer mogelijk</string>
+    <string name="lorie_pref_pointerCapture_summary">Alle hardware-aanwijsgebeurtenissen onderscheppen. Aanwijzer keert terug naar Android na indrukken van Escape-toets.</string>
+    <string name="lorie_pref_transformCapturedPointer">Bewegingen van vastgelegde aanwijzer transformeren</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Snelheidsfactor van vastgelegde aanwijzer, %</string>
+    <string name="lorie_pref_tapToMove">Tik-om-te-verplaatsen inschakelen voor touchpads</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Gamepad-invoergebeurtenissen negeren</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Voorkomen dat gamepad- en joystickgebeurtenissen worden doorgestuurd naar de X-server</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Extra toetsenbord weergeven</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Toetsenbord met extra toetsen weergeven.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">IME weergeven met extern toetsenbord</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Softwaretoetsenbord weergeven terwijl hardwaretoetsenbord is verbonden.</string>
+    <string name="lorie_pref_preferScancodes">Scancodes verkiezen wanneer mogelijk</string>
+    <string name="lorie_pref_preferScancodes_summary">X-server de hardware-toetsenbordindeling laten afhandelen (met DE-instellingen of setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Oplossing voor scancodes hardwaretoetsenbord</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Herstelt scancodes op sommige apparaten. Kan problemen veroorzaken met meerdere indelingen.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Systeemsnelkoppelingen onderscheppen</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Alleen Samsung Dex. Maakt onderschepping van \"Alt+F4\", \"Meta+D\", \"Meta+E\", enz. mogelijk.</string>
+    <string name="lorie_pref_enableAccessibilityService">Toegankelijkheidsservice inschakelen om systeemsnelkoppelingen handmatig te onderscheppen.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Toegankelijkheidsinstellingen openen.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Toegankelijkheidsservice inschakelen om systeemsnelkoppelingen automatisch te onderscheppen.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Vereist WRITE_SECURE_SETTINGS-toestemming.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Toetsonderschepping pauzeren met Esc-toets</string>
+    <string name="lorie_pref_filterOutWinkey">Onderschepte Win-toets (Meta/Mod4) uitfilteren.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Stelt u in staat Dex-snelkoppelingen te gebruiken tijdens onderschepping. Vereist Toegankelijkheidsservice om te werken.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Teken-gebaseerde invoer afdwingen</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Onderdrukt suggesties, voorspellend typen en CJK-talen</string>
+
+    <string name="lorie_pref_clipboardEnable">Klembord delen</string>
+    <string name="lorie_pref_requestNotificationPermission">Meldingsmachtiging aanvragen</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR-modus</string>
+    <string name="lorie_pref_configureResponseToUserActions">Reactie op gebruikersacties configureren</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Voorkeuren voor secundaire schermen apart opslaan</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Open dit scherm op het scherm dat u wilt configureren</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Schermhoogte aanpassen voor extra toetsenbalk</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Kan schermflikkering veroorzaken tijdens omschakelen van extra toetsenbalk.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Speciale toetsen op extra toetsenbalk deactiveren na elke toetsdruk</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Gebruik lang indrukken om speciale toetsen te vergrendelen</string>
+    <string name="lorie_pref_opacityEKBar">Ondoorzichtigheid van extra toetsenbalk, %</string>
+    <string name="lorie_pref_extra_keys_config">Configuratie extra toetsen</string>
+
+    <string name="lorie_pref_swipeUpAction">Drie vingers omhoog vegen</string>
+    <string name="lorie_pref_swipeDownAction">Drie vingers omlaag vegen</string>
+    <string name="lorie_pref_volumeUpAction">Volume omhoog</string>
+    <string name="lorie_pref_volumeDownAction">Volume omlaag</string>
+    <string name="lorie_pref_backButtonAction">Terug-knop</string>
+    <string name="lorie_pref_notificationTapAction">Melding aanraken</string>
+    <string name="lorie_pref_notificationButton0Action">Eerste meldingsknop</string>
+    <string name="lorie_pref_notificationButton1Action">Tweede meldingsknop</string>
+    <string name="lorie_pref_mediaKeysAction">Mediatoetsen</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Vereist dat \"weergaveresolutiemodus\" \"exact\" of \"custom\" is</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Vereist onderschepping van systeemsnelkoppelingen met Dex-modus of Toegankelijkheidsservice</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Vereist dat \"invoermodus aanraakscherm\" \"Trackpad\" is en \"weergaveresolutiemodus\" niet \"native\" is</string>
+
+    <string name="lorie_touchMode_trackpad">Touchpad</string>
+    <string name="lorie_touchMode_simulated">Gesimuleerd aanraakscherm</string>
+    <string name="lorie_touchMode_direct">Direct aanraken</string>
+
+    <string name="lorie_displayResolution_native">natief</string>
+    <string name="lorie_displayResolution_scaled">geschaald</string>
+    <string name="lorie_displayResolution_exact">exact</string>
+    <string name="lorie_displayResolution_custom">aangepast</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilineair</string>
+    <string name="lorie_displayFiltering_nearest">dichtstbijzijnde buur</string>
+
+    <string name="lorie_transformCapturedPointer_no">Nee</string>
+    <string name="lorie_transformCapturedPointer_cw">Met de klok mee</string>
+    <string name="lorie_transformCapturedPointer_cc">Tegen de klok in</string>
+    <string name="lorie_transformCapturedPointer_ud">Ondersteboven</string>
+    <string name="lorie_transformCapturedPointer_at">Automatisch (voor touchpad)</string>
+
+    <string name="lorie_userAction_noAction">geen actie</string>
+    <string name="lorie_userAction_noActionWithText">geen actie (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">softwaretoetsenbord omschakelen</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">extra toetsenbalk omschakelen</string>
+    <string name="lorie_userAction_openPreferences">voorkeuren openen</string>
+    <string name="lorie_userAction_releaseCaptures">aanwijzer- en toetsenbordvastlegging vrijgeven</string>
+    <string name="lorie_userAction_toggleFullscreen">volledig scherm omschakelen</string>
+    <string name="lorie_userAction_restartActivity">activiteit herstarten</string>
+    <string name="lorie_userAction_exit">afsluiten</string>
+    <string name="lorie_userAction_sendVolumeDown">volume omlaag verzenden</string>
+    <string name="lorie_userAction_sendVolumeUp">volume omhoog verzenden</string>
+    <string name="lorie_userAction_sendMediaAction">media-actie verzenden</string>
+    <string name="lorie_userAction_androidVolumeControl">Android volumeregeling</string>
+    <string name="lorie_userAction_androidMediaControl">Android mediabediening</string>
+
+    <string name="lorie_orientation_auto">automatisch</string>
+    <string name="lorie_orientation_portrait">staand</string>
+    <string name="lorie_orientation_landscape">liggend</string>
+    <string name="lorie_orientation_reversePortrait">omgekeerd staand</string>
+    <string name="lorie_orientation_reverseLandscape">omgekeerd liggend</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Gekopieerd naar klembord</string>
+    <string name="lorie_toast_wrong_resolution_format">Verkeerd resolutieformaat</string>
+    <string name="lorie_dialog_permission_denied_title">Toestemming geweigerd</string>
+    <string name="lorie_dialog_permission_denied_message">Android heeft WRITE_SECURE_SETTINGS-toestemming nodig om de toegankelijkheidsservice automatisch te starten.\nVoer deze opdracht uit met ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Kan native bibliotheek niet laden. Hebt u de juiste APK geïnstalleerd? Probeer de universal-versie.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

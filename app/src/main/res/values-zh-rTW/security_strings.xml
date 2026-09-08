@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_debug_title">Debugging（除錯模式）</string>
+    <string name="tc4_debug_desc">預設關閉。收集有限的私人日誌；配對並重啟容器後，允許需金鑰驗證的 USB SSH。關閉後約兩秒內停止 SSH。</string>
+    <string name="tc4_debug_confirm">開啟維修工具箱？只配對信任的電腦：SSH 可以存取容器及共用檔案。使用 Android 已授權的 USB 電腦配對 Ed25519 公開金鑰，再重啟容器。不開放密碼登入或網路桌面。這不會開啟 Android 的 USB 偵錯。</string>
+    <string name="tc4_debug_export_title">匯出除錯日誌</string>
+    <string name="tc4_debug_export_desc">將有限的 Android 診斷紀錄存成 ZIP。分享前請檢查內容；不會自動上傳。</string>
+    <string name="tc4_debug_clear_title">清除除錯日誌及配對</string>
+    <string name="tc4_debug_clear_desc">關閉除錯模式、忘記配對電腦，並刪除已收集的 Android 日誌。保留遊戲和存檔；不刪除已匯出的副本。</string>
+    <string name="tc4_debug_export_done">除錯 ZIP 已儲存。</string>
+    <string name="tc4_debug_export_failed">無法匯出除錯日誌。</string>
+    <string name="tc4_shortcut_unverified">已阻擋未驗證的捷徑。請在 Tiny Computer 內重新建立此捷徑。</string>
+    <string name="tc4_shortcut_secure_create_failed">無法儲存已驗證的捷徑，未執行任何命令。</string>
+</resources>

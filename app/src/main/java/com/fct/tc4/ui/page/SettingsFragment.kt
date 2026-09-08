@@ -34,10 +34,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.annotation.StringRes
 import com.fct.tc4.R
+import com.fct.tc4.debug.DebugController
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import com.fct.tc4.databinding.Tc4FragmentSettingsBinding
 import com.fct.tc4.databinding.Tc4SettingsActionItemBinding
 import com.fct.tc4.databinding.Tc4SettingsSwitchItemBinding
 import com.fct.tc4.ui.misc.LauncherShortcutDialogFragment
+import com.fct.tc4.ui.misc.AppLanguageDialogFragment
 import com.google.android.material.listitem.ListItemViewHolder
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
@@ -55,6 +60,21 @@ class SettingsFragment : Fragment() {
     }
 
     private lateinit var adapter: SettingsListAdapter
+
+    private val exportDebug = registerForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
+        if (uri != null) viewLifecycleOwner.lifecycleScope.launch {
+            val context = requireContext().applicationContext
+            val saved = withContext(Dispatchers.IO) {
+                runCatching {
+                    context.contentResolver.openOutputStream(uri)?.use { DebugController.export(context, it) }
+                        ?: error("Cannot open destination")
+                }.isSuccess
+            }
+            if (_binding != null) Snackbar.make(binding.root,
+                if (saved) R.string.tc4_debug_export_done else R.string.tc4_debug_export_failed,
+                Snackbar.LENGTH_LONG).show()
+        }
+    }
 
     /** API 28-29: 运行时请求 WRITE_EXTERNAL_STORAGE */
     private val requestStoragePermission = registerForActivityResult(
@@ -80,7 +100,15 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = SettingsListAdapter(
-            onToggle = { item -> viewModel.toggle(item) },
+            onToggle = { item ->
+                if (item.id == "debugging" && !item.isChecked) {
+                    MaterialAlertDialogBuilder(requireContext())
+                        .setTitle(R.string.tc4_debug_title)
+                        .setMessage(R.string.tc4_debug_confirm)
+                        .setPositiveButton(android.R.string.ok) { _, _ -> viewModel.toggle(item) }
+                        .setNegativeButton(android.R.string.cancel, null).show()
+                } else viewModel.toggle(item)
+            },
             onAction = { item -> handleAction(item) }
         )
         binding.recyclerView.adapter = adapter
@@ -95,6 +123,16 @@ class SettingsFragment : Fragment() {
 
     private fun handleAction(item: ActionSetting) {
         when (item.id) {
+            "app_language" -> if (childFragmentManager.findFragmentByTag("app_language") == null)
+                AppLanguageDialogFragment().show(childFragmentManager, "app_language")
+            "debug_export" -> exportDebug.launch("Tiny-Computer-debugging.zip")
+            "debug_clear" -> MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.tc4_debug_clear_title)
+                .setMessage(R.string.tc4_debug_clear_desc)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    DebugController.clear(requireContext())
+                    viewModel.refresh()
+                }.setNegativeButton(android.R.string.cancel, null).show()
             "launcher_shortcut" -> {
                 val code = arguments?.getString("code") ?: ""
                 LauncherShortcutDialogFragment.newInstance(code)
@@ -208,8 +246,12 @@ private class SwitchVH(
 
         binding.itemSwitch.setOnCheckedChangeListener(null)
         binding.itemSwitch.isChecked = item.isChecked
-        binding.itemSwitch.setOnCheckedChangeListener { _, _ ->
-            onToggle(item)
+        binding.itemSwitch.setOnCheckedChangeListener { button, checked ->
+            if (checked != item.isChecked) {
+                // Reset while awaiting the model or a confirmation dialog.
+                button.isChecked = item.isChecked
+                onToggle(item)
+            }
         }
         binding.itemCard.setOnClickListener {
             binding.itemSwitch.toggle()

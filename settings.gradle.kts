@@ -39,3 +39,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tiny Container"
 include(":app")
+// Build the reviewed Java viewport integration against the unchanged upstream
+// ARM64 X11 renderer. Do not silently fall back to the published Maven AAR.
+include(":decklite-x11", ":decklite-x11-stub")
+project(":decklite-x11").projectDir = file("third_party/termux-x11/app")
+project(":decklite-x11-stub").projectDir = file("third_party/termux-x11/shell-loader/stub")

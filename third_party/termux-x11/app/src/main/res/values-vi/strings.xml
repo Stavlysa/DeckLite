@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Chưa kết nối</string>
+    <string name="preferences_button_text">   TÙY CHỌN   </string>
+    <string name="help_button_text">   TRỢ GIÚP   </string>
+    <string name="exit_button_text">   THOÁT   </string>
+    <string name="extra_keys_config_desc">Tại đây bạn có thể đặt giá trị của biến extra-keys như trong ứng dụng Termux (đọc <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">tại đây</a>) và hơn thế nữa \n
+VD: <b>META</b> cho <i>phím META</i>, \n
+<b>KEYBOARD</b> cho <i>phím chuyển đổi bàn phím ảo</i>, \n
+<b>PREFERENCES</b> cho <i>phím mở tùy chọn</i>, \n
+<b>MOUSE_HELPER</b> cho <i>phím chuyển đổi trợ giúp chuột</i>, \n
+<b>STYLUS_HELPER</b> cho <i>phím chuyển đổi lớp phủ nhấp bút stylus</i>, \n
+<b>EXIT</b> cho <i>phím thoát ứng dụng</i>.</string>
+    <string name="lorie_notification_content_text">Kéo xuống để hiển thị tùy chọn</string>
+    <string name="lorie_notification_open_preferences">Tùy chọn</string>
+    <string name="lorie_notification_exit">Thoát</string>
+    <string name="lorie_notification_restart_activity">Khởi động lại</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Chuyển đổi IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Chuyển đổi bàn phím bổ sung</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Giải phóng bắt giữ</string>
+    <string name="lorie_notification_toggle_fullscreen">Chuyển đổi toàn màn hình</string>
+
+    <string name="lorie_pref_main">Tùy chọn</string>
+    <string name="lorie_pref_output">Đầu ra</string>
+    <string name="lorie_pref_pointer">Con trỏ</string>
+    <string name="lorie_pref_kbd">Bàn phím</string>
+    <string name="lorie_pref_other">Khác</string>
+    <string name="lorie_pref_version">Phiên bản</string>
+    <string name="lorie_pref_ekbar">Tùy chọn thanh phím phụ</string>
+    <string name="lorie_pref_userActions">Phản hồi với hành động người dùng</string>
+
+    <string name="lorie_pref_displayResolutionMode">Chế độ độ phân giải màn hình</string>
+    <string name="lorie_pref_displayScale">Tỷ lệ màn hình, %</string>
+    <string name="lorie_pref_displayResolutionExact">Độ phân giải màn hình</string>
+    <string name="lorie_pref_displayResolutionCustom">Độ phân giải màn hình</string>
+    <string name="lorie_pref_displayFilteringMode">Chế độ lọc màn hình</string>
+    <string name="lorie_pref_adjustResolution">Điều chỉnh độ phân giải đã đặt để phù hợp với hướng màn hình</string>
+    <string name="lorie_pref_displayStretch">Kéo giãn để vừa màn hình</string>
+    <string name="lorie_pref_Reseed">Điều chỉnh lại màn hình khi bàn phím ảo đang mở</string>
+    <string name="lorie_pref_Reseed_summary">Kích thước màn hình sẽ được điều chỉnh khi Bàn phím ảo đang mở.</string>
+    <string name="lorie_pref_PIP">Chế độ hình trong hình</string>
+    <string name="lorie_pref_PIP_summary">Hiển thị ứng dụng ở chế độ PIP khi nhấn nút home hoặc nút ứng dụng gần đây</string>
+    <string name="lorie_pref_fullscreen">Toàn màn hình</string>
+    <string name="lorie_pref_fullscreen_summary">Chuyển đổi chế độ đắm chìm trên màn hình thiết bị của bạn</string>
+    <string name="lorie_pref_forceOrientation">Hướng màn hình</string>
+    <string name="lorie_pref_hideCutout">Ẩn phần khuyết màn hình (nếu có)</string>
+    <string name="lorie_pref_keepScreenOn">Giữ màn hình bật</string>
+
+    <string name="lorie_pref_touchMode">Chế độ nhập màn hình cảm ứng</string>
+    <string name="lorie_pref_scaleTouchpad">Áp dụng hệ số tỷ lệ màn hình cho bàn di chuột</string>
+    <string name="lorie_pref_showStylusClickOverride">Hiển thị tùy chọn nhấp bút stylus</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Ghi đè chạm bút stylus, nhấp trái, giữa hoặc phải (chỉ bút stylus)</string>
+    <string name="lorie_pref_stylusIsMouse">Bật chế độ chuột bút stylus</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Làm cho bút stylus của bạn hoạt động như chuột. Khi được kích hoạt, bút stylus sẽ chỉ di chuyển con trỏ và gửi nhấp chuột, bỏ qua áp lực, góc và độ nghiêng.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Chế độ sửa đổi tiếp xúc nút bút stylus</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Bật tùy chọn này để gửi nút chuột phải hoặc giữa chỉ khi bút stylus chạm vào màn hình trong khi nút được nhấn.</string>
+    <string name="lorie_pref_showMouseHelper">Hiển thị lớp phủ trợ giúp nhấp chuột</string>
+    <string name="lorie_pref_showMouseHelper_summary">Nút chuột trên màn hình có thể sử dụng với bàn di chuột</string>
+    <string name="lorie_pref_pointerCapture">Bắt giữ thiết bị trỏ bên ngoài khi có thể</string>
+    <string name="lorie_pref_pointerCapture_summary">Chặn tất cả sự kiện con trỏ phần cứng. Con trỏ trở lại Android sau khi nhấn phím Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Biến đổi chuyển động của con trỏ bị bắt giữ</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Hệ số tốc độ con trỏ bị bắt giữ, %</string>
+    <string name="lorie_pref_tapToMove">Bật chạm-để-di-chuyển cho bàn di chuột</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Bỏ qua sự kiện nhập từ gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Ngăn sự kiện gamepad và joystick được chuyển tiếp đến máy chủ X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Hiển thị bàn phím bổ sung</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Hiển thị bàn phím với các phím bổ sung.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Hiển thị IME với bàn phím ngoài</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Hiển thị bàn phím phần mềm trong khi bàn phím phần cứng được kết nối.</string>
+    <string name="lorie_pref_preferScancodes">Ưu tiên mã quét khi có thể</string>
+    <string name="lorie_pref_preferScancodes_summary">Để máy chủ X xử lý bố cục bàn phím phần cứng (với cài đặt DE hoặc setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Giải pháp mã quét bàn phím phần cứng</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Sửa mã quét trên một số thiết bị. Có thể gây ra sự cố với nhiều bố cục.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Chặn phím tắt hệ thống</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Chỉ Samsung Dex. Cho phép chặn \"Alt+F4\", \"Meta+D\", \"Meta+E\", v.v.</string>
+    <string name="lorie_pref_enableAccessibilityService">Bật dịch vụ Trợ năng để chặn thủ công các phím tắt hệ thống.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Mở cài đặt Trợ năng.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Bật dịch vụ Trợ năng để tự động chặn các phím tắt hệ thống.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Yêu cầu quyền WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Tạm dừng chặn phím bằng phím Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Lọc phím Win (Meta/Mod4) bị chặn.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Cho phép bạn sử dụng phím tắt Dex trong khi chặn. Yêu cầu dịch vụ Trợ năng để hoạt động.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Ép buộc nhập dựa trên ký tự</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Ngăn chặn đề xuất, gõ dự đoán và ngôn ngữ CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">Chia sẻ clipboard</string>
+    <string name="lorie_pref_requestNotificationPermission">Yêu cầu quyền thông báo</string>
+    <string name="lorie_pref_xrMode">Chế độ Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">Định cấu hình phản hồi với hành động người dùng</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Lưu trữ tùy chọn cho màn hình phụ riêng biệt</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Mở màn hình này trên màn hình bạn muốn cấu hình</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Điều chỉnh chiều cao màn hình cho thanh phím phụ</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Có thể gây nhấp nháy màn hình khi chuyển đổi thanh phím phụ.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Vô hiệu hóa các phím đặc biệt trên thanh phím phụ sau mỗi lần nhấn</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Sử dụng nhấn giữ để khóa các phím đặc biệt</string>
+    <string name="lorie_pref_opacityEKBar">Độ mờ của thanh phím phụ, %</string>
+    <string name="lorie_pref_extra_keys_config">Cấu hình phím phụ</string>
+
+    <string name="lorie_pref_swipeUpAction">Vuốt ba ngón tay lên</string>
+    <string name="lorie_pref_swipeDownAction">Vuốt ba ngón tay xuống</string>
+    <string name="lorie_pref_volumeUpAction">Tăng âm lượng</string>
+    <string name="lorie_pref_volumeDownAction">Giảm âm lượng</string>
+    <string name="lorie_pref_backButtonAction">Nút quay lại</string>
+    <string name="lorie_pref_notificationTapAction">Chạm thông báo</string>
+    <string name="lorie_pref_notificationButton0Action">Nút thông báo thứ nhất</string>
+    <string name="lorie_pref_notificationButton1Action">Nút thông báo thứ hai</string>
+    <string name="lorie_pref_mediaKeysAction">Phím phương tiện</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Yêu cầu \"chế độ độ phân giải màn hình\" là \"exact\" hoặc \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Yêu cầu chặn phím tắt hệ thống với chế độ Dex hoặc dịch vụ Trợ năng</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Yêu cầu \"chế độ nhập màn hình cảm ứng\" là \"Trackpad\" và \"chế độ độ phân giải màn hình\" không phải là \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Bàn di chuột</string>
+    <string name="lorie_touchMode_simulated">Màn hình cảm ứng mô phỏng</string>
+    <string name="lorie_touchMode_direct">Chạm trực tiếp</string>
+
+    <string name="lorie_displayResolution_native">gốc</string>
+    <string name="lorie_displayResolution_scaled">đã chia tỷ lệ</string>
+    <string name="lorie_displayResolution_exact">chính xác</string>
+    <string name="lorie_displayResolution_custom">tùy chỉnh</string>
+
+    <string name="lorie_displayFiltering_bilinear">song tuyến</string>
+    <string name="lorie_displayFiltering_nearest">láng giềng gần nhất</string>
+
+    <string name="lorie_transformCapturedPointer_no">Không</string>
+    <string name="lorie_transformCapturedPointer_cw">Cùng chiều kim đồng hồ</string>
+    <string name="lorie_transformCapturedPointer_cc">Ngược chiều kim đồng hồ</string>
+    <string name="lorie_transformCapturedPointer_ud">Lộn ngược</string>
+    <string name="lorie_transformCapturedPointer_at">Tự động (cho bàn di chuột)</string>
+
+    <string name="lorie_userAction_noAction">không hành động</string>
+    <string name="lorie_userAction_noActionWithText">không hành động (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">chuyển đổi bàn phím ảo</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">chuyển đổi thanh phím bổ sung</string>
+    <string name="lorie_userAction_openPreferences">mở tùy chọn</string>
+    <string name="lorie_userAction_releaseCaptures">giải phóng bắt giữ con trỏ và bàn phím</string>
+    <string name="lorie_userAction_toggleFullscreen">chuyển đổi toàn màn hình</string>
+    <string name="lorie_userAction_restartActivity">khởi động lại hoạt động</string>
+    <string name="lorie_userAction_exit">thoát</string>
+    <string name="lorie_userAction_sendVolumeDown">gửi giảm âm lượng</string>
+    <string name="lorie_userAction_sendVolumeUp">gửi tăng âm lượng</string>
+    <string name="lorie_userAction_sendMediaAction">gửi hành động phương tiện</string>
+    <string name="lorie_userAction_androidVolumeControl">điều khiển âm lượng Android</string>
+    <string name="lorie_userAction_androidMediaControl">điều khiển phương tiện Android</string>
+
+    <string name="lorie_orientation_auto">tự động</string>
+    <string name="lorie_orientation_portrait">dọc</string>
+    <string name="lorie_orientation_landscape">ngang</string>
+    <string name="lorie_orientation_reversePortrait">dọc ngược</string>
+    <string name="lorie_orientation_reverseLandscape">ngang ngược</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Đã sao chép vào clipboard</string>
+    <string name="lorie_toast_wrong_resolution_format">Sai định dạng độ phân giải</string>
+    <string name="lorie_dialog_permission_denied_title">Quyền bị từ chối</string>
+    <string name="lorie_dialog_permission_denied_message">Android yêu cầu quyền WRITE_SECURE_SETTINGS để tự động khởi động dịch vụ trợ năng.\nVui lòng chạy lệnh này bằng ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Không tải được thư viện native. Bạn đã cài đúng APK chưa? Hãy thử phiên bản universal.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

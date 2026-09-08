@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Não conectado</string>
+    <string name="preferences_button_text">   PREFERÊNCIAS   </string>
+    <string name="help_button_text">   AJUDA   </string>
+    <string name="exit_button_text">   SAIR   </string>
+    <string name="extra_keys_config_desc">Aqui você pode definir o valor da variável extra-keys como no aplicativo Termux (leia <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">isto</a>) e mais \n
+Ex. <b>META</b> para <i>tecla META</i>, \n
+<b>KEYBOARD</b> para <i>tecla de alternar teclado virtual</i>, \n
+<b>PREFERENCES</b> para <i>tecla de abrir preferências</i>, \n
+<b>MOUSE_HELPER</b> para <i>tecla de alternar assistente do mouse</i>, \n
+<b>STYLUS_HELPER</b> para <i>tecla de alternar sobreposição de clique da caneta</i>, \n
+<b>EXIT</b> para <i>tecla de sair do aplicativo</i>.</string>
+    <string name="lorie_notification_content_text">Deslize para baixo para mostrar opções</string>
+    <string name="lorie_notification_open_preferences">Preferências</string>
+    <string name="lorie_notification_exit">Sair</string>
+    <string name="lorie_notification_restart_activity">Reiniciar</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Alternar IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Alternar teclado adicional</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Liberar capturas</string>
+    <string name="lorie_notification_toggle_fullscreen">Alternar tela cheia</string>
+
+    <string name="lorie_pref_main">Preferências</string>
+    <string name="lorie_pref_output">Saída</string>
+    <string name="lorie_pref_pointer">Ponteiro</string>
+    <string name="lorie_pref_kbd">Teclado</string>
+    <string name="lorie_pref_other">Outro</string>
+    <string name="lorie_pref_version">Versão</string>
+    <string name="lorie_pref_ekbar">Preferências da barra de teclas extras</string>
+    <string name="lorie_pref_userActions">Resposta às ações do usuário</string>
+
+    <string name="lorie_pref_displayResolutionMode">Modo de resolução da tela</string>
+    <string name="lorie_pref_displayScale">Escala da tela, %</string>
+    <string name="lorie_pref_displayResolutionExact">Resolução da tela</string>
+    <string name="lorie_pref_displayResolutionCustom">Resolução da tela</string>
+    <string name="lorie_pref_displayFilteringMode">Modo de filtragem da tela</string>
+    <string name="lorie_pref_adjustResolution">Ajustar a resolução definida para se adequar à orientação da tela</string>
+    <string name="lorie_pref_displayStretch">Esticar para caber na tela</string>
+    <string name="lorie_pref_Reseed">Reajustar tela com teclado virtual aberto</string>
+    <string name="lorie_pref_Reseed_summary">O tamanho da tela será ajustado enquanto o teclado virtual estiver aberto.</string>
+    <string name="lorie_pref_PIP">Modo picture-in-picture</string>
+    <string name="lorie_pref_PIP_summary">Mostrar aplicativo em modo PIP quando o botão início ou aplicativos recentes for pressionado</string>
+    <string name="lorie_pref_fullscreen">Tela cheia</string>
+    <string name="lorie_pref_fullscreen_summary">Alternar modo imersivo na tela do seu dispositivo</string>
+    <string name="lorie_pref_forceOrientation">Orientação da tela</string>
+    <string name="lorie_pref_hideCutout">Ocultar entalhe da tela (se existir)</string>
+    <string name="lorie_pref_keepScreenOn">Manter tela ligada</string>
+
+    <string name="lorie_pref_touchMode">Modo de entrada da tela sensível ao toque</string>
+    <string name="lorie_pref_scaleTouchpad">Aplicar fator de escala da tela ao touchpad</string>
+    <string name="lorie_pref_showStylusClickOverride">Mostrar opções de clique da caneta</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Substituição de toque da caneta, clique esquerdo, central ou direito (apenas caneta)</string>
+    <string name="lorie_pref_stylusIsMouse">Ativar modo mouse da caneta</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Faça sua caneta funcionar como um mouse. Quando ativado, a caneta apenas moverá o cursor e enviará cliques do mouse, ignorando pressão, ângulo e inclinação.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Modo modificador de contato do botão da caneta</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Ative esta opção para enviar botões direito ou central do mouse apenas quando a caneta toca na tela enquanto o botão está pressionado.</string>
+    <string name="lorie_pref_showMouseHelper">Mostrar sobreposição de ajuda de clique do mouse</string>
+    <string name="lorie_pref_showMouseHelper_summary">Botões do mouse na tela utilizáveis com touchpad</string>
+    <string name="lorie_pref_pointerCapture">Capturar dispositivos apontadores externos quando possível</string>
+    <string name="lorie_pref_pointerCapture_summary">Interceptar todos os eventos do ponteiro de hardware. O ponteiro volta ao Android após pressionar a tecla Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Transformar movimentos do ponteiro capturado</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Fator de velocidade do ponteiro capturado, %</string>
+    <string name="lorie_pref_tapToMove">Ativar tocar-para-mover para touchpads</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorar eventos de entrada do gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Impedir que eventos do gamepad e joystick sejam encaminhados para o servidor X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Mostrar teclado adicional</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Mostrar teclado com teclas adicionais.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Mostrar IME com teclado externo</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Mostrar teclado virtual enquanto o teclado físico está conectado.</string>
+    <string name="lorie_pref_preferScancodes">Preferir códigos de varredura quando possível</string>
+    <string name="lorie_pref_preferScancodes_summary">Deixar o servidor X gerenciar o layout do teclado físico (com configurações DE ou setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Solução para códigos de varredura do teclado físico</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Corrige códigos de varredura em alguns dispositivos. Pode causar problemas com vários layouts.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Interceptar atalhos do sistema</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Apenas Samsung Dex. Permite a interceptação de \"Alt+F4\", \"Meta+D\", \"Meta+E\", etc.</string>
+    <string name="lorie_pref_enableAccessibilityService">Ativar serviço de acessibilidade para interceptar atalhos do sistema manualmente.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Abrir configurações de acessibilidade.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Ativar serviço de acessibilidade para interceptar atalhos do sistema automaticamente.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Requer permissão WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Pausar interceptação de teclas com tecla Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Filtrar tecla Win (Meta/Mod4) interceptada.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Permite usar atalhos Dex durante a interceptação. Requer serviço de acessibilidade para funcionar.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Forçar entrada baseada em caracteres</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Suprime sugestões, digitação preditiva e idiomas CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">Compartilhamento da área de transferência</string>
+    <string name="lorie_pref_requestNotificationPermission">Solicitar permissão de notificação</string>
+    <string name="lorie_pref_xrMode">Modo Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">Configurar resposta às ações do usuário</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Armazenar preferências para telas secundárias separadamente</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Abra esta tela na tela que deseja configurar</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Ajustar altura da tela para a barra de teclas extras</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Pode causar oscilação da tela durante a alternância da barra de teclas extras.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Desativar teclas especiais na barra de teclas extras após cada pressionamento</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Use toque longo para bloquear teclas especiais</string>
+    <string name="lorie_pref_opacityEKBar">Opacidade da barra de teclas extras, %</string>
+    <string name="lorie_pref_extra_keys_config">Configuração das teclas extras</string>
+
+    <string name="lorie_pref_swipeUpAction">Deslizar três dedos para cima</string>
+    <string name="lorie_pref_swipeDownAction">Deslizar três dedos para baixo</string>
+    <string name="lorie_pref_volumeUpAction">Aumentar volume</string>
+    <string name="lorie_pref_volumeDownAction">Diminuir volume</string>
+    <string name="lorie_pref_backButtonAction">Botão voltar</string>
+    <string name="lorie_pref_notificationTapAction">Toque na notificação</string>
+    <string name="lorie_pref_notificationButton0Action">Primeiro botão da notificação</string>
+    <string name="lorie_pref_notificationButton1Action">Segundo botão da notificação</string>
+    <string name="lorie_pref_mediaKeysAction">Teclas de mídia</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Requer que o \"modo de resolução da tela\" seja \"exact\" ou \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Requer interceptação de atalhos do sistema com modo Dex ou serviço de acessibilidade</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Requer que o \"modo de entrada da tela sensível ao toque\" seja \"Trackpad\" e o \"modo de resolução da tela\" não seja \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Touchpad</string>
+    <string name="lorie_touchMode_simulated">Tela sensível ao toque simulada</string>
+    <string name="lorie_touchMode_direct">Toque direto</string>
+
+    <string name="lorie_displayResolution_native">nativo</string>
+    <string name="lorie_displayResolution_scaled">dimensionado</string>
+    <string name="lorie_displayResolution_exact">exato</string>
+    <string name="lorie_displayResolution_custom">personalizado</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilinear</string>
+    <string name="lorie_displayFiltering_nearest">vizinho mais próximo</string>
+
+    <string name="lorie_transformCapturedPointer_no">Não</string>
+    <string name="lorie_transformCapturedPointer_cw">Sentido horário</string>
+    <string name="lorie_transformCapturedPointer_cc">Sentido anti-horário</string>
+    <string name="lorie_transformCapturedPointer_ud">De cabeça para baixo</string>
+    <string name="lorie_transformCapturedPointer_at">Automático (para touchpad)</string>
+
+    <string name="lorie_userAction_noAction">nenhuma ação</string>
+    <string name="lorie_userAction_noActionWithText">nenhuma ação (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">alternar teclado virtual</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">alternar barra de teclas adicionais</string>
+    <string name="lorie_userAction_openPreferences">abrir preferências</string>
+    <string name="lorie_userAction_releaseCaptures">liberar captura do ponteiro e teclado</string>
+    <string name="lorie_userAction_toggleFullscreen">alternar tela cheia</string>
+    <string name="lorie_userAction_restartActivity">reiniciar atividade</string>
+    <string name="lorie_userAction_exit">sair</string>
+    <string name="lorie_userAction_sendVolumeDown">enviar diminuir volume</string>
+    <string name="lorie_userAction_sendVolumeUp">enviar aumentar volume</string>
+    <string name="lorie_userAction_sendMediaAction">enviar ação de mídia</string>
+    <string name="lorie_userAction_androidVolumeControl">controle de volume Android</string>
+    <string name="lorie_userAction_androidMediaControl">controle de mídia Android</string>
+
+    <string name="lorie_orientation_auto">automático</string>
+    <string name="lorie_orientation_portrait">retrato</string>
+    <string name="lorie_orientation_landscape">paisagem</string>
+    <string name="lorie_orientation_reversePortrait">retrato invertido</string>
+    <string name="lorie_orientation_reverseLandscape">paisagem invertida</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Copiado para a área de transferência</string>
+    <string name="lorie_toast_wrong_resolution_format">Formato de resolução incorreto</string>
+    <string name="lorie_dialog_permission_denied_title">Permissão negada</string>
+    <string name="lorie_dialog_permission_denied_message">O Android requer a permissão WRITE_SECURE_SETTINGS para iniciar o serviço de acessibilidade automaticamente.\nPor favor, execute este comando usando ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Falha ao carregar a biblioteca nativa. Você instalou o APK correto? Experimente a versão universal.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

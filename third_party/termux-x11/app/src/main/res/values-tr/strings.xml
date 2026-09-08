@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Bağlı değil</string>
+    <string name="preferences_button_text">   TERCİHLER   </string>
+    <string name="help_button_text">   YARDIM   </string>
+    <string name="exit_button_text">   ÇIKIŞ   </string>
+    <string name="extra_keys_config_desc">Burada Termux uygulamasındaki gibi extra-keys değişkeninin değerini ayarlayabilirsiniz (<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">bunu</a> okuyun) ve daha fazlası \n
+Örn. <b>META</b> için <i>META tuşu</i>, \n
+<b>KEYBOARD</b> için <i>yazılım klavyesi değiştirme tuşu</i>, \n
+<b>PREFERENCES</b> için <i>tercihleri açma tuşu</i>, \n
+<b>MOUSE_HELPER</b> için <i>fare yardımcısı değiştirme tuşu</i>, \n
+<b>STYLUS_HELPER</b> için <i>kalem tıklama yerleşimi değiştirme tuşu</i>, \n
+<b>EXIT</b> için <i>uygulamadan çıkış tuşu</i>.</string>
+    <string name="lorie_notification_content_text">Seçenekleri göstermek için aşağı çekin</string>
+    <string name="lorie_notification_open_preferences">Tercihler</string>
+    <string name="lorie_notification_exit">Çıkış</string>
+    <string name="lorie_notification_restart_activity">Yeniden Başlat</string>
+    <string name="lorie_notification_toggle_soft_keyboard">IME\'yi Değiştir</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Ek klavyeyi değiştir</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Yakalamaları serbest bırak</string>
+    <string name="lorie_notification_toggle_fullscreen">Tam ekranı değiştir</string>
+
+    <string name="lorie_pref_main">Tercihler</string>
+    <string name="lorie_pref_output">Çıktı</string>
+    <string name="lorie_pref_pointer">İşaretçi</string>
+    <string name="lorie_pref_kbd">Klavye</string>
+    <string name="lorie_pref_other">Diğer</string>
+    <string name="lorie_pref_version">Sürüm</string>
+    <string name="lorie_pref_ekbar">Ekstra tuş çubuğu tercihleri</string>
+    <string name="lorie_pref_userActions">Kullanıcı eylemlerine yanıt</string>
+
+    <string name="lorie_pref_displayResolutionMode">Ekran çözünürlük modu</string>
+    <string name="lorie_pref_displayScale">Ekran ölçeği, %</string>
+    <string name="lorie_pref_displayResolutionExact">Ekran çözünürlüğü</string>
+    <string name="lorie_pref_displayResolutionCustom">Ekran çözünürlüğü</string>
+    <string name="lorie_pref_displayFilteringMode">Ekran filtreleme modu</string>
+    <string name="lorie_pref_adjustResolution">Ayarlanan çözünürlüğü ekran yönüne uyacak şekilde ayarla</string>
+    <string name="lorie_pref_displayStretch">Ekrana sığacak şekilde uzat</string>
+    <string name="lorie_pref_Reseed">Yazılım klavyesi açıkken ekranı yeniden ayarla</string>
+    <string name="lorie_pref_Reseed_summary">Yazılım Klavyesi açıkken ekran boyutu ayarlanacaktır.</string>
+    <string name="lorie_pref_PIP">PIP modu</string>
+    <string name="lorie_pref_PIP_summary">Ana ekran düğmesine veya son uygulamalar düğmesine basıldığında uygulamayı PIP modunda göster</string>
+    <string name="lorie_pref_fullscreen">Tam ekran</string>
+    <string name="lorie_pref_fullscreen_summary">Cihazınızın ekranında sürükleyici modu değiştir</string>
+    <string name="lorie_pref_forceOrientation">Ekran yönü</string>
+    <string name="lorie_pref_hideCutout">Ekran çentiğini gizle (varsa)</string>
+    <string name="lorie_pref_keepScreenOn">Ekranı Açık Tut</string>
+
+    <string name="lorie_pref_touchMode">Dokunmatik ekran giriş modu</string>
+    <string name="lorie_pref_scaleTouchpad">Dokunmatik yüzeye ekran ölçek faktörünü uygula</string>
+    <string name="lorie_pref_showStylusClickOverride">Kalem tıklama seçeneklerini göster</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Kalem dokunma geçersiz kılma, sol, orta veya sağ tıklama (yalnızca kalem)</string>
+    <string name="lorie_pref_stylusIsMouse">Kalem fare modunu etkinleştir</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Kaleminizin bir fare gibi çalışmasını sağlayın. Etkinleştirildiğinde, kalem yalnızca imleci hareket ettirir ve fare tıklamaları gönderir; basınç, açı ve eğimi yok sayar.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Kalem düğmesi temas değiştirici modu</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Düğmeye basılıyken kalem ekrana dokunduğunda yalnızca sağ veya orta fare düğmelerini göndermek için bu seçeneği etkinleştirin.</string>
+    <string name="lorie_pref_showMouseHelper">Fare tıklama yardımcı yerleşimini göster</string>
+    <string name="lorie_pref_showMouseHelper_summary">Dokunmatik yüzey ile kullanılabilen ekran üstü fare düğmeleri</string>
+    <string name="lorie_pref_pointerCapture">Mümkün olduğunda harici işaretleme aygıtlarını yakala</string>
+    <string name="lorie_pref_pointerCapture_summary">Tüm donanım işaretçi olaylarını engelle. Escape tuşuna basıldıktan sonra işaretçi Android\'e geri döner.</string>
+    <string name="lorie_pref_transformCapturedPointer">Yakalanan işaretçi hareketlerini dönüştür</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Yakalanan işaretçi hız faktörü, %</string>
+    <string name="lorie_pref_tapToMove">Dokunmatik yüzeyler için dokun-ve-taşıyı etkinleştir</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Gamepad giriş olaylarını yok say</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Gamepad ve joystick olaylarının X sunucusuna iletilmesini engelle</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Ek klavyeyi göster</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Ek tuşlarla klavyeyi göster.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Harici klavye ile IME\'yi göster</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Donanım klavyesi bağlıyken yazılım klavyesini göster.</string>
+    <string name="lorie_pref_preferScancodes">Mümkün olduğunda tarama kodlarını tercih et</string>
+    <string name="lorie_pref_preferScancodes_summary">Donanım klavye düzenini X sunucusunun işlemesine izin ver (DE ayarları veya setxkbmap ile).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Donanım klavyesi tarama kodları geçici çözümü</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Bazı cihazlarda tarama kodlarını düzeltir. Birden çok düzen ile sorunlara neden olabilir.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Sistem kısayollarını engelle</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Yalnızca Samsung Dex. \"Alt+F4\", \"Meta+D\", \"Meta+E\" vb. engellenmesine izin verir.</string>
+    <string name="lorie_pref_enableAccessibilityService">Sistem kısayollarını manuel olarak engellemek için Erişilebilirlik hizmetini etkinleştir.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Erişilebilirlik ayarlarını aç.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Sistem kısayollarını otomatik olarak engellemek için Erişilebilirlik hizmetini etkinleştir.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">WRITE_SECURE_SETTINGS izni gerektirir.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Esc tuşu ile tuş engellemeyi duraklat</string>
+    <string name="lorie_pref_filterOutWinkey">Engellenen Win (Meta/Mod4) tuşunu filtrele.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Engelleme sırasında Dex kısayollarını kullanmanıza izin verir. Çalışması için Erişilebilirlik hizmeti gerektirir.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Karakter tabanlı girişi zorla</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Önerileri, tahmine dayalı yazmayı ve CJK dillerini bastırır</string>
+
+    <string name="lorie_pref_clipboardEnable">Pano paylaşımı</string>
+    <string name="lorie_pref_requestNotificationPermission">Bildirim izni iste</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR modu</string>
+    <string name="lorie_pref_configureResponseToUserActions">Kullanıcı eylemlerine yanıtı yapılandır</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">İkincil ekranlar için tercihleri ayrı olarak sakla</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Yapılandırmak istediğiniz ekranda bu ekranı açın</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Ekstra tuş çubuğu için ekran yüksekliğini ayarla</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Ekstra tuş çubuğunu değiştirirken ekran titremesine neden olabilir.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Her tuş basımından sonra ekstra tuş çubuğundaki özel tuşları devre dışı bırak</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Özel tuşları kilitlemek için uzun dokunuş kullanın</string>
+    <string name="lorie_pref_opacityEKBar">Ekstra tuş çubuğu opaklığı, %</string>
+    <string name="lorie_pref_extra_keys_config">Ekstra tuş yapılandırması</string>
+
+    <string name="lorie_pref_swipeUpAction">Üç parmakla yukarı kaydır</string>
+    <string name="lorie_pref_swipeDownAction">Üç parmakla aşağı kaydır</string>
+    <string name="lorie_pref_volumeUpAction">Sesi artır</string>
+    <string name="lorie_pref_volumeDownAction">Sesi azalt</string>
+    <string name="lorie_pref_backButtonAction">Geri düğmesi</string>
+    <string name="lorie_pref_notificationTapAction">Bildirime dokunma</string>
+    <string name="lorie_pref_notificationButton0Action">Bildirim ilk düğmesi</string>
+    <string name="lorie_pref_notificationButton1Action">Bildirim ikinci düğmesi</string>
+    <string name="lorie_pref_mediaKeysAction">Medya tuşları</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">\"Ekran çözünürlük modu\"nun \"exact\" veya \"custom\" olmasını gerektirir</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Dex modu veya Erişilebilirlik hizmeti ile sistem kısayollarının engellenmesini gerektirir</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">\"Dokunmatik ekran giriş modu\"nun \"Trackpad\" ve \"Ekran çözünürlük modu\"nun \"native\" olmamasını gerektirir</string>
+
+    <string name="lorie_touchMode_trackpad">Dokunmatik Yüzey</string>
+    <string name="lorie_touchMode_simulated">Benzetilmiş dokunmatik ekran</string>
+    <string name="lorie_touchMode_direct">Doğrudan dokunma</string>
+
+    <string name="lorie_displayResolution_native">yerel</string>
+    <string name="lorie_displayResolution_scaled">ölçekli</string>
+    <string name="lorie_displayResolution_exact">tam</string>
+    <string name="lorie_displayResolution_custom">özel</string>
+
+    <string name="lorie_displayFiltering_bilinear">çiftdoğrusal</string>
+    <string name="lorie_displayFiltering_nearest">en yakın komşu</string>
+
+    <string name="lorie_transformCapturedPointer_no">Hayır</string>
+    <string name="lorie_transformCapturedPointer_cw">Saat yönünde</string>
+    <string name="lorie_transformCapturedPointer_cc">Saat yönünün tersine</string>
+    <string name="lorie_transformCapturedPointer_ud">Ters dönmüş</string>
+    <string name="lorie_transformCapturedPointer_at">Otomatik (dokunmatik yüzey için)</string>
+
+    <string name="lorie_userAction_noAction">eylem yok</string>
+    <string name="lorie_userAction_noActionWithText">eylem yok (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">yazılım klavyesini değiştir</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">ekstra tuş çubuğunu değiştir</string>
+    <string name="lorie_userAction_openPreferences">tercihleri aç</string>
+    <string name="lorie_userAction_releaseCaptures">işaretçi ve klavye yakalamasını serbest bırak</string>
+    <string name="lorie_userAction_toggleFullscreen">tam ekranı değiştir</string>
+    <string name="lorie_userAction_restartActivity">etkinliği yeniden başlat</string>
+    <string name="lorie_userAction_exit">çık</string>
+    <string name="lorie_userAction_sendVolumeDown">sesi azalt gönder</string>
+    <string name="lorie_userAction_sendVolumeUp">sesi artır gönder</string>
+    <string name="lorie_userAction_sendMediaAction">medya eylemi gönder</string>
+    <string name="lorie_userAction_androidVolumeControl">Android ses kontrolü</string>
+    <string name="lorie_userAction_androidMediaControl">Android medya kontrolü</string>
+
+    <string name="lorie_orientation_auto">otomatik</string>
+    <string name="lorie_orientation_portrait">dikey</string>
+    <string name="lorie_orientation_landscape">yatay</string>
+    <string name="lorie_orientation_reversePortrait">ters dikey</string>
+    <string name="lorie_orientation_reverseLandscape">ters yatay</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Panoya kopyalandı</string>
+    <string name="lorie_toast_wrong_resolution_format">Yanlış çözünürlük biçimi</string>
+    <string name="lorie_dialog_permission_denied_title">İzin reddedildi</string>
+    <string name="lorie_dialog_permission_denied_message">Android, erişilebilirlik hizmetini otomatik olarak başlatmak için WRITE_SECURE_SETTINGS izni gerektirir.\nLütfen bu komutu ADB kullanarak çalıştırın:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Yerel kütüphane yüklenemedi. Doğru APK\'yı yüklediniz mi? Universal sürümü deneyin.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Nepřipojeno</string>
+    <string name="preferences_button_text">   PŘEDVOLBY   </string>
+    <string name="help_button_text">   NÁPOVĚDA   </string>
+    <string name="exit_button_text">   UKONČIT   </string>
+    <string name="extra_keys_config_desc">Zde můžete nastavit hodnotu proměnné extra-keys jako v aplikaci Termux (přečtěte si <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">toto</a>) a další \n
+Např. <b>META</b> pro <i>klávesu META</i>, \n
+<b>KEYBOARD</b> pro <i>klávesu přepínání softwarové klávesnice</i>, \n
+<b>PREFERENCES</b> pro <i>klávesu otevření předvoleb</i>, \n
+<b>MOUSE_HELPER</b> pro <i>klávesu přepínání pomocníka myši</i>, \n
+<b>STYLUS_HELPER</b> pro <i>klávesu přepínání překrytí kliknutí stylusem</i>, \n
+<b>EXIT</b> pro <i>klávesu ukončení aplikace</i>.</string>
+    <string name="lorie_notification_content_text">Stáhněte dolů pro zobrazení možností</string>
+    <string name="lorie_notification_open_preferences">Předvolby</string>
+    <string name="lorie_notification_exit">Ukončit</string>
+    <string name="lorie_notification_restart_activity">Restartovat</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Přepnout IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Přepnout další klávesnici</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Uvolnit zachycení</string>
+    <string name="lorie_notification_toggle_fullscreen">Přepnout celou obrazovku</string>
+
+    <string name="lorie_pref_main">Předvolby</string>
+    <string name="lorie_pref_output">Výstup</string>
+    <string name="lorie_pref_pointer">Ukazatel</string>
+    <string name="lorie_pref_kbd">Klávesnice</string>
+    <string name="lorie_pref_other">Ostatní</string>
+    <string name="lorie_pref_version">Verze</string>
+    <string name="lorie_pref_ekbar">Předvolby panelu extra kláves</string>
+    <string name="lorie_pref_userActions">Reakce na akce uživatele</string>
+
+    <string name="lorie_pref_displayResolutionMode">Režim rozlišení displeje</string>
+    <string name="lorie_pref_displayScale">Měřítko displeje, %</string>
+    <string name="lorie_pref_displayResolutionExact">Rozlišení displeje</string>
+    <string name="lorie_pref_displayResolutionCustom">Rozlišení displeje</string>
+    <string name="lorie_pref_displayFilteringMode">Režim filtrování displeje</string>
+    <string name="lorie_pref_adjustResolution">Přizpůsobit nastavené rozlišení orientaci obrazovky</string>
+    <string name="lorie_pref_displayStretch">Roztáhnout na celý displej</string>
+    <string name="lorie_pref_Reseed">Přizpůsobit obrazovku při otevřené softwarové klávesnici</string>
+    <string name="lorie_pref_Reseed_summary">Velikost obrazovky bude upravena při otevřené softwarové klávesnici.</string>
+    <string name="lorie_pref_PIP">Režim obraz v obraze</string>
+    <string name="lorie_pref_PIP_summary">Zobrazit aplikaci v režimu obraz v obraze při stisknutí tlačítka domů nebo nedávných aplikací</string>
+    <string name="lorie_pref_fullscreen">Celá obrazovka</string>
+    <string name="lorie_pref_fullscreen_summary">Přepnout imerzivní režim na displeji vašeho zařízení</string>
+    <string name="lorie_pref_forceOrientation">Orientace obrazovky</string>
+    <string name="lorie_pref_hideCutout">Skrýt výřez displeje (pokud existuje)</string>
+    <string name="lorie_pref_keepScreenOn">Ponechat obrazovku zapnutou</string>
+
+    <string name="lorie_pref_touchMode">Režim dotykového vstupu</string>
+    <string name="lorie_pref_scaleTouchpad">Aplikovat faktor měřítka displeje na touchpad</string>
+    <string name="lorie_pref_showStylusClickOverride">Zobrazit možnosti kliknutí stylusem</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Přepsání dotyku stylusem, levé, prostřední nebo pravé kliknutí (pouze stylus)</string>
+    <string name="lorie_pref_stylusIsMouse">Povolit režim myši pro stylus</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Nechte svůj stylus fungovat jako myš. Po aktivaci bude stylus pouze pohybovat kurzorem a odesílat kliknutí myši, ignoruje tlak, úhel a sklon.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Režim modifikátoru kontaktu tlačítka stylusu</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Povolte tuto možnost pro odesílání pravého nebo prostředního tlačítka myši pouze když se stylus dotkne obrazovky při stisknutém tlačítku.</string>
+    <string name="lorie_pref_showMouseHelper">Zobrazit překrytí pomocníka kliknutí myši</string>
+    <string name="lorie_pref_showMouseHelper_summary">Tlačítka myši na obrazovce použitelná s touchpadem</string>
+    <string name="lorie_pref_pointerCapture">Zachytit externí ukazovací zařízení, pokud je to možné</string>
+    <string name="lorie_pref_pointerCapture_summary">Zachytit všechny události hardwarového ukazatele. Ukazatel se vrátí do Androidu po stisknutí klávesy Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Transformovat zachycené pohyby ukazatele</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Faktor rychlosti zachyceného ukazatele, %</string>
+    <string name="lorie_pref_tapToMove">Povolit klepnutí pro přesun pro touchpady</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorovat vstupní události gamepadu</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Zabránit předávání událostí gamepadu a joysticku na X server</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Zobrazit další klávesnici</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Zobrazit klávesnici s dalšími klávesami.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Zobrazit IME s externí klávesnicí</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Zobrazit softwarovou klávesnici, když je připojena hardwarová klávesnice.</string>
+    <string name="lorie_pref_preferScancodes">Preferovat skenovací kódy, pokud je to možné</string>
+    <string name="lorie_pref_preferScancodes_summary">Nechat X server zpracovat rozložení hardwarové klávesnice (s nastavením DE nebo setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Řešení pro skenovací kódy hardwarové klávesnice</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Opravuje skenovací kódy na některých zařízeních. Může způsobit problémy s více rozloženími.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Zachytit systémové zkratky</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Pouze Samsung Dex. Umožňuje zachycení \"Alt+F4\", \"Meta+D\", \"Meta+E\", atd.</string>
+    <string name="lorie_pref_enableAccessibilityService">Povolit službu přístupnosti pro ruční zachycení systémových zkratek.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Otevřít nastavení přístupnosti.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Povolit službu přístupnosti pro automatické zachycení systémových zkratek.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Vyžaduje oprávnění WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Pozastavit zachycování kláves klávesou Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Odfiltrovat zachycenou klávesu Win (Meta/Mod4).</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Umožňuje používat zkratky Dex při zachycování. Vyžaduje službu přístupnosti.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Vynutit znakový vstup</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Potlačuje návrhy, prediktivní psaní a jazyky CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">Sdílení schránky</string>
+    <string name="lorie_pref_requestNotificationPermission">Požádat o oprávnění oznámení</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR režim</string>
+    <string name="lorie_pref_configureResponseToUserActions">Konfigurovat reakci na akce uživatele</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Ukládat předvolby pro sekundární displeje odděleně</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Otevřete tuto obrazovku na displeji, který chcete konfigurovat</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Upravit výšku displeje pro panel extra kláves</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Může způsobit blikání obrazovky při přepínání panelu extra kláves.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Deaktivovat speciální klávesy na panelu extra kláves po každém stisku</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Použijte dlouhé stisknutí k uzamčení speciálních kláves</string>
+    <string name="lorie_pref_opacityEKBar">Průhlednost panelu extra kláves, %</string>
+    <string name="lorie_pref_extra_keys_config">Konfigurace extra kláves</string>
+
+    <string name="lorie_pref_swipeUpAction">Přejetí třemi prsty nahoru</string>
+    <string name="lorie_pref_swipeDownAction">Přejetí třemi prsty dolů</string>
+    <string name="lorie_pref_volumeUpAction">Zvýšení hlasitosti</string>
+    <string name="lorie_pref_volumeDownAction">Snížení hlasitosti</string>
+    <string name="lorie_pref_backButtonAction">Tlačítko zpět</string>
+    <string name="lorie_pref_notificationTapAction">Klepnutí na oznámení</string>
+    <string name="lorie_pref_notificationButton0Action">První tlačítko oznámení</string>
+    <string name="lorie_pref_notificationButton1Action">Druhé tlačítko oznámení</string>
+    <string name="lorie_pref_mediaKeysAction">Mediální klávesy</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Vyžaduje, aby \"režim rozlišení displeje\" byl \"exact\" nebo \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Vyžaduje zachycování systémových zkratek pomocí režimu Dex nebo služby přístupnosti</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Vyžaduje, aby \"režim dotykového vstupu\" byl \"Trackpad\" a \"režim rozlišení displeje\" nebyl \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Touchpad</string>
+    <string name="lorie_touchMode_simulated">Simulovaná dotyková obrazovka</string>
+    <string name="lorie_touchMode_direct">Přímý dotyk</string>
+
+    <string name="lorie_displayResolution_native">nativní</string>
+    <string name="lorie_displayResolution_scaled">škálované</string>
+    <string name="lorie_displayResolution_exact">přesné</string>
+    <string name="lorie_displayResolution_custom">vlastní</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilineární</string>
+    <string name="lorie_displayFiltering_nearest">nejbližší soused</string>
+
+    <string name="lorie_transformCapturedPointer_no">Ne</string>
+    <string name="lorie_transformCapturedPointer_cw">Po směru hodin</string>
+    <string name="lorie_transformCapturedPointer_cc">Proti směru hodin</string>
+    <string name="lorie_transformCapturedPointer_ud">Vzhůru nohama</string>
+    <string name="lorie_transformCapturedPointer_at">Automaticky (pro touchpad)</string>
+
+    <string name="lorie_userAction_noAction">žádná akce</string>
+    <string name="lorie_userAction_noActionWithText">žádná akce (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">přepnout softwarovou klávesnici</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">přepnout panel dalších kláves</string>
+    <string name="lorie_userAction_openPreferences">otevřít předvolby</string>
+    <string name="lorie_userAction_releaseCaptures">uvolnit zachycení ukazatele a klávesnice</string>
+    <string name="lorie_userAction_toggleFullscreen">přepnout celou obrazovku</string>
+    <string name="lorie_userAction_restartActivity">restartovat aktivitu</string>
+    <string name="lorie_userAction_exit">ukončit</string>
+    <string name="lorie_userAction_sendVolumeDown">odeslat snížení hlasitosti</string>
+    <string name="lorie_userAction_sendVolumeUp">odeslat zvýšení hlasitosti</string>
+    <string name="lorie_userAction_sendMediaAction">odeslat mediální akci</string>
+    <string name="lorie_userAction_androidVolumeControl">ovládání hlasitosti Android</string>
+    <string name="lorie_userAction_androidMediaControl">ovládání médií Android</string>
+
+    <string name="lorie_orientation_auto">automaticky</string>
+    <string name="lorie_orientation_portrait">na výšku</string>
+    <string name="lorie_orientation_landscape">na šířku</string>
+    <string name="lorie_orientation_reversePortrait">obráceně na výšku</string>
+    <string name="lorie_orientation_reverseLandscape">obráceně na šířku</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Zkopírováno do schránky</string>
+    <string name="lorie_toast_wrong_resolution_format">Nesprávný formát rozlišení</string>
+    <string name="lorie_dialog_permission_denied_title">Oprávnění zamítnuto</string>
+    <string name="lorie_dialog_permission_denied_message">Android vyžaduje oprávnění WRITE_SECURE_SETTINGS pro automatické spuštění služby přístupnosti.\nSpusťte prosím tento příkaz pomocí ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Selhalo načtení nativní knihovny. Nainstalovali jste správné APK? Zkuste univerzální verzi.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

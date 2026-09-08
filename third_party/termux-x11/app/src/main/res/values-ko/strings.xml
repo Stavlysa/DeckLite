@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">연결되지 않음</string>
+    <string name="preferences_button_text">   환경설정   </string>
+    <string name="help_button_text">   도움말   </string>
+    <string name="exit_button_text">   종료   </string>
+    <string name="extra_keys_config_desc">여기에서 Termux 앱에서와 같이 extra-keys 변수 값을 설정할 수 있습니다 (<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">이것</a>을 읽어보세요) \n
+예: <b>META</b>는 <i>META 키</i>, \n
+<b>KEYBOARD</b>는 <i>소프트 키보드 전환 키</i>, \n
+<b>PREFERENCES</b>는 <i>환경설정 열기 키</i>, \n
+<b>MOUSE_HELPER</b>는 <i>마우스 도우미 전환 키</i>, \n
+<b>STYLUS_HELPER</b>는 <i>스타일러스 클릭 오버레이 전환 키</i>, \n
+<b>EXIT</b>는 <i>앱 종료 키</i>.</string>
+    <string name="lorie_notification_content_text">아래로 당겨서 옵션 표시</string>
+    <string name="lorie_notification_open_preferences">환경설정</string>
+    <string name="lorie_notification_exit">종료</string>
+    <string name="lorie_notification_restart_activity">다시 시작</string>
+    <string name="lorie_notification_toggle_soft_keyboard">IME 전환</string>
+    <string name="lorie_notification_toggle_additional_key_bar">추가 키보드 전환</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">캡처 해제</string>
+    <string name="lorie_notification_toggle_fullscreen">전체 화면 전환</string>
+
+    <string name="lorie_pref_main">환경설정</string>
+    <string name="lorie_pref_output">출력</string>
+    <string name="lorie_pref_pointer">포인터</string>
+    <string name="lorie_pref_kbd">키보드</string>
+    <string name="lorie_pref_other">기타</string>
+    <string name="lorie_pref_version">버전</string>
+    <string name="lorie_pref_ekbar">추가 키 바 환경설정</string>
+    <string name="lorie_pref_userActions">사용자 동작에 대한 응답</string>
+
+    <string name="lorie_pref_displayResolutionMode">디스플레이 해상도 모드</string>
+    <string name="lorie_pref_displayScale">디스플레이 배율, %</string>
+    <string name="lorie_pref_displayResolutionExact">디스플레이 해상도</string>
+    <string name="lorie_pref_displayResolutionCustom">디스플레이 해상도</string>
+    <string name="lorie_pref_displayFilteringMode">디스플레이 필터링 모드</string>
+    <string name="lorie_pref_adjustResolution">화면 방향에 맞게 설정된 해상도 조정</string>
+    <string name="lorie_pref_displayStretch">디스플레이에 맞게 늘이기</string>
+    <string name="lorie_pref_Reseed">소프트 키보드가 열려 있을 때 화면 크기 재조정</string>
+    <string name="lorie_pref_Reseed_summary">소프트 키보드가 열려 있는 동안 화면 크기가 조정됩니다.</string>
+    <string name="lorie_pref_PIP">PIP 모드</string>
+    <string name="lorie_pref_PIP_summary">홈 버튼 또는 최근 앱 버튼을 누를 때 PIP 모드로 앱 표시</string>
+    <string name="lorie_pref_fullscreen">전체 화면</string>
+    <string name="lorie_pref_fullscreen_summary">기기 디스플레이에서 몰입형 모드 전환</string>
+    <string name="lorie_pref_forceOrientation">화면 방향</string>
+    <string name="lorie_pref_hideCutout">디스플레이 컷아웃 숨기기 (있는 경우)</string>
+    <string name="lorie_pref_keepScreenOn">화면 켜짐 유지</string>
+
+    <string name="lorie_pref_touchMode">터치스크린 입력 모드</string>
+    <string name="lorie_pref_scaleTouchpad">터치패드에 디스플레이 배율 적용</string>
+    <string name="lorie_pref_showStylusClickOverride">스타일러스 클릭 옵션 표시</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">스타일러스 터치 재정의, 왼쪽/가운데/오른쪽 클릭 (스타일러스만)</string>
+    <string name="lorie_pref_stylusIsMouse">스타일러스 마우스 모드 활성화</string>
+    <string name="lorie_pref_stylusIsMouse_summary">스타일러스가 마우스처럼 작동하게 합니다. 활성화되면 스타일러스는 커서만 이동하고 마우스 클릭을 보내며, 압력, 각도, 기울기를 무시합니다.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">스타일러스 버튼 접촉 수정자 모드</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">이 옵션을 활성화하면 버튼을 누른 상태에서 스타일러스가 화면에 닿을 때만 오른쪽 또는 가운데 마우스 버튼을 보냅니다.</string>
+    <string name="lorie_pref_showMouseHelper">마우스 클릭 도우미 오버레이 표시</string>
+    <string name="lorie_pref_showMouseHelper_summary">터치패드와 함께 사용 가능한 화면 마우스 버튼</string>
+    <string name="lorie_pref_pointerCapture">가능한 경우 외부 포인터 장치 캡처</string>
+    <string name="lorie_pref_pointerCapture_summary">모든 하드웨어 포인터 이벤트를 가로챕니다. Esc 키를 누르면 포인터가 Android로 돌아갑니다.</string>
+    <string name="lorie_pref_transformCapturedPointer">캡처된 포인터 움직임 변환</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">캡처된 포인터 속도 계수, %</string>
+    <string name="lorie_pref_tapToMove">터치패드 탭-투-무브 활성화</string>
+    <string name="lorie_pref_ignoreGamepadEvents">게임패드 입력 이벤트 무시</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">게임패드 및 조이스틱 이벤트가 X 서버로 전달되지 않도록 방지</string>
+
+    <string name="lorie_pref_showAdditionalKbd">추가 키보드 표시</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">추가 키가 있는 키보드를 표시합니다.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">외부 키보드 연결 시 IME 표시</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">하드웨어 키보드가 연결된 상태에서 소프트웨어 키보드를 표시합니다.</string>
+    <string name="lorie_pref_preferScancodes">가능한 경우 스캔코드 우선</string>
+    <string name="lorie_pref_preferScancodes_summary">X 서버가 하드웨어 키보드 레이아웃을 처리하도록 합니다 (DE 설정 또는 setxkbmap 사용).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">하드웨어 키보드 스캔코드 해결 방법</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">일부 기기에서 스캔코드를 수정합니다. 여러 레이아웃에서 문제가 발생할 수 있습니다.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">시스템 단축키 가로채기</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Samsung Dex만 해당. \"Alt+F4\", \"Meta+D\", \"Meta+E\" 등을 가로챌 수 있습니다.</string>
+    <string name="lorie_pref_enableAccessibilityService">시스템 단축키를 수동으로 가로채기 위한 접근성 서비스 활성화.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">접근성 설정 열기.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">시스템 단축키를 자동으로 가로채기 위한 접근성 서비스 활성화.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">WRITE_SECURE_SETTINGS 권한 필요.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Esc 키로 키 가로채기 일시 중지</string>
+    <string name="lorie_pref_filterOutWinkey">가로챈 Win (Meta/Mod4) 키 필터링.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">가로채기 중에 Dex 단축키를 사용할 수 있습니다. 작동하려면 접근성 서비스가 필요합니다.</string>
+    <string name="lorie_pref_enforceCharBasedInput">문자 기반 입력 강제</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">제안, 예측 입력 및 CJK 언어 억제</string>
+
+    <string name="lorie_pref_clipboardEnable">클립보드 공유</string>
+    <string name="lorie_pref_requestNotificationPermission">알림 권한 요청</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR 모드</string>
+    <string name="lorie_pref_configureResponseToUserActions">사용자 동작에 대한 응답 구성</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">보조 디스플레이 환경설정 별도 저장</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">구성하려는 디스플레이에서 이 화면 열기</string>
+
+    <string name="lorie_pref_adjustHeightForEK">추가 키 바에 맞게 디스플레이 높이 조정</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">추가 키 바 전환 시 화면 깜박임이 발생할 수 있습니다.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">각 키 누름 후 추가 키 바의 특수 키 비활성화</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">특수 키를 잠그려면 길게 누르기 사용</string>
+    <string name="lorie_pref_opacityEKBar">추가 키 바 불투명도, %</string>
+    <string name="lorie_pref_extra_keys_config">추가 키 구성</string>
+
+    <string name="lorie_pref_swipeUpAction">세 손가락 위로 스와이프</string>
+    <string name="lorie_pref_swipeDownAction">세 손가락 아래로 스와이프</string>
+    <string name="lorie_pref_volumeUpAction">볼륨 높이기</string>
+    <string name="lorie_pref_volumeDownAction">볼륨 낮추기</string>
+    <string name="lorie_pref_backButtonAction">뒤로 버튼</string>
+    <string name="lorie_pref_notificationTapAction">알림 탭</string>
+    <string name="lorie_pref_notificationButton0Action">알림 첫 번째 버튼</string>
+    <string name="lorie_pref_notificationButton1Action">알림 두 번째 버튼</string>
+    <string name="lorie_pref_mediaKeysAction">미디어 키</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">\"디스플레이 해상도 모드\"가 \"exact\" 또는 \"custom\"이어야 함</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Dex 모드 또는 접근성 서비스로 시스템 단축키를 가로채야 함</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">\"터치스크린 입력 모드\"가 \"Trackpad\"이고 \"디스플레이 해상도 모드\"가 \"native\"가 아니어야 함</string>
+
+    <string name="lorie_touchMode_trackpad">터치패드</string>
+    <string name="lorie_touchMode_simulated">시뮬레이션된 터치스크린</string>
+    <string name="lorie_touchMode_direct">직접 터치</string>
+
+    <string name="lorie_displayResolution_native">네이티브</string>
+    <string name="lorie_displayResolution_scaled">배율 조정</string>
+    <string name="lorie_displayResolution_exact">정확</string>
+    <string name="lorie_displayResolution_custom">사용자 정의</string>
+
+    <string name="lorie_displayFiltering_bilinear">쌍선형</string>
+    <string name="lorie_displayFiltering_nearest">최근접 이웃</string>
+
+    <string name="lorie_transformCapturedPointer_no">아니요</string>
+    <string name="lorie_transformCapturedPointer_cw">시계 방향</string>
+    <string name="lorie_transformCapturedPointer_cc">반시계 방향</string>
+    <string name="lorie_transformCapturedPointer_ud">위아래 뒤집기</string>
+    <string name="lorie_transformCapturedPointer_at">자동 (터치패드용)</string>
+
+    <string name="lorie_userAction_noAction">동작 없음</string>
+    <string name="lorie_userAction_noActionWithText">동작 없음 (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">소프트 키보드 전환</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">추가 키 바 전환</string>
+    <string name="lorie_userAction_openPreferences">환경설정 열기</string>
+    <string name="lorie_userAction_releaseCaptures">포인터 및 키보드 캡처 해제</string>
+    <string name="lorie_userAction_toggleFullscreen">전체 화면 전환</string>
+    <string name="lorie_userAction_restartActivity">액티비티 다시 시작</string>
+    <string name="lorie_userAction_exit">종료</string>
+    <string name="lorie_userAction_sendVolumeDown">볼륨 낮추기 전송</string>
+    <string name="lorie_userAction_sendVolumeUp">볼륨 높이기 전송</string>
+    <string name="lorie_userAction_sendMediaAction">미디어 동작 전송</string>
+    <string name="lorie_userAction_androidVolumeControl">Android 볼륨 컨트롤</string>
+    <string name="lorie_userAction_androidMediaControl">Android 미디어 컨트롤</string>
+
+    <string name="lorie_orientation_auto">자동</string>
+    <string name="lorie_orientation_portrait">세로</string>
+    <string name="lorie_orientation_landscape">가로</string>
+    <string name="lorie_orientation_reversePortrait">역방향 세로</string>
+    <string name="lorie_orientation_reverseLandscape">역방향 가로</string>
+
+    <string name="lorie_toast_copied_to_clipboard">클립보드에 복사됨</string>
+    <string name="lorie_toast_wrong_resolution_format">잘못된 해상도 형식</string>
+    <string name="lorie_dialog_permission_denied_title">권한 거부됨</string>
+    <string name="lorie_dialog_permission_denied_message">Android에서 접근성 서비스를 자동으로 시작하려면 WRITE_SECURE_SETTINGS 권한이 필요합니다.\nADB를 사용하여 다음 명령을 실행하세요:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">네이티브 라이브러리 로드 실패. 올바른 APK를 설치하셨나요? universal 버전을 시도해 보세요.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

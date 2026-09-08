@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Haijaunganishwa</string>
+    <string name="preferences_button_text">   MAPENDEKEZO   </string>
+    <string name="help_button_text">   MUSAADA   </string>
+    <string name="exit_button_text">   TOKA   </string>
+    <string name="extra_keys_config_desc">Hapa unaweza kuweka thamani ya kigezo cha extra-keys kama katika programu ya Termux (soma <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">hapa</a>) na zaidi \n
+Mf. <b>META</b> kwa <i>kitufe cha META</i>, \n
+<b>KEYBOARD</b> kwa <i>kitufe cha kugeuza kibodi laini</i>, \n
+<b>PREFERENCES</b> kwa <i>kitufe cha kufungua mapendeleo</i>, \n
+<b>MOUSE_HELPER</b> kwa <i>kitufe cha kugeuza msaidizi wa kipanya</i>, \n
+<b>STYLUS_HELPER</b> kwa <i>kitufe cha kugeuza kifuniko cha kubofya kwa stylus</i>, \n
+<b>EXIT</b> kwa <i>kitufe cha kutoka programu</i>.</string>
+    <string name="lorie_notification_content_text">Vuta chini kuonyesha chaguzi</string>
+    <string name="lorie_notification_open_preferences">Mapendeleo</string>
+    <string name="lorie_notification_exit">Toka</string>
+    <string name="lorie_notification_restart_activity">Anzisha Upya</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Geuza IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Geuza kibodi ya ziada</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Toa mateka</string>
+    <string name="lorie_notification_toggle_fullscreen">Geuza skrini nzima</string>
+
+    <string name="lorie_pref_main">Mapendeleo</string>
+    <string name="lorie_pref_output">Tokeo</string>
+    <string name="lorie_pref_pointer">Kielekezi</string>
+    <string name="lorie_pref_kbd">Kibodi</string>
+    <string name="lorie_pref_other">Nyingine</string>
+    <string name="lorie_pref_version">Toleo</string>
+    <string name="lorie_pref_ekbar">Mapendeleo ya upau wa vitufe vya ziada</string>
+    <string name="lorie_pref_userActions">Mwitikio kwa vitendo vya mtumiaji</string>
+
+    <string name="lorie_pref_displayResolutionMode">Hali ya ubora wa onyesho</string>
+    <string name="lorie_pref_displayScale">Kiwango cha onyesho, %</string>
+    <string name="lorie_pref_displayResolutionExact">Ubora wa onyesho</string>
+    <string name="lorie_pref_displayResolutionCustom">Ubora wa onyesho</string>
+    <string name="lorie_pref_displayFilteringMode">Hali ya kuchuja onyesho</string>
+    <string name="lorie_pref_adjustResolution">Rekebisha ubora uliowekwa ili kutoshea mwelekeo wa skrini</string>
+    <string name="lorie_pref_displayStretch">Nyosha ili kutoshea onyesho</string>
+    <string name="lorie_pref_Reseed">Rekebisha skrini upya wakati kibodi laini iko wazi</string>
+    <string name="lorie_pref_Reseed_summary">Ukubwa wa skrini utarekebishwa wakati Kibodi Laini iko wazi.</string>
+    <string name="lorie_pref_PIP">Hali ya picha-ndani-ya-picha</string>
+    <string name="lorie_pref_PIP_summary">Onyesha programu katika hali ya PIP wakati kitufe cha nyumbani au kitufe cha programu za hivi karibuni kinabonyezwa</string>
+    <string name="lorie_pref_fullscreen">Skrini nzima</string>
+    <string name="lorie_pref_fullscreen_summary">Geuza hali ya kuzamisha kwenye onyesho la kifaa chako</string>
+    <string name="lorie_pref_forceOrientation">Mwelekeo wa skrini</string>
+    <string name="lorie_pref_hideCutout">Ficha sehemu iliyokatwa ya onyesho (ikiwa ipo)</string>
+    <string name="lorie_pref_keepScreenOn">Weka Skrini Ikiwaka</string>
+
+    <string name="lorie_pref_touchMode">Hali ya ingizo la skrini ya kugusa</string>
+    <string name="lorie_pref_scaleTouchpad">Tumia kiwango cha onyesho kwenye kiguso</string>
+    <string name="lorie_pref_showStylusClickOverride">Onyesha chaguzi za kubofya kwa stylus</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Ubadilishaji wa mguso wa stylus, bonyeza kushoto, katikati au kulia (stylus pekee)</string>
+    <string name="lorie_pref_stylusIsMouse">Wezesha hali ya kipanya cha stylus</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Fanya stylus yako ifanye kazi kama kipanya. Inapowezeshwa, stylus itasogeza tu kielekezi na kutuma mibofyo ya kipanya, ikipuuza shinikizo, pembe na mwinamo.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Hali ya kirekebishaji cha mguso wa kitufe cha stylus</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Wezesha chaguo hili kutuma vitufe vya kulia au katikati vya kipanya tu wakati stylus inagusa skrini huku kitufe kikibonyezwa.</string>
+    <string name="lorie_pref_showMouseHelper">Onyesha kifuniko cha msaidizi wa kubofya kipanya</string>
+    <string name="lorie_pref_showMouseHelper_summary">Vitufe vya kipanya kwenye skrini vinavyoweza kutumika na kiguso</string>
+    <string name="lorie_pref_pointerCapture">Kamata vifaa vya nje vya kuelekeza inapowezekana</string>
+    <string name="lorie_pref_pointerCapture_summary">Zuia matukio yote ya kielekezi cha vifaa. Kielekezi kinarudi kwa Android baada ya kubonyeza kitufe cha Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Badilisha mienendo ya kielekezi kilichokamatwa</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Kiwango cha kasi ya kielekezi kilichokamatwa, %</string>
+    <string name="lorie_pref_tapToMove">Wezesha gusa-kusogeza kwa viguso</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Puuza matukio ya kuingiza ya gamepad</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Zuia matukio ya gamepad na joystick kusambazwa kwa seva ya X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Onyesha kibodi ya ziada</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Onyesha kibodi yenye vitufe vya ziada.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Onyesha IME na kibodi ya nje</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Onyesha kibodi laini wakati kibodi ya vifaa imeunganishwa.</string>
+    <string name="lorie_pref_preferScancodes">Pendelea misimbo ya kuchanganua inapowezekana</string>
+    <string name="lorie_pref_preferScancodes_summary">Acha seva ya X ishughulikie mpangilio wa kibodi ya vifaa (kwa mipangilio ya DE au setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Suluhisho la misimbo ya kuchanganua ya kibodi ya vifaa</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Hurekebisha misimbo ya kuchanganua kwenye baadhi ya vifaa. Inaweza kusababisha matatizo na mipangilio mingi.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Zuia njia za mkato za mfumo</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Samsung Dex pekee. Inaruhusu kuzuiliwa kwa \"Alt+F4\", \"Meta+D\", \"Meta+E\", n.k.</string>
+    <string name="lorie_pref_enableAccessibilityService">Wezesha huduma ya Ufikiaji kuzuia njia za mkato za mfumo kwa mikono.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Fungua mipangilio ya Ufikiaji.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Wezesha huduma ya Ufikiaji kuzuia njia za mkato za mfumo kiotomatiki.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Inahitaji ruhusa ya WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Simamisha kuzuia vitufe kwa kitufe cha Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Chuja kitufe cha Win (Meta/Mod4) kilichozuiliwa.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Inakuruhusu kutumia njia za mkato za Dex wakati wa kuzuilia. Inahitaji huduma ya Ufikiaji kufanya kazi.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Lazimisha ingizo lenye msingi wa herufi</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Huzuia mapendekezo, uchapaji wa utabiri na lugha za CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">Kushiriki ubao wa kunakili</string>
+    <string name="lorie_pref_requestNotificationPermission">Omba ruhusa ya arifa</string>
+    <string name="lorie_pref_xrMode">Hali ya Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">Sanidi mwitikio kwa vitendo vya mtumiaji</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Hifadhi mapendeleo ya maonyesho ya pili kivyake</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Fungua skrini hii kwenye onyesho unalotaka kusanidi</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Rekebisha urefu wa onyesho kwa upau wa vitufe vya ziada</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Inaweza kusababisha skrini kupepesa wakati wa kugeuza upau wa vitufe vya ziada.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Zima vitufe maalum kwenye upau wa vitufe vya ziada baada ya kila bonyezo</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Tumia kugusa kwa muda mrefu kufunga vitufe maalum</string>
+    <string name="lorie_pref_opacityEKBar">Uwazi wa upau wa vitufe vya ziada, %</string>
+    <string name="lorie_pref_extra_keys_config">Usanidi wa vitufe vya ziada</string>
+
+    <string name="lorie_pref_swipeUpAction">Telezesha vidole vitatu juu</string>
+    <string name="lorie_pref_swipeDownAction">Telezesha vidole vitatu chini</string>
+    <string name="lorie_pref_volumeUpAction">Paza sauti</string>
+    <string name="lorie_pref_volumeDownAction">Punguza sauti</string>
+    <string name="lorie_pref_backButtonAction">Kitufe cha nyuma</string>
+    <string name="lorie_pref_notificationTapAction">Gusa arifa</string>
+    <string name="lorie_pref_notificationButton0Action">Kitufe cha kwanza cha arifa</string>
+    <string name="lorie_pref_notificationButton1Action">Kitufe cha pili cha arifa</string>
+    <string name="lorie_pref_mediaKeysAction">Vitufe vya media</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Inahitaji \"hali ya ubora wa onyesho\" iwe \"exact\" au \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Inahitaji kuzuia njia za mkato za mfumo kwa hali ya Dex au huduma ya Ufikiaji</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Inahitaji \"hali ya ingizo la skrini ya kugusa\" iwe \"Trackpad\" na \"hali ya ubora wa onyesho\" isiwe \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Kiguso</string>
+    <string name="lorie_touchMode_simulated">Skrini ya kugusa iliyoigwa</string>
+    <string name="lorie_touchMode_direct">Mguso wa moja kwa moja</string>
+
+    <string name="lorie_displayResolution_native">asili</string>
+    <string name="lorie_displayResolution_scaled">iliyokadiriwa</string>
+    <string name="lorie_displayResolution_exact">sahihi</string>
+    <string name="lorie_displayResolution_custom">maalumu</string>
+
+    <string name="lorie_displayFiltering_bilinear">mistari-miwili</string>
+    <string name="lorie_displayFiltering_nearest">jirani wa karibu</string>
+
+    <string name="lorie_transformCapturedPointer_no">Hapana</string>
+    <string name="lorie_transformCapturedPointer_cw">Kwa mwelekeo wa saa</string>
+    <string name="lorie_transformCapturedPointer_cc">Kinyume na saa</string>
+    <string name="lorie_transformCapturedPointer_ud">Juuchini</string>
+    <string name="lorie_transformCapturedPointer_at">Kiotomatiki (kwa kiguso)</string>
+
+    <string name="lorie_userAction_noAction">hakuna kitendo</string>
+    <string name="lorie_userAction_noActionWithText">hakuna kitendo (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">geuza kibodi laini</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">geuza upau wa vitufe vya ziada</string>
+    <string name="lorie_userAction_openPreferences">fungua mapendeleo</string>
+    <string name="lorie_userAction_releaseCaptures">toa kielekezi na ukamataji wa kibodi</string>
+    <string name="lorie_userAction_toggleFullscreen">geuza skrini nzima</string>
+    <string name="lorie_userAction_restartActivity">anzisha upya shughuli</string>
+    <string name="lorie_userAction_exit">toka</string>
+    <string name="lorie_userAction_sendVolumeDown">tuma punguza sauti</string>
+    <string name="lorie_userAction_sendVolumeUp">tuma ongeza sauti</string>
+    <string name="lorie_userAction_sendMediaAction">tuma kitendo cha media</string>
+    <string name="lorie_userAction_androidVolumeControl">udhibiti wa sauti wa Android</string>
+    <string name="lorie_userAction_androidMediaControl">udhibiti wa media wa Android</string>
+
+    <string name="lorie_orientation_auto">kiotomatiki</string>
+    <string name="lorie_orientation_portrait">wima</string>
+    <string name="lorie_orientation_landscape">mlalo</string>
+    <string name="lorie_orientation_reversePortrait">wima iliyogeuzwa</string>
+    <string name="lorie_orientation_reverseLandscape">mlalo iliyogeuzwa</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Imenakiliwa kwenye ubao wa kunakili</string>
+    <string name="lorie_toast_wrong_resolution_format">Muundo wa ubora si sahihi</string>
+    <string name="lorie_dialog_permission_denied_title">Ruhusa imekataliwa</string>
+    <string name="lorie_dialog_permission_denied_message">Android inahitaji ruhusa ya WRITE_SECURE_SETTINGS ili kuanzisha huduma ya ufikiaji kiotomatiki.\nTafadhali endesha amri hii kwa kutumia ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Imeshindwa kupakia maktaba asili. Je, umesakinisha APK sahihi? Jaribu toleo la universal.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

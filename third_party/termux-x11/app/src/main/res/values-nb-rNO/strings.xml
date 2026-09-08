@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Ikke tilkoblet</string>
+    <string name="preferences_button_text">   INNSTILLINGER   </string>
+    <string name="help_button_text">   HJELP   </string>
+    <string name="exit_button_text">   AVSLUTT   </string>
+    <string name="extra_keys_config_desc">Her kan du angi verdien av extra-keys-variabelen som i Termux-appen (les <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">dette</a>) og mer \n
+F.eks. <b>META</b> for <i>META-tast</i>, \n
+<b>KEYBOARD</b> for <i>tast for bytte av programvaretastatur</i>, \n
+<b>PREFERENCES</b> for <i>tast for åpning av innstillinger</i>, \n
+<b>MOUSE_HELPER</b> for <i>tast for bytte av musehjelper</i>, \n
+<b>STYLUS_HELPER</b> for <i>tast for bytte av pekepenn-klikk-overlegg</i>, \n
+<b>EXIT</b> for <i>tast for avslutning av app</i>.</string>
+    <string name="lorie_notification_content_text">Trekk ned for å vise alternativer</string>
+    <string name="lorie_notification_open_preferences">Innstillinger</string>
+    <string name="lorie_notification_exit">Avslutt</string>
+    <string name="lorie_notification_restart_activity">Start på nytt</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Bytt IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Bytt ekstra tastatur</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Frigi fangst</string>
+    <string name="lorie_notification_toggle_fullscreen">Bytt fullskjerm</string>
+
+    <string name="lorie_pref_main">Innstillinger</string>
+    <string name="lorie_pref_output">Utdata</string>
+    <string name="lorie_pref_pointer">Peker</string>
+    <string name="lorie_pref_kbd">Tastatur</string>
+    <string name="lorie_pref_other">Annet</string>
+    <string name="lorie_pref_version">Versjon</string>
+    <string name="lorie_pref_ekbar">Innstillinger for ekstra tastelinje</string>
+    <string name="lorie_pref_userActions">Svar på brukerhandlinger</string>
+
+    <string name="lorie_pref_displayResolutionMode">Skjermoppløsningsmodus</string>
+    <string name="lorie_pref_displayScale">Skjermskala, %</string>
+    <string name="lorie_pref_displayResolutionExact">Skjermoppløsning</string>
+    <string name="lorie_pref_displayResolutionCustom">Skjermoppløsning</string>
+    <string name="lorie_pref_displayFilteringMode">Skjermfiltreringsmodus</string>
+    <string name="lorie_pref_adjustResolution">Juster innstilt oppløsning for å passe skjermorientering</string>
+    <string name="lorie_pref_displayStretch">Strekk for å passe skjerm</string>
+    <string name="lorie_pref_Reseed">Juster skjerm mens programvaretastatur er åpent</string>
+    <string name="lorie_pref_Reseed_summary">Skjermstørrelsen justeres mens programvaretastaturet er åpent.</string>
+    <string name="lorie_pref_PIP">Bilde-i-bilde-modus</string>
+    <string name="lorie_pref_PIP_summary">Vis app i bilde-i-bilde-modus når hjem-knappen eller siste apper-knappen trykkes</string>
+    <string name="lorie_pref_fullscreen">Fullskjerm</string>
+    <string name="lorie_pref_fullscreen_summary">Bytt fordypningsmodus på enhetens skjerm</string>
+    <string name="lorie_pref_forceOrientation">Skjermorientering</string>
+    <string name="lorie_pref_hideCutout">Skjul skjermutsparing (hvis noen)</string>
+    <string name="lorie_pref_keepScreenOn">Hold skjermen på</string>
+
+    <string name="lorie_pref_touchMode">Berøringsskjerm inndatamodus</string>
+    <string name="lorie_pref_scaleTouchpad">Bruk skjermskalafaktor på berøringsplate</string>
+    <string name="lorie_pref_showStylusClickOverride">Vis pekepenn-klikk-alternativer</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Pekepenn-berøringsoverstyring, venstre, midtre eller høyre klikk (kun pekepenn)</string>
+    <string name="lorie_pref_stylusIsMouse">Aktiver pekepenn-musmodus</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Få pekepennen til å fungere som en mus. Når aktivert, vil pekepennen bare flytte markøren og sende museklikk, og ignorere trykk, vinkel og helning.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Pekepenn-knappekontakt modifikatormodus</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Aktiver dette alternativet for å sende høyre eller midtre museknapper bare når pekepennen berører skjermen mens knappen trykkes.</string>
+    <string name="lorie_pref_showMouseHelper">Vis museklikk-hjelper-overlegg</string>
+    <string name="lorie_pref_showMouseHelper_summary">Museknapper på skjermen som kan brukes med berøringsplate</string>
+    <string name="lorie_pref_pointerCapture">Fang eksterne pekeenheter når mulig</string>
+    <string name="lorie_pref_pointerCapture_summary">Avskjær alle maskinvare-pekerhendelser. Peker går tilbake til Android etter å ha trykket Escape-tasten.</string>
+    <string name="lorie_pref_transformCapturedPointer">Transformer fangede pekerbevegelser</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Fanget pekerhastighetsfaktor, %</string>
+    <string name="lorie_pref_tapToMove">Aktiver trykk-for-å-flytte for berøringsplater</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignorer inndatahendelser fra spillkontroller</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Hindre at hendelser fra spillkontroller og joystick videresendes til X-server</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Vis ekstra tastatur</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Vis tastatur med ekstra taster.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Vis IME med eksternt tastatur</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Vis programvaretastatur mens maskinvaretastatur er tilkoblet.</string>
+    <string name="lorie_pref_preferScancodes">Foretrekk skannekoder når mulig</string>
+    <string name="lorie_pref_preferScancodes_summary">La X-serveren håndtere maskinvaretastaturoppsett (med DE-innstillinger eller setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Løsning for maskinvaretastatur skannekoder</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Fikser skannekoder på noen enheter. Kan forårsake problemer med flere oppsett.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Avskjær systemsnarveier</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Kun Samsung Dex. Tillater avskjæring av \"Alt+F4\", \"Meta+D\", \"Meta+E\", osv.</string>
+    <string name="lorie_pref_enableAccessibilityService">Aktiver tilgjengelighetstjeneste for å avskjære systemsnarveier manuelt.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Åpne tilgjengelighetsinnstillinger.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Aktiver tilgjengelighetstjeneste for å avskjære systemsnarveier automatisk.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Krever WRITE_SECURE_SETTINGS-tillatelse.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Sett tasteavskjæring på pause med Esc-tast</string>
+    <string name="lorie_pref_filterOutWinkey">Filtrer ut avskåret Win-tast (Meta/Mod4).</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Lar deg bruke Dex-snarveier under avskjæring. Krever tilgjengelighetstjeneste for å fungere.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Tving tegnbasert inndata</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Undertrykker forslag, prediktiv skriving og CJK-språk</string>
+
+    <string name="lorie_pref_clipboardEnable">Utklippstavledeling</string>
+    <string name="lorie_pref_requestNotificationPermission">Be om varslingstillatelse</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR-modus</string>
+    <string name="lorie_pref_configureResponseToUserActions">Konfigurer svar på brukerhandlinger</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Lagre innstillinger for sekundære skjermer separat</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Åpne denne skjermen på skjermen du vil konfigurere</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Juster skjermhøyde for ekstra tastelinje</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Kan forårsake skjermflimmer under bytting av ekstra tastelinje.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Deaktiver spesialtaster på ekstra tastelinje etter hvert tastetrykk</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Bruk langt trykk for å låse spesialtaster</string>
+    <string name="lorie_pref_opacityEKBar">Gjennomsiktighet for ekstra tastelinje, %</string>
+    <string name="lorie_pref_extra_keys_config">Konfigurasjon av ekstra taster</string>
+
+    <string name="lorie_pref_swipeUpAction">Tre-finger sveip opp</string>
+    <string name="lorie_pref_swipeDownAction">Tre-finger sveip ned</string>
+    <string name="lorie_pref_volumeUpAction">Volum opp</string>
+    <string name="lorie_pref_volumeDownAction">Volum ned</string>
+    <string name="lorie_pref_backButtonAction">Tilbake-knapp</string>
+    <string name="lorie_pref_notificationTapAction">Varslingstrykk</string>
+    <string name="lorie_pref_notificationButton0Action">Første varslingsknapp</string>
+    <string name="lorie_pref_notificationButton1Action">Andre varslingsknapp</string>
+    <string name="lorie_pref_mediaKeysAction">Medietaster</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Krever at \"skjermoppløsningsmodus\" er \"exact\" eller \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Krever avskjæring av systemsnarveier med Dex-modus eller tilgjengelighetstjeneste</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Krever at \"berøringsskjerm inndatamodus\" er \"Trackpad\" og at \"skjermoppløsningsmodus\" ikke er \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Berøringsplate</string>
+    <string name="lorie_touchMode_simulated">Simulert berøringsskjerm</string>
+    <string name="lorie_touchMode_direct">Direkte berøring</string>
+
+    <string name="lorie_displayResolution_native">nativ</string>
+    <string name="lorie_displayResolution_scaled">skalert</string>
+    <string name="lorie_displayResolution_exact">nøyaktig</string>
+    <string name="lorie_displayResolution_custom">tilpasset</string>
+
+    <string name="lorie_displayFiltering_bilinear">bilineær</string>
+    <string name="lorie_displayFiltering_nearest">nærmeste nabo</string>
+
+    <string name="lorie_transformCapturedPointer_no">Nei</string>
+    <string name="lorie_transformCapturedPointer_cw">Med klokken</string>
+    <string name="lorie_transformCapturedPointer_cc">Mot klokken</string>
+    <string name="lorie_transformCapturedPointer_ud">Opp ned</string>
+    <string name="lorie_transformCapturedPointer_at">Automatisk (for berøringsplate)</string>
+
+    <string name="lorie_userAction_noAction">ingen handling</string>
+    <string name="lorie_userAction_noActionWithText">ingen handling (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">bytt programvaretastatur</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">bytt ekstra tastelinje</string>
+    <string name="lorie_userAction_openPreferences">åpne innstillinger</string>
+    <string name="lorie_userAction_releaseCaptures">frigi peker- og tastaturfangst</string>
+    <string name="lorie_userAction_toggleFullscreen">bytt fullskjerm</string>
+    <string name="lorie_userAction_restartActivity">start aktivitet på nytt</string>
+    <string name="lorie_userAction_exit">avslutt</string>
+    <string name="lorie_userAction_sendVolumeDown">send volum ned</string>
+    <string name="lorie_userAction_sendVolumeUp">send volum opp</string>
+    <string name="lorie_userAction_sendMediaAction">send mediehandling</string>
+    <string name="lorie_userAction_androidVolumeControl">Android volumkontroll</string>
+    <string name="lorie_userAction_androidMediaControl">Android mediekontroll</string>
+
+    <string name="lorie_orientation_auto">automatisk</string>
+    <string name="lorie_orientation_portrait">stående</string>
+    <string name="lorie_orientation_landscape">liggende</string>
+    <string name="lorie_orientation_reversePortrait">omvendt stående</string>
+    <string name="lorie_orientation_reverseLandscape">omvendt liggende</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Kopiert til utklippstavlen</string>
+    <string name="lorie_toast_wrong_resolution_format">Feil oppløsningsformat</string>
+    <string name="lorie_dialog_permission_denied_title">Tillatelse nektet</string>
+    <string name="lorie_dialog_permission_denied_message">Android krever WRITE_SECURE_SETTINGS-tillatelse for å starte tilgjengelighetstjenesten automatisk.\nVennligst kjør denne kommandoen med ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Kunne ikke laste native bibliotek. Installerte du riktig APK? Prøv universal-versjonen.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

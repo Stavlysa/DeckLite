@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">Nie połączono</string>
+    <string name="preferences_button_text">   PREFERENCJE   </string>
+    <string name="help_button_text">   POMOC   </string>
+    <string name="exit_button_text">   WYJŚCIE   </string>
+    <string name="extra_keys_config_desc">Tutaj możesz ustawić wartość zmiennej extra-keys jak w aplikacji Termux (przeczytaj <a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">to</a>) i więcej \n
+Np. <b>META</b> dla <i>klawisza META</i>, \n
+<b>KEYBOARD</b> dla <i>klawisza przełączania klawiatury programowej</i>, \n
+<b>PREFERENCES</b> dla <i>klawisza otwierania preferencji</i>, \n
+<b>MOUSE_HELPER</b> dla <i>klawisza przełączania pomocnika myszy</i>, \n
+<b>STYLUS_HELPER</b> dla <i>klawisza przełączania nakładki kliknięcia rysika</i>, \n
+<b>EXIT</b> dla <i>klawisza wyjścia z aplikacji</i>.</string>
+    <string name="lorie_notification_content_text">Przeciągnij w dół, aby pokazać opcje</string>
+    <string name="lorie_notification_open_preferences">Preferencje</string>
+    <string name="lorie_notification_exit">Wyjście</string>
+    <string name="lorie_notification_restart_activity">Uruchom ponownie</string>
+    <string name="lorie_notification_toggle_soft_keyboard">Przełącz IME</string>
+    <string name="lorie_notification_toggle_additional_key_bar">Przełącz dodatkową klawiaturę</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">Zwolnij przechwytywanie</string>
+    <string name="lorie_notification_toggle_fullscreen">Przełącz pełny ekran</string>
+
+    <string name="lorie_pref_main">Preferencje</string>
+    <string name="lorie_pref_output">Wyjście</string>
+    <string name="lorie_pref_pointer">Wskaźnik</string>
+    <string name="lorie_pref_kbd">Klawiatura</string>
+    <string name="lorie_pref_other">Inne</string>
+    <string name="lorie_pref_version">Wersja</string>
+    <string name="lorie_pref_ekbar">Preferencje paska dodatkowych klawiszy</string>
+    <string name="lorie_pref_userActions">Odpowiedź na działania użytkownika</string>
+
+    <string name="lorie_pref_displayResolutionMode">Tryb rozdzielczości wyświetlacza</string>
+    <string name="lorie_pref_displayScale">Skala wyświetlacza, %</string>
+    <string name="lorie_pref_displayResolutionExact">Rozdzielczość wyświetlacza</string>
+    <string name="lorie_pref_displayResolutionCustom">Rozdzielczość wyświetlacza</string>
+    <string name="lorie_pref_displayFilteringMode">Tryb filtrowania wyświetlacza</string>
+    <string name="lorie_pref_adjustResolution">Dostosuj ustawioną rozdzielczość do orientacji ekranu</string>
+    <string name="lorie_pref_displayStretch">Rozciągnij, aby dopasować do wyświetlacza</string>
+    <string name="lorie_pref_Reseed">Dostosuj ekran, gdy klawiatura programowa jest otwarta</string>
+    <string name="lorie_pref_Reseed_summary">Rozmiar ekranu zostanie dostosowany, gdy klawiatura programowa jest otwarta.</string>
+    <string name="lorie_pref_PIP">Tryb obraz w obrazie</string>
+    <string name="lorie_pref_PIP_summary">Pokaż aplikację w trybie PIP po naciśnięciu przycisku home lub przycisku ostatnich aplikacji</string>
+    <string name="lorie_pref_fullscreen">Pełny ekran</string>
+    <string name="lorie_pref_fullscreen_summary">Przełącz tryb immersyjny na wyświetlaczu urządzenia</string>
+    <string name="lorie_pref_forceOrientation">Orientacja ekranu</string>
+    <string name="lorie_pref_hideCutout">Ukryj wycięcie wyświetlacza (jeśli istnieje)</string>
+    <string name="lorie_pref_keepScreenOn">Utrzymuj ekran włączony</string>
+
+    <string name="lorie_pref_touchMode">Tryb wprowadzania dotykowego</string>
+    <string name="lorie_pref_scaleTouchpad">Zastosuj współczynnik skali wyświetlacza do touchpada</string>
+    <string name="lorie_pref_showStylusClickOverride">Pokaż opcje kliknięcia rysikiem</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">Zastąpienie dotyku rysika, kliknięcie lewym, środkowym lub prawym przyciskiem (tylko rysik)</string>
+    <string name="lorie_pref_stylusIsMouse">Włącz tryb myszy rysika</string>
+    <string name="lorie_pref_stylusIsMouse_summary">Spraw, aby rysik działał jak mysz. Po aktywacji rysik będzie tylko przesuwał kursor i wysyłał kliknięcia myszy, ignorując nacisk, kąt i nachylenie.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">Tryb modyfikatora kontaktu przycisku rysika</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">Włącz tę opcję, aby wysyłać prawy lub środkowy przycisk myszy tylko wtedy, gdy rysik dotyka ekranu podczas naciśnięcia przycisku.</string>
+    <string name="lorie_pref_showMouseHelper">Pokaż nakładkę pomocnika kliknięcia myszy</string>
+    <string name="lorie_pref_showMouseHelper_summary">Przyciski myszy na ekranie do użycia z touchpadem</string>
+    <string name="lorie_pref_pointerCapture">Przechwytuj zewnętrzne urządzenia wskazujące, gdy to możliwe</string>
+    <string name="lorie_pref_pointerCapture_summary">Przechwytuj wszystkie zdarzenia wskaźnika sprzętowego. Wskaźnik wraca do Androida po naciśnięciu klawisza Escape.</string>
+    <string name="lorie_pref_transformCapturedPointer">Przekształć ruchy przechwyconego wskaźnika</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">Współczynnik prędkości przechwyconego wskaźnika, %</string>
+    <string name="lorie_pref_tapToMove">Włącz dotknij-aby-przesunąć dla touchpadów</string>
+    <string name="lorie_pref_ignoreGamepadEvents">Ignoruj zdarzenia wejściowe gamepada</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">Zapobiegaj przekazywaniu zdarzeń gamepada i joysticka do serwera X</string>
+
+    <string name="lorie_pref_showAdditionalKbd">Pokaż dodatkową klawiaturę</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">Pokaż klawiaturę z dodatkowymi klawiszami.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">Pokaż IME z zewnętrzną klawiaturą</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">Pokaż klawiaturę programową, gdy klawiatura sprzętowa jest podłączona.</string>
+    <string name="lorie_pref_preferScancodes">Preferuj kody skanowania, gdy to możliwe</string>
+    <string name="lorie_pref_preferScancodes_summary">Pozwól serwerowi X obsługiwać układ klawiatury sprzętowej (z ustawieniami DE lub setxkbmap).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">Obejście dla kodów skanowania klawiatury sprzętowej</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">Naprawia kody skanowania na niektórych urządzeniach. Może powodować problemy z wieloma układami.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">Przechwytuj skróty systemowe</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Tylko Samsung Dex. Umożliwia przechwytywanie \"Alt+F4\", \"Meta+D\", \"Meta+E\" itp.</string>
+    <string name="lorie_pref_enableAccessibilityService">Włącz usługę dostępności do ręcznego przechwytywania skrótów systemowych.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">Otwórz ustawienia dostępności.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">Włącz usługę dostępności do automatycznego przechwytywania skrótów systemowych.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">Wymaga uprawnienia WRITE_SECURE_SETTINGS.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Wstrzymaj przechwytywanie klawiszy klawiszem Esc</string>
+    <string name="lorie_pref_filterOutWinkey">Odfiltruj przechwycony klawisz Win (Meta/Mod4).</string>
+    <string name="lorie_pref_filterOutWinkey_summary">Umożliwia korzystanie ze skrótów Dex podczas przechwytywania. Wymaga usługi dostępności.</string>
+    <string name="lorie_pref_enforceCharBasedInput">Wymuś wprowadzanie znakowe</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">Tłumi sugestie, pisanie predykcyjne i języki CJK</string>
+
+    <string name="lorie_pref_clipboardEnable">Udostępnianie schowka</string>
+    <string name="lorie_pref_requestNotificationPermission">Poproś o uprawnienie do powiadomień</string>
+    <string name="lorie_pref_xrMode">Tryb Meta Oculus XR</string>
+    <string name="lorie_pref_configureResponseToUserActions">Skonfiguruj odpowiedź na działania użytkownika</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">Przechowuj preferencje dla dodatkowych wyświetlaczy oddzielnie</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">Otwórz ten ekran na wyświetlaczu, który chcesz skonfigurować</string>
+
+    <string name="lorie_pref_adjustHeightForEK">Dostosuj wysokość wyświetlacza do paska dodatkowych klawiszy</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">Może powodować migotanie ekranu podczas przełączania paska dodatkowych klawiszy.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">Dezaktywuj specjalne klawisze na pasku dodatkowych klawiszy po każdym naciśnięciu</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">Użyj długiego dotknięcia, aby zablokować specjalne klawisze</string>
+    <string name="lorie_pref_opacityEKBar">Krycie paska dodatkowych klawiszy, %</string>
+    <string name="lorie_pref_extra_keys_config">Konfiguracja dodatkowych klawiszy</string>
+
+    <string name="lorie_pref_swipeUpAction">Przesunięcie trzema palcami w górę</string>
+    <string name="lorie_pref_swipeDownAction">Przesunięcie trzema palcami w dół</string>
+    <string name="lorie_pref_volumeUpAction">Zwiększ głośność</string>
+    <string name="lorie_pref_volumeDownAction">Zmniejsz głośność</string>
+    <string name="lorie_pref_backButtonAction">Przycisk wstecz</string>
+    <string name="lorie_pref_notificationTapAction">Dotknięcie powiadomienia</string>
+    <string name="lorie_pref_notificationButton0Action">Pierwszy przycisk powiadomienia</string>
+    <string name="lorie_pref_notificationButton1Action">Drugi przycisk powiadomienia</string>
+    <string name="lorie_pref_mediaKeysAction">Klawisze multimedialne</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">Wymaga, aby \"tryb rozdzielczości wyświetlacza\" był \"exact\" lub \"custom\"</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Wymaga przechwytywania skrótów systemowych za pomocą trybu Dex lub usługi dostępności</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">Wymaga, aby \"tryb wprowadzania dotykowego\" był \"Trackpad\", a \"tryb rozdzielczości wyświetlacza\" nie był \"native\"</string>
+
+    <string name="lorie_touchMode_trackpad">Touchpad</string>
+    <string name="lorie_touchMode_simulated">Symulowany ekran dotykowy</string>
+    <string name="lorie_touchMode_direct">Dotyk bezpośredni</string>
+
+    <string name="lorie_displayResolution_native">natywna</string>
+    <string name="lorie_displayResolution_scaled">skalowana</string>
+    <string name="lorie_displayResolution_exact">dokładna</string>
+    <string name="lorie_displayResolution_custom">niestandardowa</string>
+
+    <string name="lorie_displayFiltering_bilinear">dwuliniowe</string>
+    <string name="lorie_displayFiltering_nearest">najbliższy sąsiad</string>
+
+    <string name="lorie_transformCapturedPointer_no">Nie</string>
+    <string name="lorie_transformCapturedPointer_cw">Zgodnie z ruchem wskazówek zegara</string>
+    <string name="lorie_transformCapturedPointer_cc">Przeciwnie do ruchu wskazówek zegara</string>
+    <string name="lorie_transformCapturedPointer_ud">Do góry nogami</string>
+    <string name="lorie_transformCapturedPointer_at">Automatycznie (dla touchpada)</string>
+
+    <string name="lorie_userAction_noAction">brak akcji</string>
+    <string name="lorie_userAction_noActionWithText">brak akcji (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">przełącz klawiaturę programową</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">przełącz pasek dodatkowych klawiszy</string>
+    <string name="lorie_userAction_openPreferences">otwórz preferencje</string>
+    <string name="lorie_userAction_releaseCaptures">zwolnij przechwytywanie wskaźnika i klawiatury</string>
+    <string name="lorie_userAction_toggleFullscreen">przełącz pełny ekran</string>
+    <string name="lorie_userAction_restartActivity">uruchom ponownie aktywność</string>
+    <string name="lorie_userAction_exit">wyjdź</string>
+    <string name="lorie_userAction_sendVolumeDown">wyślij zmniejszenie głośności</string>
+    <string name="lorie_userAction_sendVolumeUp">wyślij zwiększenie głośności</string>
+    <string name="lorie_userAction_sendMediaAction">wyślij akcję multimedialną</string>
+    <string name="lorie_userAction_androidVolumeControl">kontrola głośności Androida</string>
+    <string name="lorie_userAction_androidMediaControl">kontrola multimediów Androida</string>
+
+    <string name="lorie_orientation_auto">automatycznie</string>
+    <string name="lorie_orientation_portrait">pionowo</string>
+    <string name="lorie_orientation_landscape">poziomo</string>
+    <string name="lorie_orientation_reversePortrait">odwrócony pion</string>
+    <string name="lorie_orientation_reverseLandscape">odwrócony poziom</string>
+
+    <string name="lorie_toast_copied_to_clipboard">Skopiowano do schowka</string>
+    <string name="lorie_toast_wrong_resolution_format">Nieprawidłowy format rozdzielczości</string>
+    <string name="lorie_dialog_permission_denied_title">Odmowa uprawnień</string>
+    <string name="lorie_dialog_permission_denied_message">Android wymaga uprawnienia WRITE_SECURE_SETTINGS do automatycznego uruchomienia usługi dostępności.\nUruchom to polecenie za pomocą ADB:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">Nie udało się załadować biblioteki natywnej. Czy zainstalowałeś właściwy plik APK? Wypróbuj wersję universal.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

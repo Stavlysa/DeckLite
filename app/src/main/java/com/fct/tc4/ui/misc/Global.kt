@@ -272,8 +272,9 @@ object Global {
         }
     }
 
-    /** 检查 assets 中是否内置了 rootfs.tar.zst */
+    /** Modern chunked assets or the original single-file built-in image. */
     fun hasBuiltInRootfs(): Boolean {
+        if (hasBundledRootfsManifest()) return true
         return try {
             appContext.assets.open("rootfs.tar.zst").use { }
             true
@@ -281,6 +282,11 @@ object Global {
             false
         }
     }
+
+    fun hasBundledRootfsManifest(): Boolean = try {
+        appContext.assets.open(BundledRootfs.MANIFEST).use { }
+        true
+    } catch (_: Exception) { false }
 
     /**
      * 获取某个容器的完整配置（快捷方式）。

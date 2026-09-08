@@ -1,0 +1,167 @@
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_X11_APP_NAME "Termux:X11">
+    ]>
+<resources>
+    <string name="x11_app_name">&TERMUX_X11_APP_NAME;</string>
+
+    <string name="not_connected">இணைக்கப்படவில்லை</string>
+    <string name="preferences_button_text">   விருப்பத்தேர்வுகள்   </string>
+    <string name="help_button_text">   உதவி   </string>
+    <string name="exit_button_text">   வெளியேறு   </string>
+    <string name="extra_keys_config_desc">Termux பயன்பாட்டில் உள்ளதைப் போல extra-keys மாறியின் மதிப்பை இங்கே அமைக்கலாம் (<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">இதைப்</a> படிக்கவும்) மற்றும் மேலும் \n
+எ.கா. <b>META</b> என்பது <i>META விசை</i>, \n
+<b>KEYBOARD</b> என்பது <i>மென்பொருள் விசைப்பலகை மாற்று விசை</i>, \n
+<b>PREFERENCES</b> என்பது <i>விருப்பத்தேர்வுகள் திறக்கும் விசை</i>, \n
+<b>MOUSE_HELPER</b> என்பது <i>சுட்டி உதவியாளர் மாற்று விசை</i>, \n
+<b>STYLUS_HELPER</b> என்பது <i>ஸ்டைலஸ் கிளிக் மேலடுக்கு மாற்று விசை</i>, \n
+<b>EXIT</b> என்பது <i>பயன்பாட்டு வெளியேற்ற விசை</i>.</string>
+    <string name="lorie_notification_content_text">விருப்பங்களைக் காட்ட கீழே இழுக்கவும்</string>
+    <string name="lorie_notification_open_preferences">விருப்பத்தேர்வுகள்</string>
+    <string name="lorie_notification_exit">வெளியேறு</string>
+    <string name="lorie_notification_restart_activity">மீண்டும் தொடங்கு</string>
+    <string name="lorie_notification_toggle_soft_keyboard">IME-ஐ மாற்று</string>
+    <string name="lorie_notification_toggle_additional_key_bar">கூடுதல் விசைப்பலகையை மாற்று</string>
+    <string name="lorie_notification_release_pointer_and_keyboard_capture">பிடிப்புகளை விடுவி</string>
+    <string name="lorie_notification_toggle_fullscreen">முழுத்திரையை மாற்று</string>
+
+    <string name="lorie_pref_main">விருப்பத்தேர்வுகள்</string>
+    <string name="lorie_pref_output">வெளியீடு</string>
+    <string name="lorie_pref_pointer">சுட்டுக்காட்டி</string>
+    <string name="lorie_pref_kbd">விசைப்பலகை</string>
+    <string name="lorie_pref_other">மற்றவை</string>
+    <string name="lorie_pref_version">பதிப்பு</string>
+    <string name="lorie_pref_ekbar">கூடுதல் விசைப் பட்டை விருப்பத்தேர்வுகள்</string>
+    <string name="lorie_pref_userActions">பயனர் செயல்களுக்கான பதில்</string>
+
+    <string name="lorie_pref_displayResolutionMode">காட்சித் தெளிவுத்திறன் முறை</string>
+    <string name="lorie_pref_displayScale">காட்சி அளவீடு, %</string>
+    <string name="lorie_pref_displayResolutionExact">காட்சித் தெளிவுத்திறன்</string>
+    <string name="lorie_pref_displayResolutionCustom">காட்சித் தெளிவுத்திறன்</string>
+    <string name="lorie_pref_displayFilteringMode">காட்சி வடிகட்டுதல் முறை</string>
+    <string name="lorie_pref_adjustResolution">திரை நோக்குநிலைக்கு ஏற்ப அமைக்கப்பட்ட தெளிவுத்திறனைச் சரிசெய்</string>
+    <string name="lorie_pref_displayStretch">காட்சிக்குப் பொருந்துமாறு நீட்டு</string>
+    <string name="lorie_pref_Reseed">மென்பொருள் விசைப்பலகை திறந்திருக்கும்போது திரையை மறுசீரமை</string>
+    <string name="lorie_pref_Reseed_summary">மென்பொருள் விசைப்பலகை திறந்திருக்கும்போது திரை அளவு சரிசெய்யப்படும்.</string>
+    <string name="lorie_pref_PIP">PIP முறை</string>
+    <string name="lorie_pref_PIP_summary">முகப்பு பொத்தான் அல்லது சமீபத்திய பயன்பாடுகள் பொத்தானை அழுத்தும்போது PIP முறையில் பயன்பாட்டைக் காட்டு</string>
+    <string name="lorie_pref_fullscreen">முழுத்திரை</string>
+    <string name="lorie_pref_fullscreen_summary">உங்கள் சாதனத் திரையில் மூழ்கும் பயன்முறையை மாற்று</string>
+    <string name="lorie_pref_forceOrientation">திரை நோக்குநிலை</string>
+    <string name="lorie_pref_hideCutout">காட்சி வெட்டுப் பகுதியை மறை (இருந்தால்)</string>
+    <string name="lorie_pref_keepScreenOn">திரையை இயக்கத்தில் வை</string>
+
+    <string name="lorie_pref_touchMode">தொடுதிரை உள்ளீட்டு முறை</string>
+    <string name="lorie_pref_scaleTouchpad">டச்பேடிற்கு காட்சி அளவீட்டுக் காரணியைப் பயன்படுத்து</string>
+    <string name="lorie_pref_showStylusClickOverride">ஸ்டைலஸ் கிளிக் விருப்பங்களைக் காட்டு</string>
+    <string name="lorie_pref_showStylusClickOverride_summary">ஸ்டைலஸ் தொடு மேலெழுதல், இடது, நடு அல்லது வலது கிளிக் (ஸ்டைலஸ் மட்டும்)</string>
+    <string name="lorie_pref_stylusIsMouse">ஸ்டைலஸ் சுட்டி முறையை இயக்கு</string>
+    <string name="lorie_pref_stylusIsMouse_summary">உங்கள் ஸ்டைலஸை சுட்டி போல செயல்பட வைக்கவும். செயல்படுத்தப்பட்டால், ஸ்டைலஸ் கர்சரை மட்டும் நகர்த்தி சுட்டி கிளிக்குகளை அனுப்பும், அழுத்தம், கோணம் மற்றும் சாய்வை புறக்கணிக்கும்.</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode">ஸ்டைலஸ் பொத்தான் தொடர்பு மாற்றி முறை</string>
+    <string name="lorie_pref_stylusButtonContactModifierMode_summary">பொத்தானை அழுத்தியிருக்கும்போது ஸ்டைலஸ் திரையைத் தொடும்போது மட்டும் வலது அல்லது நடு சுட்டி பொத்தான்களை அனுப்ப இந்த விருப்பத்தை இயக்கவும்.</string>
+    <string name="lorie_pref_showMouseHelper">சுட்டி கிளிக் உதவி மேலடுக்கைக் காட்டு</string>
+    <string name="lorie_pref_showMouseHelper_summary">டச்பேடுடன் பயன்படுத்தக்கூடிய திரையில் உள்ள சுட்டி பொத்தான்கள்</string>
+    <string name="lorie_pref_pointerCapture">முடிந்தால் வெளிப்புற சுட்டிக்காட்டி சாதனங்களைப் பிடி</string>
+    <string name="lorie_pref_pointerCapture_summary">அனைத்து வன்பொருள் சுட்டிக்காட்டி நிகழ்வுகளையும் இடைமறி. Escape விசையை அழுத்திய பின் சுட்டிக்காட்டி Android-க்குத் திரும்பும்.</string>
+    <string name="lorie_pref_transformCapturedPointer">பிடிக்கப்பட்ட சுட்டிக்காட்டி இயக்கங்களை மாற்று</string>
+    <string name="lorie_pref_capturedPointerSpeedFactor">பிடிக்கப்பட்ட சுட்டிக்காட்டி வேகக் காரணி, %</string>
+    <string name="lorie_pref_tapToMove">டச்பேடுகளுக்கு தட்டி-நகர்த்தலை இயக்கு</string>
+    <string name="lorie_pref_ignoreGamepadEvents">கேம்பேட் உள்ளீட்டு நிகழ்வுகளைப் புறக்கணி</string>
+    <string name="lorie_pref_ignoreGamepadEvents_summary">கேம்பேட் மற்றும் ஜாய்ஸ்டிக் நிகழ்வுகள் X சேவையகத்திற்கு அனுப்பப்படுவதைத் தடு</string>
+
+    <string name="lorie_pref_showAdditionalKbd">கூடுதல் விசைப்பலகையைக் காட்டு</string>
+    <string name="lorie_pref_showAdditionalKbd_summary">கூடுதல் விசைகளுடன் விசைப்பலகையைக் காட்டு.</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected">வெளிப்புற விசைப்பலகையுடன் IME-ஐக் காட்டு</string>
+    <string name="lorie_pref_showIMEWhileExternalConnected_summary">வன்பொருள் விசைப்பலகை இணைக்கப்பட்டிருக்கும்போது மென்பொருள் விசைப்பலகையைக் காட்டு.</string>
+    <string name="lorie_pref_preferScancodes">முடிந்தால் ஸ்கேன்கோடுகளை விரும்பு</string>
+    <string name="lorie_pref_preferScancodes_summary">வன்பொருள் விசைப்பலகை அமைப்பை X சேவையகம் கையாளட்டும் (DE அமைப்புகள் அல்லது setxkbmap உடன்).</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround">வன்பொருள் விசைப்பலகை ஸ்கேன்கோடுகள் தீர்வு</string>
+    <string name="lorie_pref_hardwareKbdScancodesWorkaround_summary">சில சாதனங்களில் ஸ்கேன்கோடுகளை சரிசெய்கிறது. பல அமைப்புகளில் சிக்கல்களை ஏற்படுத்தலாம்.</string>
+    <string name="lorie_pref_dexMetaKeyCapture">கணினி குறுக்குவழிகளை இடைமறி</string>
+    <string name="lorie_pref_dexMetaKeyCapture_summary">Samsung Dex மட்டும். \"Alt+F4\", \"Meta+D\", \"Meta+E\" போன்றவற்றை இடைமறிக்க அனுமதிக்கிறது.</string>
+    <string name="lorie_pref_enableAccessibilityService">கணினி குறுக்குவழிகளை கைமுறையாக இடைமறிக்க அணுகல் சேவையை இயக்கு.</string>
+    <string name="lorie_pref_enableAccessibilityService_summary">அணுகல் அமைப்புகளைத் திற.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically">கணினி குறுக்குவழிகளை தானாக இடைமறிக்க அணுகல் சேவையை இயக்கு.</string>
+    <string name="lorie_pref_enableAccessibilityServiceAutomatically_summary">WRITE_SECURE_SETTINGS அனுமதி தேவை.</string>
+    <string name="lorie_pref_pauseKeyInterceptingWithEsc">Esc விசையுடன் விசை இடைமறிப்பை இடைநிறுத்து</string>
+    <string name="lorie_pref_filterOutWinkey">இடைமறிக்கப்பட்ட Win (Meta/Mod4) விசையை வடிகட்டு.</string>
+    <string name="lorie_pref_filterOutWinkey_summary">இடைமறிப்பின் போது Dex குறுக்குவழிகளைப் பயன்படுத்த அனுமதிக்கிறது. செயல்பட அணுகல் சேவை தேவை.</string>
+    <string name="lorie_pref_enforceCharBasedInput">எழுத்து அடிப்படையிலான உள்ளீட்டை கட்டாயப்படுத்து</string>
+    <string name="lorie_pref_enforceCharBasedInput_summary">பரிந்துரைகள், முன்கணிப்பு தட்டச்சு மற்றும் CJK மொழிகளை அடக்குகிறது</string>
+
+    <string name="lorie_pref_clipboardEnable">கிளிப்போர்டு பகிர்வு</string>
+    <string name="lorie_pref_requestNotificationPermission">அறிவிப்பு அனுமதியைக் கோரு</string>
+    <string name="lorie_pref_xrMode">Meta Oculus XR முறை</string>
+    <string name="lorie_pref_configureResponseToUserActions">பயனர் செயல்களுக்கான பதிலை உள்ளமை</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately">இரண்டாம் நிலை காட்சிகளுக்கான விருப்பத்தேர்வுகளைத் தனியாகச் சேமி</string>
+    <string name="lorie_pref_storeSecondaryDisplayPreferencesSeparately_summary">நீங்கள் உள்ளமைக்க விரும்பும் காட்சியில் இந்தத் திரையைத் திறக்கவும்</string>
+
+    <string name="lorie_pref_adjustHeightForEK">கூடுதல் விசைப் பட்டைக்கு காட்சி உயரத்தைச் சரிசெய்</string>
+    <string name="lorie_pref_adjustHeightForEK_summary">கூடுதல் விசைப் பட்டையை மாற்றும்போது திரை மினுக்கத்தை ஏற்படுத்தலாம்.</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour">ஒவ்வொரு விசை அழுத்தத்திற்கும் பின் கூடுதல் விசைப் பட்டையில் உள்ள சிறப்பு விசைகளை செயல்நீக்கு</string>
+    <string name="lorie_pref_useTermuxEKBarBehaviour_summary">சிறப்பு விசைகளைப் பூட்ட நீண்ட தட்டலைப் பயன்படுத்து</string>
+    <string name="lorie_pref_opacityEKBar">கூடுதல் விசைப் பட்டையின் ஒளிபுகாநிலை, %</string>
+    <string name="lorie_pref_extra_keys_config">கூடுதல் விசைகள் உள்ளமைவு</string>
+
+    <string name="lorie_pref_swipeUpAction">மூன்று விரல் மேலே ஸ்வைப்</string>
+    <string name="lorie_pref_swipeDownAction">மூன்று விரல் கீழே ஸ்வைப்</string>
+    <string name="lorie_pref_volumeUpAction">ஒலியளவு அதிகரி</string>
+    <string name="lorie_pref_volumeDownAction">ஒலியளவு குறை</string>
+    <string name="lorie_pref_backButtonAction">பின் பொத்தான்</string>
+    <string name="lorie_pref_notificationTapAction">அறிவிப்புத் தட்டல்</string>
+    <string name="lorie_pref_notificationButton0Action">அறிவிப்பு முதல் பொத்தான்</string>
+    <string name="lorie_pref_notificationButton1Action">அறிவிப்பு இரண்டாவது பொத்தான்</string>
+    <string name="lorie_pref_mediaKeysAction">ஊடக விசைகள்</string>
+
+    <string name="lorie_pref_summary_requiresExactOrCustom">\"காட்சித் தெளிவுத்திறன் முறை\" \"exact\" அல்லது \"custom\" ஆக இருக்க வேண்டும்</string>
+    <string name="lorie_pref_summary_requiresIntercepting">Dex முறை அல்லது அணுகல் சேவையுடன் கணினி குறுக்குவழிகளை இடைமறிக்க வேண்டும்</string>
+    <string name="lorie_pref_summary_requiresTrackpadAndNative">\"தொடுதிரை உள்ளீட்டு முறை\" \"Trackpad\" ஆகவும் \"காட்சித் தெளிவுத்திறன் முறை\" \"native\" ஆக இல்லாமலும் இருக்க வேண்டும்</string>
+
+    <string name="lorie_touchMode_trackpad">டச்பேடு</string>
+    <string name="lorie_touchMode_simulated">உருவகப்படுத்தப்பட்ட தொடுதிரை</string>
+    <string name="lorie_touchMode_direct">நேரடித் தொடு</string>
+
+    <string name="lorie_displayResolution_native">இயல்பு</string>
+    <string name="lorie_displayResolution_scaled">அளவிடப்பட்ட</string>
+    <string name="lorie_displayResolution_exact">சரியான</string>
+    <string name="lorie_displayResolution_custom">தனிப்பயன்</string>
+
+    <string name="lorie_displayFiltering_bilinear">இருகோட்டு</string>
+    <string name="lorie_displayFiltering_nearest">அருகிலுள்ள அண்டை</string>
+
+    <string name="lorie_transformCapturedPointer_no">இல்லை</string>
+    <string name="lorie_transformCapturedPointer_cw">வலஞ்சுழியாக</string>
+    <string name="lorie_transformCapturedPointer_cc">இடஞ்சுழியாக</string>
+    <string name="lorie_transformCapturedPointer_ud">தலைகீழாக</string>
+    <string name="lorie_transformCapturedPointer_at">தானியங்கி (டச்பேடுக்கு)</string>
+
+    <string name="lorie_userAction_noAction">செயல் இல்லை</string>
+    <string name="lorie_userAction_noActionWithText">செயல் இல்லை (%1$s)</string>
+    <string name="lorie_userAction_toggleSoftKbd">மென்பொருள் விசைப்பலகையை மாற்று</string>
+    <string name="lorie_userAction_toggleAdditionalKbd">கூடுதல் விசை பட்டையை மாற்று</string>
+    <string name="lorie_userAction_openPreferences">விருப்பத்தேர்வுகளைத் திற</string>
+    <string name="lorie_userAction_releaseCaptures">சுட்டுக்காட்டி மற்றும் விசைப்பலகை பிடிப்பை விடுவி</string>
+    <string name="lorie_userAction_toggleFullscreen">முழுத்திரையை மாற்று</string>
+    <string name="lorie_userAction_restartActivity">செயல்பாட்டை மறுதொடக்கம்</string>
+    <string name="lorie_userAction_exit">வெளியேறு</string>
+    <string name="lorie_userAction_sendVolumeDown">ஒலியளவு குறைப்பை அனுப்பு</string>
+    <string name="lorie_userAction_sendVolumeUp">ஒலியளவு அதிகரிப்பை அனுப்பு</string>
+    <string name="lorie_userAction_sendMediaAction">ஊடகச் செயலை அனுப்பு</string>
+    <string name="lorie_userAction_androidVolumeControl">Android ஒலியளவு கட்டுப்பாடு</string>
+    <string name="lorie_userAction_androidMediaControl">Android ஊடக கட்டுப்பாடு</string>
+
+    <string name="lorie_orientation_auto">தானியங்கி</string>
+    <string name="lorie_orientation_portrait">நெடுக்காக</string>
+    <string name="lorie_orientation_landscape">குறுக்காக</string>
+    <string name="lorie_orientation_reversePortrait">தலைகீழ் நெடுக்கு</string>
+    <string name="lorie_orientation_reverseLandscape">தலைகீழ் குறுக்கு</string>
+
+    <string name="lorie_toast_copied_to_clipboard">கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது</string>
+    <string name="lorie_toast_wrong_resolution_format">தவறான தெளிவுத்திறன் வடிவம்</string>
+    <string name="lorie_dialog_permission_denied_title">அனுமதி மறுக்கப்பட்டது</string>
+    <string name="lorie_dialog_permission_denied_message">அணுகல் சேவையை தானாகத் தொடங்க Android-க்கு WRITE_SECURE_SETTINGS அனுமதி தேவை.\nADB ஐப் பயன்படுத்தி இந்தக் கட்டளையை இயக்கவும்:\nadb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="lorie_error_native_library_load">நேட்டிவ் நூலகத்தை ஏற்ற முடியவில்லை. சரியான APK-ஐ நிறுவியுள்ளீர்களா? universal பதிப்பை முயற்சிக்கவும்.</string>
+
+    <string name="lorie_key_interceptor_label">Termux:X11 KeyInterceptor</string>
+</resources>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1752" viewBox="0 0 2800 1752">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="58%">
+      <stop offset="0" stop-color="#151a20"/>
+      <stop offset="0.55" stop-color="#090b0e"/>
+      <stop offset="1" stop-color="#020304"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#273341" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0b0f14" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="2800" height="1752" fill="url(#glow)"/>
+  <circle cx="1400" cy="790" r="430" fill="none" stroke="#222a33" stroke-width="2" opacity="0.28"/>
+  <circle cx="1400" cy="790" r="320" fill="none" stroke="#171d24" stroke-width="70" opacity="0.22"/>
+  <path d="M0 1470 L1120 350 L1720 1752 L0 1752 Z" fill="url(#accent)" opacity="0.26"/>
+  <text x="1400" y="835" text-anchor="middle" fill="#d7dde5" opacity="0.16"
+        font-family="sans-serif" font-size="112" font-weight="600" letter-spacing="18">DECKLITE</text>
+</svg>

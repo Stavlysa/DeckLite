@@ -52,9 +52,8 @@ class ProgressDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         _binding = Tc4DialogProgressBinding.inflate(requireActivity().layoutInflater)
 
-        pendingTitle?.let { binding.title.text = it }
+        val title = pendingTitle ?: arguments?.getString(ARG_TITLE)
         pendingTitle = null
-        val title = arguments?.getString(ARG_TITLE)
         binding.title.text = title
         binding.title.visibility = if (title != null) View.VISIBLE else View.GONE
 

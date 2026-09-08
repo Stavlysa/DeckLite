@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_language_welcome">Добро пожаловать в Tiny Computer</string>
+    <string name="tc4_language_title">Язык приложения</string>
+    <string name="tc4_language_intro">Выберите язык интерфейса. Его можно изменить позже в настройках. Языки Wine Controller и Windows настраиваются отдельно.</string>
+    <string name="tc4_language_desc">Изменение языка интерфейса приложения. Языки Wine Controller, Windows и быстрых команд не изменяются.</string>
+    <string name="tc4_language_continue">Продолжить</string>
+    <string name="tc4_language_save_failed">Не удалось сохранить язык. Повторите попытку.</string>
+</resources>
