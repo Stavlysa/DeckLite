@@ -1,0 +1,32 @@
+panel_items = TSC
+panel_position = bottom center horizontal
+panel_size = 100% 36
+panel_margin = 0 0
+panel_padding = 6 2 6
+panel_background_id = 0
+wm_menu = 1
+
+rounded = 0
+border_width = 0
+background_color = #111827 92
+
+taskbar_mode = single_desktop
+taskbar_padding = 2 0 2
+taskbar_background_id = 0
+
+task_icon = 1
+task_text = 1
+task_centered = 1
+task_maximum_size = 180 32
+task_padding = 4 2 4
+task_font = Sans 10
+task_font_color = #e5e7eb 100
+
+systray_padding = 4 0 4
+systray_icon_size = 20
+
+time1_format = %H:%M
+time1_font = Sans Bold 10
+clock_font_color = #f9fafb 100
+clock_padding = 8 0
+
