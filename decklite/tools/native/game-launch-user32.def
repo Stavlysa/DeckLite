@@ -1,0 +1,18 @@
+LIBRARY user32.dll
+EXPORTS
+IsIconic
+RedrawWindow
+WaitForInputIdle
+GetForegroundWindow
+EnumWindows
+IsWindowVisible
+IsWindowEnabled
+GetWindowRect
+GetWindowThreadProcessId
+SetForegroundWindow
+GetClientRect
+GetDesktopWindow
+GetWindowLongPtrW
+SetWindowLongPtrW
+SetWindowPos
+GetClassNameW
