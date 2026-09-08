@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -u
+
+printf 'DeckLite / Tiny Container\n'
+printf 'Architecture: %s\n' "$(uname -m)"
+printf 'Userspace:    %s\n' "$(. /etc/os-release && echo "$PRETTY_NAME")"
+printf 'Desktop:      %s\n' "$(command -v openbox-session >/dev/null 2>&1 && echo installed || echo optional/not-installed)"
+printf 'Box64:        %s\n' "$(command -v box64 >/dev/null 2>&1 && box64 -v 2>&1 | head -1 || echo optional/not-installed)"
+printf 'Steam:        %s\n' "$([[ -x "$HOME/.local/bin/steam-decklite" ]] && echo experimental/installed || echo optional/not-installed)"
+printf 'Memory:       %s\n' "$(free -h 2>/dev/null | awk '/^Mem:/ {print $2 " total, " $7 " available"}' || echo unknown)"
+
