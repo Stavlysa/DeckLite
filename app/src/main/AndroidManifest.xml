@@ -12,17 +12,34 @@
 
     <application
         android:name=".Tc4Application"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/tc4_app_name"
+        android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TinyContainer"
         >
+        <service android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false" android:exported="false">
+            <meta-data android:name="autoStoreLocales" android:value="true" />
+        </service>
+        <receiver android:name=".debug.DebugPairingReceiver"
+            android:exported="true" android:permission="android.permission.DUMP" />
+        <receiver android:name="com.termux.x11.LoriePreferences$Receiver"
+            android:exported="false" tools:replace="android:exported" />
+        <activity android:name="com.termux.x11.LoriePreferences"
+            android:exported="false" tools:replace="android:exported" />
+        <!-- The bindable subclass retains the upstream X11 startup protocol. -->
+        <service android:name="com.termux.x11.CmdEntryPointService"
+            tools:node="remove" />
+        <service android:name=".XServerService"
+            android:process=":xserver"
+            android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true"
@@ -55,7 +72,7 @@
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
             android:name=".ui.page.Signal9Activity"
-            android:exported="true"
+            android:exported="false"
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
             android:name=".ui.page.OpenSourceLibsActivity"
