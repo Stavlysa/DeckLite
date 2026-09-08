@@ -301,6 +301,15 @@ class ContainerManageFragment : Fragment() {
                                 dialog.updateTitle(extractingText)
                             }
                         }
+                        is InstallState.CopyingBuiltIn -> {
+                            val tag = "install_copy_progress"
+                            val title = getString(R.string.tc4_builtin_copying,
+                                (state.copied * 100 / state.total).toInt(),
+                                formatBytes(state.copied), formatBytes(state.total))
+                            val dialog = childFragmentManager.findFragmentByTag(tag) as? ProgressDialogFragment
+                            if (dialog == null) ProgressDialogFragment.newBuilder(childFragmentManager).title(title).show(tag)
+                            else dialog.updateTitle(title)
+                        }
                         is InstallState.AwaitingConfirm -> {
                             (childFragmentManager.findFragmentByTag("install_copy_progress") as? ProgressDialogFragment)?.dismiss()
                             val requestKey = "confirm_install"
@@ -326,6 +335,7 @@ class ContainerManageFragment : Fragment() {
                             }
                         }
                         is InstallState.Installing -> {
+                            (childFragmentManager.findFragmentByTag("install_copy_progress") as? ProgressDialogFragment)?.dismiss()
                             if (state.webpage != null) {
                                 // 有网页 → 跳转到 ContainerInstallFragment 展示安装进度
                                 mainViewModel.navigateTo(
@@ -356,6 +366,7 @@ class ContainerManageFragment : Fragment() {
                             }
                         }
                         is InstallState.Completed -> {
+                            (childFragmentManager.findFragmentByTag("install_copy_progress") as? ProgressDialogFragment)?.dismiss()
                             (childFragmentManager.findFragmentByTag("install_progress") as? FakeProgressDialogFragment)?.dismiss()
                             if (state.launchAfterInstall) {
                                 mainViewModel.navigateTo(MainViewModel.Screen.ContainerMain(code = state.code))

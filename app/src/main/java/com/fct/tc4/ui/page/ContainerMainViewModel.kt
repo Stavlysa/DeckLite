@@ -23,6 +23,7 @@ import android.system.Os
 import android.system.OsConstants
 import android.util.Log
 import com.termux.x11.CmdEntryPointService
+import com.fct.tc4.XServerService
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -204,7 +205,12 @@ class ContainerMainViewModel(
     private suspend fun launchContainer() {
 
         val merged = collectEnabledOptions()
-        // 处理 lstat-cache feature：解析路径，生成 --assured-path= 参数
+        // Imported images cannot ship host-owned consent or a paired computer key.
+        val debugControl = com.fct.tc4.debug.DebugController.syncContainer(getApplication(), code)
+        merged.args.add("--bind=${debugControl.absolutePath}:/run/decklite-debug-control")
+        // 处理 lstat-cache feature：解析路径，生成 --assured-path= 参数。
+        // collectLstatCacheArgs excludes dynamic runtime and pseudo-filesystem
+        // paths while retaining the safe rootfs/Wine/font performance cache.
         merged.args.addAll(collectLstatCacheArgs())
         // 处理 storage feature：生成 --tiny-storage 和初始 --bind= 参数
         collectStorageArgs(merged.args)
@@ -223,23 +229,43 @@ class ContainerMainViewModel(
             .replace("\$EXTRA_LD_LIBRARY_PATH", merged.ldLibraryPath.joinToString(":"))
             .replace("\$EXTRA_LD_PRELOAD", merged.ldPreload.joinToString(" "))
             .replace("\$EXTRA_ENV", merged.env.joinToString(" "))
+        // A boot command is one PRoot invocation. YAML block wrapping and a
+        // malformed metadata patch previously inserted bare newlines after a
+        // /proc bind, so the shell executed only the first half and silently
+        // lost the /tmp X11 bind. Collapse all physical lines defensively.
+        val normalizedBootCmd = resolvedBootCmd
+            .lineSequence()
+            .map { it.trim() }
+            .filter { it.isNotEmpty() }
+            .joinToString(" ")
 
         // 写入临时脚本文件，绕过 PTY 单行 4096 字节限制
         val bootScript = File("${getApplication<Application>().filesDir}/boot_${code}.sh")
-        bootScript.writeText("exec $resolvedBootCmd")
+        bootScript.writeText("exec $normalizedBootCmd")
         Global.sendCommand("source ${bootScript.absolutePath}")
 
         for (cmd in merged.postStartContainerCommands) {
             Global.sendCommand(cmd)
         }
 
-        launchEnabledFeature()
+        // TerminalSession accepts input before the PRoot login shell is ready,
+        // but a rapid X11 startup can otherwise race queued post-start work and
+        // lose the desktop command. Queue a host-visible readiness marker after
+        // every post-start command; X11 waits for it before sending its command.
+        val readyFile = File(
+            getApplication<Application>().filesDir,
+            "container_ready_$code"
+        )
+        readyFile.delete()
+        Global.sendCommand("touch ${readyFile.absolutePath}")
+
+        launchEnabledFeature(readyFile.absolutePath)
     }
 
     // ===================== 图形界面处理 =====================
 
     @Suppress("UNCHECKED_CAST")
-    private suspend fun launchEnabledFeature() {
+    private suspend fun launchEnabledFeature(containerReadyPath: String) {
         val features = config["feature"] as? List<Map<String, Any>> ?: emptyList()
         for (feature in features) {
             val type = feature["type"] as? String ?: continue
@@ -301,6 +327,9 @@ class ContainerMainViewModel(
                     if (!waitForFile("${getApplication<Application>().filesDir}/tmp/.X11-unix/X${extractDisplay(args)}")) {
                         continue
                     }
+                    if (!waitForFile(containerReadyPath, timeoutMs = 30_000)) {
+                        Log.w(TAG, "x11: container readiness marker timed out; sending command as fallback")
+                    }
                     Global.sendCommand(command)
                     _navigationEvents.tryEmit(GuiNavigationEvent.OpenX11)
                 }
@@ -313,15 +342,14 @@ class ContainerMainViewModel(
         val app = getApplication<Application>()
         val envKeys = arrayOf(
             "TMPDIR", "XKB_CONFIG_ROOT",
-            "TERMUX_X11_DEBUG", "TERMUX_X11_OVERRIDE_PACKAGE"
+            "TERMUX_X11_OVERRIDE_PACKAGE"
         )
         val envVals = arrayOf(
             "${app.filesDir.absolutePath}/tmp",
             "${app.dataDir.absolutePath}/$code/usr/share/X11/xkb",
-            "1",
             app.packageName
         )
-        app.startService(Intent(app, CmdEntryPointService::class.java).apply {
+        app.startService(Intent(app, XServerService::class.java).apply {
             action = CmdEntryPointService.ACTION_START
             putExtra(CmdEntryPointService.EXTRA_ARGS, xserverArgs.toTypedArray())
             putExtra(CmdEntryPointService.EXTRA_ENV_KEYS, envKeys)
@@ -332,7 +360,7 @@ class ContainerMainViewModel(
     private fun killXServer() {
         if (xserverStarted) {
             getApplication<Application>().startService(Intent(
-                getApplication(), CmdEntryPointService::class.java
+                getApplication(), XServerService::class.java
             ).apply { action = CmdEntryPointService.ACTION_STOP })
             xserverStarted = false
         }
@@ -361,6 +389,13 @@ class ContainerMainViewModel(
         val app = getApplication<Application>()
         val cacheDir = app.filesDir.absolutePath
         val containerDir = "${app.dataDir.absolutePath}/$code"
+        val volatileRuntimeRoots = setOf(
+            File(cacheDir, "tmp").absolutePath,
+            File(cacheDir, "run").absolutePath,
+            "/proc",
+            "/sys",
+            "/dev"
+        )
 
         val result = mutableListOf<String>()
         for (feature in features) {
@@ -374,6 +409,20 @@ class ContainerMainViewModel(
                 val resolved = rawPath
                     .replace("\$CACHE_DIR", cacheDir)
                     .replace("\$CONTAINER_DIR", containerDir)
+
+                // Runtime sockets (X11, PipeWire, D-Bus, SSH agents, etc.) and
+                // kernel-backed pseudo filesystems change after PRoot starts.
+                // Marking any of them as assured lets the lstat cache preserve
+                // missing or stale entries across a container restart, which
+                // can produce a live black X11 surface that the guest cannot
+                // connect to.
+                val normalized = resolved.trimEnd('/')
+                if (volatileRuntimeRoots.any { root ->
+                        normalized == root || normalized.startsWith("$root/")
+                    }) {
+                    Log.w(TAG, "lstat-cache: skipping volatile runtime path: $resolved")
+                    continue
+                }
 
                 // 处理通配符
                 val expanded = expandLstatPath(resolved)

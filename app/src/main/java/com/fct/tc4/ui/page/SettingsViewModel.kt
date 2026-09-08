@@ -23,6 +23,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.fct.tc4.R
+import com.fct.tc4.debug.DebugController
 import com.fct.tc4.ui.misc.Global
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -76,12 +77,18 @@ class SettingsViewModel(
             "reset_bootstrap" -> Global.shouldResetBootstrap = newChecked
             "use_legacy_proot" -> Global.useLegacyProot = newChecked
             "auto_check_update" -> Global.autoCheckUpdate = newChecked
+            "debugging" -> DebugController.setEnabled(getApplication(), newChecked)
         }
         refresh()
     }
 
-    private fun refresh() {
+    fun refresh() {
         _items.value = listOf(
+            ActionSetting("app_language", R.string.tc4_language_title, R.string.tc4_language_desc),
+            SwitchSetting("debugging", R.string.tc4_debug_title,
+                R.string.tc4_debug_desc, DebugController.enabled(getApplication())),
+            ActionSetting("debug_export", R.string.tc4_debug_export_title, R.string.tc4_debug_export_desc),
+            ActionSetting("debug_clear", R.string.tc4_debug_clear_title, R.string.tc4_debug_clear_desc),
             ActionSetting(
                 id = "launcher_shortcut",
                 titleRes = R.string.tc4_settings_shortcut_title,

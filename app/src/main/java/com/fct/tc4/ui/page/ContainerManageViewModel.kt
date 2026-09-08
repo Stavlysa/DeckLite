@@ -24,6 +24,7 @@ import androidx.lifecycle.viewModelScope
 import com.fct.tc4.R
 import com.fct.tc4.ui.misc.ConfigManager
 import com.fct.tc4.ui.misc.Global
+import com.fct.tc4.ui.misc.BundledRootfs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -83,6 +84,7 @@ sealed class InstallState {
     data object Idle : InstallState()
     data object ImportWarn : InstallState()
     data object CopyingToCache : InstallState()
+    data class CopyingBuiltIn(val copied: Long, val total: Long) : InstallState()
     data object ExtractingConfig : InstallState()
     data class AwaitingConfirm(
         val rawConfig: Map<String, Any>,
@@ -269,6 +271,9 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
             try {
                 val dir = File(getApplication<Application>().dataDir, code)
                 if (dir.exists()) dir.deleteRecursively()
+                com.fct.tc4.ui.misc.LauncherCommandVault(
+                    File(getApplication<Application>().noBackupFilesDir, "launcher-commands")
+                ).revokeContainer(code)
                 if (code == Global.autoLaunch) {
                     Global.autoLaunch = ""
                 }
@@ -376,16 +381,12 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
 
     /** 从 assets 内置 rootfs.tar.zst 开始导入（用户手动点"安装内置容器"触发） */
     fun startBuiltInImport() {
+        if (_installState.value !is InstallState.ImportWarn && _installState.value !is InstallState.Idle) return
+        _installState.value = InstallState.CopyingToCache
         viewModelScope.launch(Dispatchers.IO) {
-            _installState.value = InstallState.CopyingToCache
             val app = getApplication<Application>()
             try {
-                val cacheFile = File(app.filesDir, "rootfs.tar.zst")
-                app.assets.open("rootfs.tar.zst").use { input ->
-                    cacheFile.outputStream().use { output ->
-                        input.copyTo(output, bufferSize = 8192)
-                    }
-                }
+                copyBuiltInRootfs()
 
                 processCachedRootfs()
             } catch (e: Exception) {
@@ -398,31 +399,35 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
 
     /** 初次启动自动安装内置容器，跳过所有用户确认步骤 */
     fun autoInstallBuiltInContainer() {
+        // Locale/activity recreation must not start a second extraction, and
+        // an app update must never automatically replace an installed container.
+        if (_installState.value !is InstallState.Idle || Global.installedContainers.isNotEmpty()) return
+        _installState.value = InstallState.CopyingToCache
         viewModelScope.launch(Dispatchers.IO) {
             val app = getApplication<Application>()
             try {
-                val cacheFile = File(app.filesDir, "rootfs.tar.zst")
-
-                // 从 assets 复制到缓存
-                _installState.value = InstallState.CopyingToCache
-                app.assets.open("rootfs.tar.zst").use { input ->
-                    cacheFile.outputStream().use { output ->
-                        input.copyTo(output, bufferSize = 8192)
-                    }
-                }
+                val manifest = copyBuiltInRootfs()
 
                 // 提取并解析配置
                 val config = extractAndParseConfig() ?: return@launch
                 val code = config["code"] as? String ?: ""
-                if (code.isBlank()) {
+                if (!BundledRootfs.validCode(code) || (manifest != null && code != manifest.code)) {
                     cleanCacheFiles()
                     _installState.value = InstallState.Failed(
                         app.getString(R.string.tc4_import_missing_code_builtin))
                     return@launch
                 }
 
-                // 直接安装
+                // A pending marker permits retry of this install's own partial
+                // directory, but never an unregistered pre-existing container.
+                val pending = File(app.noBackupFilesDir, "builtin-install.pending")
+                val target = File(app.dataDir, code)
+                check(!target.exists() || (pending.isFile && pending.readText() == code)) {
+                    app.getString(R.string.tc4_builtin_existing)
+                }
+                pending.writeText(code)
                 performInstall(code, config)
+                pending.delete()
 
                 Global.autoLaunch = code
                 Global.isFirstLaunchDone = true
@@ -437,6 +442,28 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
                     app.getString(R.string.tc4_import_auto_failed, e.message ?: ""))
             }
         }
+    }
+
+    private fun copyBuiltInRootfs(): BundledRootfs.Manifest? {
+        val app = getApplication<Application>()
+        val cacheFile = File(app.filesDir, "rootfs.tar.zst")
+        cleanCacheFiles()
+        if (Global.hasBundledRootfsManifest()) {
+            val manifest = app.assets.open(BundledRootfs.MANIFEST).use(BundledRootfs::readManifest)
+            val available = android.os.StatFs(app.filesDir.absolutePath).availableBytes
+            check(available >= manifest.minimumFreeBytes) {
+                app.getString(R.string.tc4_builtin_space, formatBytes(manifest.minimumFreeBytes), formatBytes(available))
+            }
+            BundledRootfs.copyVerified(manifest, { app.assets.open(it) }, cacheFile) { copied, total ->
+                _installState.value = InstallState.CopyingBuiltIn(copied, total)
+            }
+            return manifest
+        }
+        // Preserve support for upstream single-file built-in APKs.
+        app.assets.open("rootfs.tar.zst").use { input ->
+            cacheFile.outputStream().use { input.copyTo(it, bufferSize = 1024 * 1024) }
+        }
+        return null
     }
 
     /** 用户确认安装 */
@@ -484,10 +511,21 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
         val app = getApplication<Application>()
 
         _installState.value = InstallState.ExtractingConfig
-        execShell {
+        val extractExitCode = execShell {
             Global.setupEnvironment()
             Global.sendCommand($$"tar -xf $CACHE_DIR/rootfs.tar.zst -C $CACHE_DIR .tiny.yaml")
             Global.sendCommand("exit")
+        }
+
+        if (extractExitCode != 0) {
+            cleanCacheFiles()
+            _installState.value = InstallState.Failed(
+                app.getString(
+                    R.string.tc4_import_failed,
+                    "Unable to read the container archive (tar exit $extractExitCode)"
+                )
+            )
+            return null
         }
 
         val configFile = File(app.filesDir, ".tiny.yaml")
@@ -511,6 +549,10 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
     /** 执行实际的容器安装操作（解压 rootfs、修复权限、保存配置），调用方负责状态管理 */
     private suspend fun performInstall(code: String, rawConfig: Map<String, Any>) {
         val app = getApplication<Application>()
+        require(BundledRootfs.validCode(code)) { "Invalid container code" }
+        check(File(app.dataDir, code).canonicalFile.parentFile == app.dataDir.canonicalFile) {
+            "Container target is outside app storage"
+        }
         val cacheFile = File(app.filesDir, "rootfs.tar.zst")
 
         _installState.value = InstallState.Installing(
@@ -523,16 +565,20 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
 
         // DELETING_OLD
         val dir = File(app.dataDir, code)
+        com.fct.tc4.ui.misc.LauncherCommandVault(File(app.noBackupFilesDir, "launcher-commands"))
+            .revokeContainer(code)
         if (dir.exists()) dir.deleteRecursively()
         updateCurrentStep(InstallStep.EXTRACTING_ROOTFS)
 
         // EXTRACTING_ROOTFS
         dir.mkdirs()
-        execShell {
+        val installExitCode = execShell {
             val install = $$"""
                 export CONTAINER_DIR=$${app.dataDir}/$$code
                 mkdir -p $CONTAINER_DIR
-                $BIN_DIR/proot --link2symlink $BIN_DIR/tar -xf $CACHE_DIR/rootfs.tar.zst -C $CONTAINER_DIR --delay-directory-restore --preserve-permissions
+                if ! $BIN_DIR/proot --link2symlink $BIN_DIR/tar -xf $CACHE_DIR/rootfs.tar.zst -C $CONTAINER_DIR --delay-directory-restore --preserve-permissions; then
+                    exit 20
+                fi
             """.trimIndent()
             val androidUidGidThings = $$"""
                 $BIN_DIR/sed -i '/^aid_/d' $CONTAINER_DIR/etc/passwd
@@ -566,6 +612,9 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
             """.trimIndent())
             Global.sendCommand("exit")
         }
+        if (installExitCode != 0) {
+            throw IllegalStateException("Container extraction failed (exit $installExitCode)")
+        }
         updateCurrentStep(InstallStep.CLEANING_CACHE)
         cleanCacheFiles()
 
@@ -584,6 +633,7 @@ class ContainerManageViewModel(application: Application) : AndroidViewModel(appl
 
     fun cleanCacheFiles() {
         File(getApplication<Application>().filesDir, "rootfs.tar.zst").delete()
+        File(getApplication<Application>().filesDir, "rootfs.tar.zst.part").delete()
         File(getApplication<Application>().filesDir, ".tiny.yaml").delete()
     }
 
