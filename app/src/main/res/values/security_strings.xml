@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_debug_title">Debugging</string>
+    <string name="tc4_debug_desc">Off by default. Collect limited private logs and allow key-authenticated USB SSH after pairing and a container restart. Turning off stops SSH within two seconds.</string>
+    <string name="tc4_debug_confirm">Enable the repair toolbox? Only pair a computer you trust: SSH can access this container and its shared files. Use an Android-authorized USB computer to pair an Ed25519 public key, then restart the container. No password login or network desktop access is enabled. This does not enable Android USB debugging.</string>
+    <string name="tc4_debug_export_title">Export debugging logs</string>
+    <string name="tc4_debug_export_desc">Save a local ZIP of limited Android diagnostics. Review before sharing; nothing is uploaded automatically.</string>
+    <string name="tc4_debug_clear_title">Clear debugging logs and pairing</string>
+    <string name="tc4_debug_clear_desc">Turn Debugging off, forget the paired computer and delete collected Android logs. Games and saved data are kept. Exported copies are not deleted.</string>
+    <string name="tc4_debug_export_done">Debugging ZIP saved.</string>
+    <string name="tc4_debug_export_failed">Could not export debugging logs.</string>
+    <string name="tc4_shortcut_unverified">Unverified shortcut blocked. Re-create this shortcut inside Tiny Computer.</string>
+    <string name="tc4_shortcut_secure_create_failed">Could not save the verified shortcut. No command was executed.</string>
+</resources>
