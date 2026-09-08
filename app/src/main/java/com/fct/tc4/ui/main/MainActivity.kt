@@ -43,10 +43,15 @@ import com.fct.tc4.ui.page.ContainerInstallFragment
 import com.fct.tc4.ui.page.ContainerMainFragment
 import com.fct.tc4.ui.page.ContainerManageFragment
 import com.fct.tc4.ui.misc.Global
+import com.fct.tc4.ui.misc.LauncherCommandVault
+import com.fct.tc4.ui.misc.AppLanguage
+import com.fct.tc4.ui.misc.AppLanguageDialogFragment
+import com.fct.tc4.ui.page.LanguageSelectionFragment
 import com.fct.tc4.ui.page.TerminalFragment
 import com.fct.tc4.ui.page.ContainerManageViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.termux.x11.CmdEntryPointService
+import com.fct.tc4.XServerService
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -98,9 +103,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        if (savedInstanceState == null) {
-            resolveIntentAction(intent)
-        }
+        if (!AppLanguage.hasChosen(this)) showLanguageSelection()
+        else continueInitialLaunch()
 
         // 拦截返回键：终端打开时走动画退出，不直接弹出后栈
         onBackPressedDispatcher.addCallback(this) {
@@ -112,6 +116,32 @@ class MainActivity : AppCompatActivity() {
                 isEnabled = true
             }
         }
+    }
+
+    private fun showLanguageSelection() {
+        if (supportFragmentManager.findFragmentByTag("LanguageSelection") == null) {
+            supportFragmentManager.commit {
+                replace(R.id.fragment_container, LanguageSelectionFragment(), "LanguageSelection")
+            }
+        }
+    }
+
+    private fun continueInitialLaunch() {
+        if (!viewModel.initialIntentHandled) {
+            // Mark before handling file imports or shortcut commands so a locale
+            // recreation cannot execute the original Intent twice.
+            viewModel.initialIntentHandled = true
+            resolveIntentAction(intent)
+        }
+    }
+
+    fun completeLanguageSelection(tag: String) {
+        if (!AppLanguage.markChosen(this, tag)) {
+            Snackbar.make(binding.root, R.string.tc4_language_save_failed, Snackbar.LENGTH_LONG).show()
+            return
+        }
+        continueInitialLaunch()
+        AppLanguage.apply(tag)
     }
 
     private fun showTerminal() {
@@ -157,6 +187,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.appLanguage -> {
+                if (supportFragmentManager.findFragmentByTag("app_language") == null)
+                    AppLanguageDialogFragment().show(supportFragmentManager, "app_language")
+                true
+            }
             R.id.terminalToggle -> {
                 viewModel.toggleTerminal()
                 true
@@ -187,6 +222,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
+        setIntent(intent)
+        if (!AppLanguage.hasChosen(this)) {
+            showLanguageSelection()
+            return
+        }
+        viewModel.initialIntentHandled = true
         resolveIntentAction(intent)
     }
 
@@ -343,8 +384,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onShortcutLaunch(intent: Intent) {
-        val code = intent.getStringExtra("shortcut_code") ?: return
-        val command = intent.getStringExtra("shortcut_command") ?: return
+        val authorized = LauncherCommandVault(File(noBackupFilesDir, "launcher-commands"))
+            .resolve(intent.getStringExtra(LauncherCommandVault.EXTRA_TOKEN))
+        if (authorized == null) {
+            Snackbar.make(binding.root, R.string.tc4_shortcut_unverified, Snackbar.LENGTH_LONG).show()
+            onNormalLaunch()
+            return
+        }
+        val code = authorized.code
+        val command = authorized.text
 
         // 检查容器是否存在
         if (code !in Global.installedContainers) {
@@ -383,7 +431,7 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         if (!isChangingConfigurations) {
             startService(Intent(
-                this, CmdEntryPointService::class.java
+                this, XServerService::class.java
             ).apply { action = CmdEntryPointService.ACTION_STOP })
         }
     }

@@ -29,6 +29,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val _screen = MutableStateFlow<Screen>(Screen.Init)
     val screen: StateFlow<Screen> = _screen.asStateFlow()
 
+    // Survives the Activity recreation caused by an app-language change.
+    var initialIntentHandled = false
+
     fun navigateTo(target: Screen) {
         viewModelScope.launch {
             _screen.value = target
