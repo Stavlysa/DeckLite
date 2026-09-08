@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Steam Window Controls
+Comment=Move, resize, restore, or maximize Steam with touch-friendly controls
+Exec=/opt/tiny/steam-arm64/steam_window_controls.py
+Icon=preferences-system-windows
+Terminal=false
+Categories=Game;Utility;
+StartupNotify=true

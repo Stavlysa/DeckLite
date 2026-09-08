@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Manager
+Comment=Manage Hangover Wine and Windows programs
+Exec=/usr/local/bin/wine-manager
+Icon=wine
+Terminal=false
+Categories=Game;Utility;
+StartupNotify=true
