@@ -1,0 +1,179 @@
+code: "decklite-arch-arm"
+name: "DeckLite (Arch ARM)"
+description: |
+  SteamOS 風格的輕量 ARM64 容器：Arch Linux ARM 核心、pacman 套件管理，
+  Openbox 桌面與 Box64／Steam 均為選配。針對 Tiny Container 的 PRoot
+  環境精簡，不包含 Steam Deck 核心、韌體、KDE 或 systemd 開機流程。
+
+feature:
+  - type: "lstat-cache"
+    name: "快取常用路徑"
+    description: "快取不常變動的系統路徑；升級系統前可暫時關閉。"
+    path:
+      - $CONTAINER_DIR
+      - $CONTAINER_DIR/usr
+      - $CONTAINER_DIR/usr/bin
+      - $CONTAINER_DIR/usr/lib
+      - $CONTAINER_DIR/usr/share
+      - $CONTAINER_DIR/etc
+      - $CONTAINER_DIR/home
+      - $CONTAINER_DIR/home/alarm
+      - $CACHE_DIR/tmp
+      - $CACHE_DIR/run
+      - /proc
+      - /sys
+      - /dev
+    enabled: false
+
+  - type: "x11"
+    args: [":6", "+extension", "MIT-SHM"]
+    name: "Termux:X11 桌面"
+    description: |
+      較輕量的桌面前端。請先從快捷命令安裝桌面套件，再啟用並重啟容器。
+    command: "/opt/tiny/start-desktop.sh x11"
+    enabled: false
+
+  - type: "avnc"
+    name: "AVNC 桌面"
+    description: |
+      使用 Unix socket 的 VNC 前端。請先從快捷命令安裝桌面套件，再啟用並重啟容器。
+    command: "/opt/tiny/start-desktop.sh avnc"
+    link: "vnc://127.0.0.1:5906"
+    use_unix_socket: true
+    enabled: false
+    adapt_to_screen_size: true
+    scale_ratio: 0
+
+boot_command: >
+  $BIN_DIR/proot $EXTRA_ARGS -H --kill-on-exit --link2symlink --sysvipc
+  --kernel-release="Linux localhost 6.6.0-decklite-proot #1 SMP PREEMPT aarch64 GNU/Linux"
+  -L --change-id=1000:1000 --rootfs=$CONTAINER_DIR --cwd=/home/alarm
+  --bind=/data --bind=/dev --bind=/proc --bind=/sys --bind=/dev/urandom:/dev/random
+  --bind=/proc/self/fd:/dev/fd --bind=/proc/self/fd/0:/dev/stdin --bind=/proc/self/fd/1:/dev/stdout --bind=/proc/self/fd/2:/dev/stderr
+  --bind=$CONTAINER_DIR/sys/.empty:/sys/fs/selinux
+  --bind=$CONTAINER_DIR/proc/.loadavg:/proc/loadavg
+  --bind=$CONTAINER_DIR/proc/.stat:/proc/stat
+  --bind=$CONTAINER_DIR/proc/.uptime:/proc/uptime
+  --bind=$CONTAINER_DIR/proc/.version:/proc/version
+  --bind=$CONTAINER_DIR/proc/.vmstat:/proc/vmstat
+  --bind=$CONTAINER_DIR/proc/.devices:/proc/bus/pci/devices
+  --bind=$CONTAINER_DIR/proc/.sysctl_entry_cap_last_cap:/proc/sys/kernel/cap_last_cap
+  --bind=$CONTAINER_DIR/proc/.overflowuid:/proc/sys/kernel/overflowuid
+  --bind=$CONTAINER_DIR/proc/.overflowgid:/proc/sys/kernel/overflowgid
+  --bind=$CONTAINER_DIR/proc/.sysctl_inotify_max_user_watches:/proc/sys/fs/inotify/max_user_watches
+  --bind=$CACHE_DIR/tmp:/dev/shm
+  --bind=$CACHE_DIR/tmp:/tmp
+  --bind=$CACHE_DIR/run:/run
+  --mount=$PUBLIC_DIR:/home/alarm/Public
+  --mount=/storage/self/primary:/mnt/sdcard
+  /usr/bin/env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$EXTRA_PATH
+  LD_LIBRARY_PATH=$EXTRA_LD_LIBRARY_PATH LD_PRELOAD=$EXTRA_LD_PRELOAD
+  DISPLAY=:6 LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+  HOME=/home/alarm USER=alarm LOGNAME=alarm SHELL=/bin/bash $EXTRA_ENV
+  MOZ_FAKE_NO_SANDBOX=1 QTWEBENGINE_DISABLE_SANDBOX=1 ELECTRON_DISABLE_SANDBOX=1
+  TERM=xterm-256color COLORTERM=truecolor /bin/bash -l
+
+export_command: >
+  $BIN_DIR/proot -H --kill-on-exit --link2symlink --sysvipc
+  --kernel-release="Linux localhost 6.6.0-decklite-proot #1 SMP PREEMPT aarch64 GNU/Linux"
+  -L --rootfs=$CONTAINER_DIR --cwd=/root
+  --bind=/data --bind=/dev --bind=/proc --bind=/sys --bind=/dev/urandom:/dev/random
+  --bind=/proc/self/fd:/dev/fd --bind=/proc/self/fd/0:/dev/stdin --bind=/proc/self/fd/1:/dev/stdout --bind=/proc/self/fd/2:/dev/stderr
+  --bind=$CONTAINER_DIR/sys/.empty:/sys/fs/selinux
+  --bind=$CONTAINER_DIR/proc/.loadavg:/proc/loadavg
+  --bind=$CONTAINER_DIR/proc/.stat:/proc/stat
+  --bind=$CONTAINER_DIR/proc/.uptime:/proc/uptime
+  --bind=$CONTAINER_DIR/proc/.version:/proc/version
+  --bind=$CONTAINER_DIR/proc/.vmstat:/proc/vmstat
+  --bind=$CONTAINER_DIR/proc/.devices:/proc/bus/pci/devices
+  --bind=$CONTAINER_DIR/proc/.sysctl_entry_cap_last_cap:/proc/sys/kernel/cap_last_cap
+  --bind=$CONTAINER_DIR/proc/.overflowuid:/proc/sys/kernel/overflowuid
+  --bind=$CONTAINER_DIR/proc/.overflowgid:/proc/sys/kernel/overflowgid
+  --bind=$CONTAINER_DIR/proc/.sysctl_inotify_max_user_watches:/proc/sys/fs/inotify/max_user_watches
+  --bind=$CACHE_DIR/tmp:/dev/shm
+  --bind=$CACHE_DIR/tmp:/tmp
+  --bind=$CACHE_DIR/run:/run
+  --mount=$PUBLIC_DIR:/Public
+  /usr/bin/env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 HOME=/root USER=root
+  TERM=xterm-256color COLORTERM=truecolor /bin/bash /opt/tiny/export.sh
+
+quick_commands:
+  - type: "command"
+    name: "DeckLite 系統資訊"
+    command: "decklite-info"
+
+  - type: "command"
+    name: "安裝輕量桌面"
+    description: "第一次使用請先執行；su 詢問時輸入 root 密碼 root。"
+    command: "su -c '/opt/tiny/setup-desktop.sh'"
+
+  - type: "command"
+    name: "安裝 CJK 字型"
+    description: "選配；約增加一百多 MB，改善繁中、日文及韓文字形。"
+    command: "sudo pacman -S --needed --noconfirm noto-fonts-cjk"
+
+  - type: "commands"
+    name: "系統維護"
+    commands:
+      - type: "command"
+        name: "更新所有套件"
+        command: "sudo pacman -Syu --noconfirm"
+      - type: "command"
+        name: "清除套件快取"
+        command: "sudo pacman -Scc --noconfirm"
+
+  - type: "commands"
+    name: "實驗性 PC 遊戲支援"
+    description: "ARM64 上透過 Box64／Box32 轉譯；不保證 Steam 或個別遊戲可用。"
+    commands:
+      - type: "command"
+        name: "編譯並安裝 Box64 + Box32"
+        description: "耗時且需要網路；su 詢問時輸入 root 密碼 root。"
+        command: "su -c '/opt/tiny/install-box64.sh'"
+      - type: "command"
+        name: "下載 Steam（實驗性）"
+        description: "先完成桌面與 Box64 安裝。Steam 官方建議此類環境至少準備 6 GB RAM。"
+        command: "/opt/tiny/install-steam.sh"
+      - type: "command"
+        name: "啟動 Steam（實驗性）"
+        command: "$HOME/.local/bin/steam-decklite"
+
+options:
+  - type: "option"
+    name: "高 DPI 顯示"
+    description: "字體較清楚，但會增加繪圖負擔。"
+    env: ["GDK_SCALE=2", "QT_FONT_DPI=192"]
+    enabled: false
+
+  - type: "option"
+    name: "掛載 Android 常用資料夾"
+    args:
+      - --mount=/storage/self/primary/Download:/home/alarm/Downloads
+      - --mount=/storage/self/primary/Documents:/home/alarm/Documents
+      - --mount=/storage/self/primary/Pictures:/home/alarm/Pictures
+      - --mount=/storage/self/primary/Music:/home/alarm/Music
+      - --mount=/storage/self/primary/Movies:/home/alarm/Videos
+    enabled: true
+
+  - type: "options"
+    name: "圖形加速（實驗性）"
+    description: "依 GPU、Android 驅動及前端而異；有問題時保持全部關閉。"
+    options:
+      - type: "option"
+        name: "Virgl"
+        env: ["GALLIUM_DRIVER=virpipe"]
+        pre_start_host_command: >
+          $BIN_DIR/virgl_test_server --use-egl-surfaceless --use-gles
+          --socket-path=$CACHE_DIR/tmp/.virgl_test &
+        post_end_host_command: "pkill -f virgl_test_server"
+        enabled: false
+      - type: "option"
+        name: "Adreno Turnip + Zink"
+        env:
+          - MESA_LOADER_DRIVER_OVERRIDE=zink
+          - VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/freedreno_icd.aarch64.json
+          - TU_DEBUG=noconform
+          - MESA_VK_WSI_DEBUG=sw
+        enabled: false
+
