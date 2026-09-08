@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+[[ -r /etc/profile.d/decklite-game-performance.sh ]] && \
+    source /etc/profile.d/decklite-game-performance.sh
+source /opt/tiny/wine-manager/wine-affinity-env.sh
+source /opt/tiny/wine-manager/wine-region-env.sh
+
+if [[ $# -lt 2 ]]; then
+    echo "Usage: wine-prefix-run PREFIX COMMAND [ARGUMENTS...]" >&2
+    exit 2
+fi
+
+prefix="$1"
+shift
+export WINEPREFIX="$prefix"
+export HODLL64="${HODLL64:-libarm64ecfex.dll}"
+export HODLL="${HODLL:-libwow64fex.dll}"
+mmap_shim=/opt/tiny/extra/libmmap_shim.so
+if [[ -f "$mmap_shim" && ":${LD_PRELOAD:-}:" != *":$mmap_shim:"* ]]; then
+    export LD_PRELOAD="$mmap_shim${LD_PRELOAD:+:$LD_PRELOAD}"
+fi
+/opt/tiny/wine-manager/prepare-prefix.sh "$prefix"
+source /opt/tiny/wine-manager/wine-midi-env.sh
+exec "$@"
