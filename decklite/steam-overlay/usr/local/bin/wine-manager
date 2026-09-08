@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+# Ordinary file associations launch directly through the shared configuration.
+# Opening Wine Manager itself still shows the full prefix/runtime/CPU GUI.
+if [[ $# -gt 0 ]]; then
+    case "${1,,}" in
+        *.exe) exec /opt/tiny/steam-arm64/run-exe.sh "$@" ;;
+        *.msi)
+            package="$(realpath -m -- "$1")"
+            shift
+            cd "$(dirname -- "$package")"
+            exec /opt/tiny/wine-manager/wine-prefix-run "${WINEPREFIX:-$HOME/.wine}" \
+                wine msiexec /i "$package" "$@"
+            ;;
+    esac
+fi
+exec python3 /opt/tiny/wine-manager/wine_manager.py "$@"

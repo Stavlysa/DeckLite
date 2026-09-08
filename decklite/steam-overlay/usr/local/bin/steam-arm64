@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+exec /opt/tiny/steam-arm64/run-steam.sh "$@"
+
