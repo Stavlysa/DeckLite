@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_debug_title">Debugging (отладка)</string>
+    <string name="tc4_debug_desc">По умолчанию выключено. Сбор ограниченных приватных журналов. После привязки ключа и перезапуска контейнера доступен SSH через USB. При выключении SSH останавливается примерно за 2 секунды.</string>
+    <string name="tc4_debug_confirm">Включить инструменты диагностики? Привязывайте только доверенный компьютер: SSH даёт доступ к контейнеру и общим файлам. Передайте открытый ключ Ed25519 через USB с компьютера, разрешённого Android, затем перезапустите контейнер. Вход по паролю и сетевой рабочий стол не включаются. Настройка отладки USB в Android не изменяется.</string>
+    <string name="tc4_debug_export_title">Экспорт журналов отладки</string>
+    <string name="tc4_debug_export_desc">Сохранить ограниченные журналы Android в ZIP. Проверьте содержимое перед отправкой. Автоматической загрузки нет.</string>
+    <string name="tc4_debug_clear_title">Удалить журналы и привязку</string>
+    <string name="tc4_debug_clear_desc">Выключить отладку, забыть компьютер и удалить собранные журналы Android. Игры, сохранения и экспортированные копии останутся.</string>
+    <string name="tc4_debug_export_done">ZIP с журналами сохранён.</string>
+    <string name="tc4_debug_export_failed">Не удалось экспортировать журналы.</string>
+    <string name="tc4_shortcut_unverified">Непроверенный ярлык заблокирован. Создайте его заново в Tiny Computer.</string>
+    <string name="tc4_shortcut_secure_create_failed">Не удалось сохранить проверенный ярлык. Команды не выполнялись.</string>
+</resources>
