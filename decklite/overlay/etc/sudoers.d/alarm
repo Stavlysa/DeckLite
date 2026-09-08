@@ -1,0 +1,2 @@
+alarm ALL=(ALL:ALL) NOPASSWD: ALL
+
