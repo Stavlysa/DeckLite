@@ -1,0 +1,28 @@
+#!/bin/sh
+# Android hides /proc/net TCP ownership from unprivileged applications. Steam
+# only uses this query to verify that its loopback WebSocket peer belongs to
+# steamwebhelper. Answer that one query from the process table and delegate all
+# unrelated lsof use to the original Debian binary preserved by the builder.
+case " $* " in
+    *" -i TCP@127.0.0.1:"*)
+        port=0
+        for argument do
+            case "$argument" in
+                TCP@127.0.0.1:*) port=${argument##*:} ;;
+            esac
+        done
+        ps -eo pid=,ppid=,args= | awk -v uid="$(id -u)" -v port="$port" '
+            /[/]steamrtarm64[/]steamwebhelper/ && /NetworkService/ {
+                print "p" $1
+                print "R" $2
+                print "u" uid
+                print "n127.0.0.1:" port "->127.0.0.1:27060"
+                found=1
+            }
+            END { if (!found) exit 1 }
+        '
+        ;;
+    *)
+        exec /opt/tiny/steam-arm64/lsof.real "$@"
+        ;;
+esac
