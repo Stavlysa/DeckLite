@@ -8,7 +8,7 @@
 .externalNativeBuild
 .cxx
 local.properties
-app/src/main/jniLibs
+# Reviewed upstream ARM64 JNI build inputs are included; never include keys.
 app/src/main/assets/rootfs.tar.zst
 
 # Built application files
@@ -30,3 +30,22 @@ app/release/
 # Logs
 *.log
 *.hprof
+
+# Local-only SDKs, diagnostics, release archives and generated files.
+.android-sdk/
+.android-sdk-unpack/
+**/build/
+**/.gradle/
+**/.kotlin/
+**/__pycache__/
+*.pyc
+cache/
+diagnostics/
+*.tar.zst
+*.tar.gz
+*.partial
+.env
+.env.*
+*.pem
+*.key
+*ed25519*

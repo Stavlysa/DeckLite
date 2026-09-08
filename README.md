@@ -1,3 +1,26 @@
+# DeckLite
+
+Run a Debian 13 desktop and play Windows games on Android—all in one APK!
+
+This is an unofficial fork of **Cateners/tiny_container**, with an XFCE gaming
+container, native ARM64 Steam, Hangover Wine, GE-Proton, and Android X11/input/audio
+repairs. Game compatibility and performance depend on the device; not every game
+or anti-cheat system is supported. This is Debian in a PRoot container, not SteamOS
+and not a replacement for Android.
+
+- [DeckLite features and build instructions](docs/DECKLITE.md)
+- [繁體中文使用與建置說明](docs/DECKLITE.zh-TW.md)
+- [Container project](decklite/README.md)
+- [Third-party provenance](third_party/PROVENANCE.md)
+
+Source baseline: APK 4.4.1 / container 4.3.4. Binary installers are separate from
+this source tree; creating or uploading this fork does not itself publish them.
+Do not use upstream Tiny Container downloads expecting the DeckLite changes.
+
+---
+
+## Upstream Tiny Container documentation
+
 [中文版](README.zh.md)
 
 # Tiny Container
