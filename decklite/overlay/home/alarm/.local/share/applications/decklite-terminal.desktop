@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Terminal
+Comment=Open the DeckLite terminal
+Exec=lxterminal
+Icon=utilities-terminal
+Categories=System;TerminalEmulator;
+
