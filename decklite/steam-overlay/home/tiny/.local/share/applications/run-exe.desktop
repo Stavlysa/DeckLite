@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Windows EXE (Hangover)
+Comment=Choose and run a 32-bit or 64-bit Windows program
+Exec=/usr/local/bin/wine-manager
+Icon=wine
+Terminal=false
+Categories=Game;Utility;

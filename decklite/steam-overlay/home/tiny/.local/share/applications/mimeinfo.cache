@@ -1,0 +1,5 @@
+[MIME Cache]
+application/vnd.microsoft.portable-executable=wine-manager.desktop;
+application/x-ms-dos-executable=wine-manager.desktop;
+application/x-msdownload=wine-manager.desktop;
+application/x-msi=wine-manager.desktop;

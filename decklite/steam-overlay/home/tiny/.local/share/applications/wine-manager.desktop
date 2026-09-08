@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Manager
+Comment=Manage Hangover Wine prefixes and run 32-bit or 64-bit Windows programs
+Exec=/usr/local/bin/wine-manager %f
+Icon=wine
+Terminal=false
+Categories=Game;Utility;
+MimeType=application/x-ms-dos-executable;application/x-msdownload;application/vnd.microsoft.portable-executable;application/x-msi;
+StartupNotify=true
