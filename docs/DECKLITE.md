@@ -49,20 +49,30 @@ have the signing identity required to overwrite an existing installed APK.
 ## Include a clean container
 
 See [container build instructions](../decklite/README.md). Do not export your live
-home directory or Steam account into a public image. A built-in APK can be assembled
-from a small release APK and a separately validated rootfs using Python 3.14:
+home directory or Steam account into a public image. A built-in APK can be
+assembled from a small release APK and a separately validated rootfs using Python
+3.14. For a GitHub single-asset build, first use
+`decklite/tools/compact_steam_rootfs.py` to make the reviewed XZ gaming image;
+Tiny Computer's bsdtar detects XZ by magic and the bootstrap includes liblzma:
+
+The compact gaming image omits Firefox ESR, unrelated Qt office/GIS/print/scan/ML
+developer stacks, development-only files, non-license documentation, generated
+caches and unsupported translations. Steam, Wine, Hangover, Proton, multimedia/GPU
+libraries, both prefix templates and Debian copyright files remain. Use APT to
+reinstall an omitted optional desktop package if it is needed.
 
 ```sh
 python decklite/tools/bundle_container_apk.py embed \
   --base app/build/outputs/apk/release/app-release.apk \
-  --rootfs /path/to/clean-rootfs.tar.zst --output /path/to/unsigned.apk \
+  --rootfs /path/to/clean-rootfs.tar.xz --output /path/to/unsigned.apk \
   --sha256 ROOTFS_SHA256
 ```
 
 Then run SDK `zipalign -P 16 4`, sign with **your own** key using `apksigner`, and
 run `bundle_container_apk.py verify SIGNED.apk --sha256 ROOTFS_SHA256`.
-Never distribute the unsigned intermediate. A built-in image adds about 3.5 GB to
-installed-app storage in addition to the expanded container.
+Never distribute the unsigned intermediate. The embedded archive temporarily
+occupies app-private storage while importing, in addition to the expanded
+container, so keep the existing 22 GiB free-space guard.
 
 ## Tested scope
 
