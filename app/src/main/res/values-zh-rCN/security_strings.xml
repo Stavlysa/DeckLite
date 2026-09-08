@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_debug_title">Debugging（调试模式）</string>
+    <string name="tc4_debug_desc">默认关闭。收集有限的私有日志；配对并重启容器后，允许需要密钥验证的 USB SSH。关闭后约两秒内停止 SSH。</string>
+    <string name="tc4_debug_confirm">开启维修工具箱？只配对信任的电脑：SSH 可以访问容器及共享文件。使用 Android 已授权的 USB 电脑配对 Ed25519 公钥，再重启容器。不开放密码登录或网络桌面。这不会开启 Android 的 USB 调试。</string>
+    <string name="tc4_debug_export_title">导出调试日志</string>
+    <string name="tc4_debug_export_desc">将有限的 Android 诊断记录保存为 ZIP。分享前请检查内容；不会自动上传。</string>
+    <string name="tc4_debug_clear_title">清除调试日志及配对</string>
+    <string name="tc4_debug_clear_desc">关闭调试模式、忘记配对电脑，并删除已收集的 Android 日志。保留游戏和存档；不删除已导出的副本。</string>
+    <string name="tc4_debug_export_done">调试 ZIP 已保存。</string>
+    <string name="tc4_debug_export_failed">无法导出调试日志。</string>
+    <string name="tc4_shortcut_unverified">已阻止未验证的快捷方式。请在 Tiny Computer 内重新创建。</string>
+    <string name="tc4_shortcut_secure_create_failed">无法保存已验证的快捷方式，未执行任何命令。</string>
+</resources>
