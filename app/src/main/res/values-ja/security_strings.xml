@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tc4_debug_title">Debugging（デバッグモード）</string>
+    <string name="tc4_debug_desc">初期設定はオフです。限定的な非公開ログを収集します。ペアリングしてコンテナを再起動すると、鍵認証の USB SSH が利用できます。オフにすると約2秒以内に SSH が停止します。</string>
+    <string name="tc4_debug_confirm">修復ツールを有効にしますか？ SSH はコンテナと共有ファイルにアクセスできるため、信頼できるパソコンのみを登録してください。Android で許可した USB 接続から Ed25519 公開鍵を登録し、コンテナを再起動します。パスワード認証やネットワーク経由のデスクトップは有効になりません。Android の USB デバッグ設定は変更しません。</string>
+    <string name="tc4_debug_export_title">デバッグログを書き出す</string>
+    <string name="tc4_debug_export_desc">限定的な Android 診断情報を ZIP に保存します。共有前に内容を確認してください。自動送信はしません。</string>
+    <string name="tc4_debug_clear_title">デバッグログとペアリングを削除</string>
+    <string name="tc4_debug_clear_desc">デバッグをオフにし、登録したパソコンと収集した Android ログを削除します。ゲーム、セーブデータ、書き出したコピーは削除しません。</string>
+    <string name="tc4_debug_export_done">デバッグ ZIP を保存しました。</string>
+    <string name="tc4_debug_export_failed">ログを書き出せませんでした。</string>
+    <string name="tc4_shortcut_unverified">未確認のショートカットを拒否しました。Tiny Computer 内で作り直してください。</string>
+    <string name="tc4_shortcut_secure_create_failed">確認済みショートカットを保存できませんでした。コマンドは実行していません。</string>
+</resources>
