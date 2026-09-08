@@ -55,8 +55,10 @@
 /* ================================================================= */
 /*  SPSC ringbuffer (single-producer, single-consumer, lock-free)    */
 /* ================================================================= */
-#define RING_SIZE          (768u * 1024u)  /* 768 KB ≈ 2 s @ 48 kHz F32 stereo */
-#define RING_LATENCY_LIMIT (384u * 64u)  /* 384 KB ≈ 1/16 s   skip old if > 1/16 s */
+#define RING_SIZE               (768u * 1024u) /* 2 s @ 48 kHz F32 stereo */
+#define PREBUFFER_FRAMES        4096u          /* 85 ms @ 48 kHz */
+#define RING_LATENCY_FRAMES     8192u          /* 171 ms @ 48 kHz */
+#define AAUDIO_BUFFER_BURSTS    8
 
 typedef struct {
     uint8_t     buf[RING_SIZE];
@@ -66,7 +68,15 @@ typedef struct {
 
 static void ring_init(ring_t *r)     { atomic_init(&r->write_idx,0); atomic_init(&r->read_idx,0); }
 
-static uint32_t ring_write(ring_t *r, const uint8_t *src, uint32_t n)
+static uint32_t ring_available(ring_t *r)
+{
+    uint32_t rd = atomic_load_explicit(&r->read_idx, memory_order_relaxed);
+    uint32_t w  = atomic_load_explicit(&r->write_idx, memory_order_acquire);
+    return w - rd;
+}
+
+static uint32_t ring_write(ring_t *r, const uint8_t *src, uint32_t n,
+                           uint32_t latency_limit)
 {
     uint32_t w  = atomic_load_explicit(&r->write_idx, memory_order_relaxed);
     uint32_t rd = atomic_load_explicit(&r->read_idx,  memory_order_acquire);
@@ -77,12 +87,12 @@ static uint32_t ring_write(ring_t *r, const uint8_t *src, uint32_t n)
      * the consumer (AAudio) has fallen behind.  Skip old frames so the
      * listener doesn't experience growing end-to-end delay.
      */
-    if (used > RING_LATENCY_LIMIT) {
-        uint32_t new_rd = w - RING_LATENCY_LIMIT;
+    if (used > latency_limit) {
+        uint32_t new_rd = w - latency_limit;
         LOGI("ring: latency guard skip %u bytes", new_rd - rd);
         atomic_store_explicit(&r->read_idx, new_rd, memory_order_release);
         rd  = new_rd;
-        used = RING_LATENCY_LIMIT;
+        used = latency_limit;
     }
 
     uint32_t space = RING_SIZE - used;
@@ -117,12 +127,17 @@ static uint32_t ring_read(ring_t *r, uint8_t *dst, uint32_t n)
 typedef struct {
     ring_t        ring;
     atomic_bool   running;
-    atomic_bool   stream_ready;
+    atomic_bool   stream_started;
+    atomic_bool   prebuffering;
     atomic_bool   aaudio_restart;
+    atomic_uint   underrun_count;
 
     int32_t       sample_rate;
     int32_t       channel_count;
     int32_t       bytes_per_frame;
+    uint32_t      prebuffer_bytes;
+    uint32_t      latency_limit_bytes;
+    uint32_t      reported_underruns;
 
     int           sock_fd;
     pthread_t     sock_thread;
@@ -167,11 +182,26 @@ static aaudio_data_callback_result_t out_cb(
 
     int32_t bpf = g.bytes_per_frame;
     uint32_t want = (uint32_t)nframes * (uint32_t)bpf;
+
+    /* After an underrun, hold silence until a useful amount of audio has
+     * accumulated.  Resuming on the next tiny packet would create a rapid
+     * play/silence cycle which is heard as stuttering. */
+    if (atomic_load_explicit(&g.prebuffering, memory_order_acquire)) {
+        if (ring_available(&g.ring) < g.prebuffer_bytes) {
+            memset(buf, 0, want);
+            return AAUDIO_CALLBACK_RESULT_CONTINUE;
+        }
+        atomic_store_explicit(&g.prebuffering, false, memory_order_release);
+    }
+
     uint32_t got  = ring_read(&g.ring, (uint8_t*)buf, want);
 
     /* If underrun, pad with silence (zeroes) – memcpy won't touch tail */
-    if (got < want)
+    if (got < want) {
         memset((uint8_t*)buf + got, 0, want - got);
+        atomic_fetch_add_explicit(&g.underrun_count, 1, memory_order_relaxed);
+        atomic_store_explicit(&g.prebuffering, true, memory_order_release);
+    }
 
     return AAUDIO_CALLBACK_RESULT_CONTINUE;
 }
@@ -190,6 +220,8 @@ static void err_cb(AAudioStream *s, void *ud, aaudio_result_t e)
 /* ================================================================= */
 static void stream_close(void) {
     if (g.stream) { AAudioStream_close(g.stream); g.stream = NULL; }
+    atomic_store_explicit(&g.stream_started, false, memory_order_release);
+    atomic_store_explicit(&g.prebuffering, true, memory_order_release);
 }
 
 static int stream_open(int32_t rate, int32_t ch)
@@ -232,15 +264,43 @@ static int stream_open(int32_t rate, int32_t ch)
     if (r) { LOGE("openStream: %d", (int)r); return -1; }
     if (AAudioStream_getFormat(s) != AAUDIO_FORMAT_PCM_FLOAT) { AAudioStream_close(s); return -1; }
 
-    r = AAudioStream_requestStart(s);
-    if (r) { AAudioStream_close(s); return -1; }
-
     g.stream = s;
     g.sample_rate   = AAudioStream_getSampleRate(s);
     g.channel_count = AAudioStream_getChannelCount(s);
     g.bytes_per_frame = g.channel_count * (int32_t)sizeof(float);
+    g.prebuffer_bytes = PREBUFFER_FRAMES * (uint32_t)g.bytes_per_frame;
+    g.latency_limit_bytes = RING_LATENCY_FRAMES * (uint32_t)g.bytes_per_frame;
 
-    LOGI("AAudio OUT: rate=%d ch=%d", (int)g.sample_rate, (int)g.channel_count);
+    int32_t burst = AAudioStream_getFramesPerBurst(s);
+    int32_t capacity = AAudioStream_getBufferCapacityInFrames(s);
+    int32_t requested = burst > 0 ? burst * AAUDIO_BUFFER_BURSTS : capacity;
+    if (capacity > 0 && requested > capacity) requested = capacity;
+    int32_t actual = requested > 0
+            ? AAudioStream_setBufferSizeInFrames(s, requested)
+            : AAudioStream_getBufferSizeInFrames(s);
+
+    LOGI("AAudio OUT open: rate=%d ch=%d burst=%d capacity=%d buffer=%d prebuffer=%u",
+         (int)g.sample_rate, (int)g.channel_count, (int)burst, (int)capacity,
+         (int)actual, g.prebuffer_bytes);
+    return 0;
+}
+
+static int stream_start_if_ready(void)
+{
+    if (!g.stream || atomic_load_explicit(&g.stream_started, memory_order_acquire))
+        return 0;
+    if (ring_available(&g.ring) < g.prebuffer_bytes)
+        return 0;
+
+    atomic_store_explicit(&g.prebuffering, false, memory_order_release);
+    aaudio_result_t r = AAudioStream_requestStart(g.stream);
+    if (r) {
+        atomic_store_explicit(&g.prebuffering, true, memory_order_release);
+        LOGE("requestStart: %d", (int)r);
+        return -1;
+    }
+    atomic_store_explicit(&g.stream_started, true, memory_order_release);
+    LOGI("AAudio OUT started with %u buffered bytes", ring_available(&g.ring));
     return 0;
 }
 
@@ -259,7 +319,9 @@ static void *sock_func(void *arg)
     g.channel_count = (int32_t)read_le32(hdr+4);
     LOGI("fmt: rate=%d ch=%d", (int)g.sample_rate, (int)g.channel_count);
 
-    /* 2. Open AAudio stream (data callback will fire) */
+    /* 2. Open AAudio.  Starting is delayed until PREBUFFER_FRAMES are ready;
+     * Wine/PRoot scheduling is bursty enough that an immediately-started
+     * low-latency callback otherwise begins with repeated underruns. */
     if (stream_open(g.sample_rate, g.channel_count) < 0) { LOGE("AAudio fail"); goto out; }
 
     /* 3. Read PCM → ringbuffer */
@@ -267,7 +329,17 @@ static void *sock_func(void *arg)
     while (atomic_load_explicit(&g.running, memory_order_acquire)) {
         ssize_t n = read(fd, buf, sizeof(buf));
         if (n <= 0) { if (n<0 && errno==EINTR) continue; break; }
-        ring_write(&g.ring, buf, (uint32_t)n);
+        ring_write(&g.ring, buf, (uint32_t)n, g.latency_limit_bytes);
+        if (stream_start_if_ready() < 0) break;
+
+        uint32_t underruns = atomic_load_explicit(&g.underrun_count,
+                                                  memory_order_relaxed);
+        if (underruns != g.reported_underruns &&
+                (g.reported_underruns == 0 || underruns - g.reported_underruns >= 10)) {
+            LOGI("AAudio underruns=%u; rebuffering=%d", underruns,
+                 atomic_load_explicit(&g.prebuffering, memory_order_relaxed));
+            g.reported_underruns = underruns;
+        }
 
         /* Handle AAudio restart – drain ringbuffer BEFORE opening new stream.
          * If we don't drain, the new stream plays through old buffered data,
@@ -316,7 +388,10 @@ Java_com_fct_tc4_TinyAudio_nativeStart(JNIEnv *env, jclass cls, jstring sp)
     g.sock_fd = -1;
     ring_init(&g.ring);
     atomic_init(&g.running, true);
+    atomic_init(&g.stream_started, false);
+    atomic_init(&g.prebuffering, true);
     atomic_init(&g.aaudio_restart, false);
+    atomic_init(&g.underrun_count, 0);
 
     { int fd = connect_unix(p); g.sock_fd = fd; }
     (*env)->ReleaseStringUTFChars(env, sp, p);
