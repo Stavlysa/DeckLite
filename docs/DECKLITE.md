@@ -51,20 +51,20 @@ have the signing identity required to overwrite an existing installed APK.
 See [container build instructions](../decklite/README.md). Do not export your live
 home directory or Steam account into a public image. A built-in APK can be
 assembled from a small release APK and a separately validated rootfs using Python
-3.14. For a GitHub single-asset build, first use
-`decklite/tools/compact_steam_rootfs.py` to make the reviewed XZ gaming image;
-Tiny Computer's bsdtar detects XZ by magic and the bootstrap includes liblzma:
+3.14. The published release uses a standalone APK and the full `.tar.zst`
+container, split into two storage-mode 7-Zip volumes to meet GitHub's per-asset
+limit. Extract `.7z.001` with `.002` in the same folder, then import the resulting
+`.tar.zst` from the app's **Import Container** menu. See the
+[release notes](https://github.com/Stavlysa/DeckLite/releases/tag/v4.4.1) for details.
 
-The compact gaming image omits Firefox ESR, unrelated Qt office/GIS/print/scan/ML
-developer stacks, development-only files, non-license documentation, generated
-caches and unsupported translations. Steam, Wine, Hangover, Proton, multimedia/GPU
-libraries, both prefix templates and Debian copyright files remain. Use APT to
-reinstall an omitted optional desktop package if it is needed.
+The compact XZ experiment is not used: removing shared libraries was not proven
+safe for application compatibility. The embedding command below is for custom
+full-image APKs distributed through a host that accepts their larger size.
 
 ```sh
 python decklite/tools/bundle_container_apk.py embed \
   --base app/build/outputs/apk/release/app-release.apk \
-  --rootfs /path/to/clean-rootfs.tar.xz --output /path/to/unsigned.apk \
+  --rootfs /path/to/clean-rootfs.tar.zst --output /path/to/unsigned.apk \
   --sha256 ROOTFS_SHA256
 ```
 

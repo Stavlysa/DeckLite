@@ -34,16 +34,16 @@ GTK tests under `tests/` run inside the X11 container, with isolated preferences
 Native custom helper sources are under `tools/native/`; MIDI has its own build
 script, and the existing tgcompat provenance includes its ARM64 build command.
 
-For a single GitHub Release APK, `tools/compact_steam_rootfs.py` can create a
-denser XZ image while retaining Steam, Wine, Hangover, Proton, both prefix
-templates, codecs, fonts, package metadata and Debian copyright notices. It omits
-only development headers/toolchain files, generated package caches, non-license
-documentation and translations outside English, Chinese, Japanese and Russian.
-Firefox ESR and unrelated Qt office/GIS/print/scan/ML developer stacks are not
-part of this size-constrained gaming image; reinstall the corresponding packages
-with APT if they are needed. The Android bootstrap already includes liblzma, and
-bsdtar detects XZ by stream magic. Always verify and device-test the compact result
-before publishing it.
+The release distributes the full, untrimmed `.tar.zst` image in two 7-Zip
+volumes alongside the standalone APK. Extract `.7z.001` with both volumes in
+the same folder, then import the reconstructed `.tar.zst`. Storage-mode volume
+packaging preserves the original compressed container byte-for-byte.
+
+`tools/compact_steam_rootfs.py` is an abandoned packaging experiment, not part
+of the release workflow. Its removal of Qt5, GTK4 and other shared libraries
+can break dependencies even when the Wine/Steam files themselves remain.
+Its path-filter unit tests do not establish runtime compatibility. Do not use
+its output as a substitute for the full release image.
 
 See [the app guide](../docs/DECKLITE.md) for building a signed APK with this image
 embedded. GitHub's web file upload is for source files, not the multi-GB rootfs.

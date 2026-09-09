@@ -1,6 +1,12 @@
 # DeckLite
 
-Run a Debian 13 desktop and play Windows games on Android—all in one APK!
+Run a Debian 13 desktop and play Windows games on Android.
+
+[Download the APK and full container](https://github.com/Stavlysa/DeckLite/releases/tag/v4.4.1).
+Install the standalone APK, download both container volumes, extract `.7z.001`
+to obtain `.tar.zst`, then choose **Import Container** in the app. The release
+notes include the complete Android installation guide. This release preserves
+the full container contents; it does not use the experimental compact image.
 
 This is an unofficial fork of **Cateners/tiny_container**, with an XFCE gaming
 container, native ARM64 Steam, Hangover Wine, GE-Proton, and Android X11/input/audio
